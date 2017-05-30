@@ -45,16 +45,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectoryManager.cs" />
+    <Compile Include="Documentos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Documentos.Designer.cs">
+      <DependentUpon>Documentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager.cs" />
+    <Compile Include="Inicio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Navigator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Navigator.Designer.cs">
+      <DependentUpon>Navigator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Documentos.resx">
+      <DependentUpon>Documentos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navigator.resx">
+      <DependentUpon>Navigator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
