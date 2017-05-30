@@ -19,6 +19,7 @@ namespace Contabilidad
             InitializeComponent();
             DM = new DirectoryManager();
             DM.InitialSetup();
+
         }
 
         private void buttonInicio_Click(object sender, EventArgs e)
