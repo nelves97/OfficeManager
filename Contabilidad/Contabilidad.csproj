@@ -101,6 +101,7 @@
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="test.cs" />
     <EmbeddedResource Include="Documentos.resx">
       <DependentUpon>Documentos.cs</DependentUpon>
     </EmbeddedResource>
