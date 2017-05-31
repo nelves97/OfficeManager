@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Contabilidad
 {
-    public partial class Clientes : UserControl
+    public partial class CardClientes : UserControl
     {
-        public Clientes()
+        public CardClientes()
         {
             InitializeComponent();
-        }
-
-        private void _btnRegistrar_Click(object sender, EventArgs e)
-        {
-            navigator1.NavigateTo(new RegistrarCliente());
         }
     }
 }

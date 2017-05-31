@@ -86,7 +86,7 @@
             this.navigator1.AutoSize = true;
             this.navigator1.Location = new System.Drawing.Point(99, 3);
             this.navigator1.Name = "navigator1";
-            this.navigator1.Size = new System.Drawing.Size(200, 100);
+            this.navigator1.Size = new System.Drawing.Size(199, 139);
             this.navigator1.TabIndex = 5;
             // 
             // Documentos
