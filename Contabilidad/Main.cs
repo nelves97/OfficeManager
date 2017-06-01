@@ -14,33 +14,46 @@ namespace Contabilidad
 {
     public partial class Main : Form
     {
-        DirectoryManager DM;
-        List<Cliente> ListaClientes = new List<Cliente>();
-        
+        DirectoryManager DM;  
+   
         public Main()
         {
             InitializeComponent();
             DM = new DirectoryManager();
             DM.InitialSetup();
-            Connection.con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            SqlCommand cargarClientes = new SqlCommand("SELECT * FROM CLIENTE;", Connection.con);
-            using (SqlDataReader rdr = cargarClientes.ExecuteReader())
+            Connection.conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            SqlCommand selectClientes = new SqlCommand("SELECT * FROM CLIENTE;", Connection.conn);
+
+            try
             {
-                while (rdr.Read())
+                Connection.conn.Open();
+                using (SqlDataReader rdr = selectClientes.ExecuteReader())
                 {
-                    Cliente nuevoCliente = new Cliente();
-                    nuevoCliente.Id_Cliente = rdr.GetInt32(0);
-                    nuevoCliente.Nombre = rdr.GetString(1);
-                    nuevoCliente.Correo = rdr.GetString(2);
-                    nuevoCliente.Telefono = rdr.GetString(3);
-                    nuevoCliente.Domicilio = rdr.GetString(4);
-                    nuevoCliente.RFC = rdr.GetString(5);
-                    nuevoCliente.CURP = rdr.GetString(6);
-                    nuevoCliente.ContrasenaRFC = rdr.GetString(7);
-                    nuevoCliente.ContrasenaFIEL = rdr.GetString(8);
-                    nuevoCliente.TipoCliente = rdr.GetString(9);
-                    ListaClientes.Add(nuevoCliente);
+                    while (rdr.Read())
+                    {
+                        Cliente nuevoCliente = new Cliente();
+                        nuevoCliente.Id_Cliente = rdr.GetInt32(0);
+                        nuevoCliente.Nombre = rdr.GetString(1);
+                        nuevoCliente.Correo = rdr.GetString(2);
+                        nuevoCliente.Telefono = rdr.GetString(3);
+                        nuevoCliente.Domicilio = rdr.GetString(4);
+                        nuevoCliente.RFC = rdr.GetString(5);
+                        nuevoCliente.CURP = rdr.GetString(6);
+                        nuevoCliente.ContrasenaRFC = rdr.GetString(7);
+                        nuevoCliente.ContrasenaFIEL = rdr.GetString(8);
+                        nuevoCliente.TipoCliente = rdr.GetByte(9).ToString();
+                        Cliente.ListaClientes.Add(nuevoCliente);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                Connection.conn.Close();
             }
         }
 

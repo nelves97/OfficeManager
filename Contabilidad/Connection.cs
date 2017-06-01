@@ -9,6 +9,6 @@ namespace Contabilidad
 {
     class Connection
     {
-        public static SqlConnection con;
+        public static SqlConnection conn;
     }
 }

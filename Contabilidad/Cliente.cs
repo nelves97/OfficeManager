@@ -19,6 +19,7 @@ namespace Contabilidad
        public string ContrasenaFIEL;
        public string TipoCliente;
        public string DireccionURN;
+       public static List<Cliente> ListaClientes;
 
         public Cliente(int id_Cliente, string nombre, string correo, 
                        string telefono, string domicilio, string rFC, 
