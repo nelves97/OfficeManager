@@ -53,6 +53,7 @@
       <DependentUpon>CardClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs" />
+    <Compile Include="ClienteDeCliente.cs" />
     <Compile Include="Clientes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -68,7 +69,6 @@
       <DependentUpon>Documentos.cs</DependentUpon>
     </Compile>
     <Compile Include="FileManager.cs" />
-    <Compile Include="foo.cs" />
     <Compile Include="Inicio.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,7 +101,6 @@
     <EmbeddedResource Include="Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="test.cs" />
     <EmbeddedResource Include="Documentos.resx">
       <DependentUpon>Documentos.cs</DependentUpon>
     </EmbeddedResource>

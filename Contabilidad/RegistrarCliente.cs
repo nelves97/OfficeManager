@@ -17,11 +17,12 @@ namespace Contabilidad
         {
             InitializeComponent();
         }
+
         private void LimpiarCampos()
         {
             foreach(Control c in Controls)
             {
-                if(c is TextBox)
+                if(c is TextBox || c is RichTextBox)
                 {
                     c.Text = "";
                 }
@@ -35,14 +36,16 @@ namespace Contabilidad
                 int tipoCliente;
                 if (_rbtnMensual.Checked == true)
                 {
-                    tipoCliente = 1;
+                    tipoCliente = (Int32) Cliente.Periodos.MENSUAL;
                 }
                 else
                 {
-                    tipoCliente = 2;
+                    tipoCliente = (Int32) Cliente.Periodos.BIMESTRAL;
                 }
-
-                SqlCommand nuevoCliente = new SqlCommand("INSERT INTO CLIENTE VALUES(@nombre, @correo, @telefono, @domicilio, @RFC, @CURP, @contrasenaRFC, @contrasenaFIEL, @tipocliente;", Connection.conn);
+                Guid _guid = Guid.NewGuid();
+                
+                SqlCommand nuevoCliente = new SqlCommand("INSERT INTO Clientes VALUES(@guid, @nombre, @correo, @telefono, @domicilio, @RFC, @CURP, @contrasenaRFC, @contrasenaFIEL, @periodo);", Connection.conn);
+                nuevoCliente.Parameters.Add(new SqlParameter("guid", _guid));
                 nuevoCliente.Parameters.Add(new SqlParameter("nombre", _txtNombre.Text));
                 nuevoCliente.Parameters.Add(new SqlParameter("correo", _txtCorreo.Text));
                 nuevoCliente.Parameters.Add(new SqlParameter("telefono", _txtTelefono.Text));
@@ -51,8 +54,8 @@ namespace Contabilidad
                 nuevoCliente.Parameters.Add(new SqlParameter("CURP", _txtCURP.Text));
                 nuevoCliente.Parameters.Add(new SqlParameter("contrasenaRFC", _txtContrasenaRFC.Text));
                 nuevoCliente.Parameters.Add(new SqlParameter("contrasenaFIEL", _txtContrasenaFIEL.Text));
-                nuevoCliente.Parameters.Add(new SqlParameter("tipocliente", tipoCliente));
-                SqlCommand idNueva = new SqlCommand(" SELECT TOP 1 ID_CLIENTE FROM CLIENTE ORDER BY ID_CLIENTE DESC;", Connection.conn);
+                nuevoCliente.Parameters.Add(new SqlParameter("periodo", tipoCliente));
+                SqlCommand idNueva = new SqlCommand(" SELECT TOP 1 Id FROM Clientes ORDER BY Id DESC;", Connection.conn);
                 
                 try
                 {
@@ -61,7 +64,7 @@ namespace Contabilidad
                     MessageBox.Show("Cliente guardado correctamente.");
                     using (SqlDataReader rdr = idNueva.ExecuteReader())
                     {
-                        Cliente nuevo = new Cliente(rdr.GetByte(0), _txtNombre.Text, _txtCorreo.Text, _txtTelefono.Text, _txtDomicilio.Text, _txtRFC.Text, _txtCURP.Text, _txtContrasenaRFC.Text, _txtContrasenaFIEL.Text, tipoCliente.ToString(), "x");
+                        Cliente nuevo = new Cliente(rdr.GetByte(0), _guid, _txtNombre.Text, _txtCorreo.Text, _txtTelefono.Text, _txtDomicilio.Text, _txtRFC.Text, _txtCURP.Text, _txtContrasenaRFC.Text, _txtContrasenaFIEL.Text, (Cliente.Periodos) tipoCliente, null);
                         Cliente.ListaClientes.Add(nuevo);
                     }                        
                     LimpiarCampos();

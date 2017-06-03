@@ -31,24 +31,27 @@ namespace Contabilidad
                 {
                     while (rdr.Read())
                     {
-                        Cliente nuevoCliente = new Cliente();
-                        nuevoCliente.Id_Cliente = rdr.GetInt32(0);
-                        nuevoCliente.Nombre = rdr.GetString(1);
-                        nuevoCliente.Correo = rdr.GetString(2);
-                        nuevoCliente.Telefono = rdr.GetString(3);
-                        nuevoCliente.Domicilio = rdr.GetString(4);
-                        nuevoCliente.RFC = rdr.GetString(5);
-                        nuevoCliente.CURP = rdr.GetString(6);
-                        nuevoCliente.ContrasenaRFC = rdr.GetString(7);
-                        nuevoCliente.ContrasenaFIEL = rdr.GetString(8);
-                        nuevoCliente.TipoCliente = rdr.GetByte(9).ToString();
+                        Cliente nuevoCliente = new Cliente(
+                            rdr.GetInt32(0),
+                            rdr.GetGuid(1),
+                            rdr.GetString(2),
+                            rdr.GetString(3),
+                            rdr.GetString(4),
+                            rdr.GetString(5),
+                            rdr.GetString(6),
+                            rdr.GetString(7),
+                            rdr.GetString(8),
+                            rdr.GetString(9),
+                            (Cliente.Periodos) rdr.GetInt32(10),
+                            rdr.GetString(11) != null ? new Uri(rdr.GetString(11)) : null
+                            );
+
                         Cliente.ListaClientes.Add(nuevoCliente);
                     }
                 }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.ToString());
             }
             finally

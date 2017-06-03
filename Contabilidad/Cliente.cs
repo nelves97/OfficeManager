@@ -8,50 +8,53 @@ namespace Contabilidad
 {
     public class Cliente
     {
-       public int Id_Cliente;
-       public string Nombre;
-       public string Correo;
-       public string Telefono;
-       public string Domicilio;
-       public string RFC;
-       public string CURP;
-       public string ContrasenaRFC;
-       public string ContrasenaFIEL;
-       public string TipoCliente;
-       public string DireccionURN;
-       public static List<Cliente> ListaClientes;
+        public static List<Cliente> ListaClientes;
 
-        public Cliente(int id_Cliente, string nombre, string correo, 
-                       string telefono, string domicilio, string rFC, 
-                       string cURP, string contrasenaRFC, string contrasenaFIEL, 
-                       string tipoCliente, string direccionURN)
+        public enum Periodos
         {
-            Id_Cliente = id_Cliente;
-            Nombre = nombre;
-            Correo = correo;
-            Telefono = telefono;
-            Domicilio = domicilio;
-            RFC = rFC;
-            CURP = cURP;
-            ContrasenaRFC = contrasenaRFC;
-            ContrasenaFIEL = contrasenaFIEL;
-            TipoCliente = tipoCliente;
-            DireccionURN = direccionURN;
+            MENSUAL = 1,
+            BIMESTRAL = 2
         }
 
-        public Cliente()
+        public Int32 Id;
+        public Guid GUID;
+        public String Nombre;
+        public String Correo;
+        public String Telefono;
+        public String Domicilio;
+        public String RFC;
+        public String CURP;
+        public String PasswordRFC;
+        public String PasswordFIEL;
+        public Periodos Periodo;
+        public Uri FilesUri;
+
+        public Cliente(
+            Int32  Id,
+            Guid GUID,
+            String Nombre,
+            String Correo, 
+            String Telefono,
+            String Domicilio,
+            String RFC, 
+            String CURP,
+            String PasswordRFC,
+            String PasswordFIEL, 
+            Periodos Periodo,
+            Uri FilesUri)
         {
-            Id_Cliente = 0;
-            Nombre = null;
-            Correo = null;
-            Telefono = null;
-            Domicilio = null;
-            RFC = null;
-            CURP = null;
-            ContrasenaRFC = null;
-            ContrasenaFIEL = null;
-            TipoCliente = null;
-            DireccionURN = null;
+            this.Id = Id;
+            this.GUID = GUID;
+            this.Nombre = Nombre;
+            this.Correo = Correo;
+            this.Telefono = Telefono;
+            this.Domicilio = Domicilio;
+            this.RFC = RFC;
+            this.CURP = CURP;
+            this.PasswordRFC = PasswordRFC;
+            this.PasswordFIEL = PasswordFIEL;
+            this.Periodo = Periodo;
+            this.FilesUri = FilesUri;
         }
     }
 }
