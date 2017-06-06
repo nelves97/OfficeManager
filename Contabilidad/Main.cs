@@ -21,19 +21,21 @@ namespace Contabilidad
             InitializeComponent();
             DM = new DirectoryManager();
             DM.InitialSetup();
+            Cliente.ListaClientes = new List<Cliente>();
             Connection.conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            SqlCommand selectClientes = new SqlCommand("SELECT * FROM CLIENTE;", Connection.conn);
+            SqlCommand selectClientes = new SqlCommand("SELECT * FROM Clientes;", Connection.conn);
 
             try
             {
                 Connection.conn.Open();
+                
                 using (SqlDataReader rdr = selectClientes.ExecuteReader())
                 {
                     while (rdr.Read())
                     {
                         Cliente nuevoCliente = new Cliente(
                             rdr.GetInt32(0),
-                            rdr.GetGuid(1),
+                            rdr.GetString(1),
                             rdr.GetString(2),
                             rdr.GetString(3),
                             rdr.GetString(4),
@@ -41,10 +43,8 @@ namespace Contabilidad
                             rdr.GetString(6),
                             rdr.GetString(7),
                             rdr.GetString(8),
-                            rdr.GetString(9),
-                            (Cliente.Periodos) rdr.GetInt32(10),
-                            rdr.GetString(11) != null ? new Uri(rdr.GetString(11)) : null
-                            );
+                            (Cliente.Periodos) rdr.GetInt32(9)
+                        );
 
                         Cliente.ListaClientes.Add(nuevoCliente);
                     }

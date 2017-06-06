@@ -17,7 +17,6 @@ namespace Contabilidad
         }
 
         public Int32 Id;
-        public Guid GUID;
         public String Nombre;
         public String Correo;
         public String Telefono;
@@ -27,11 +26,11 @@ namespace Contabilidad
         public String PasswordRFC;
         public String PasswordFIEL;
         public Periodos Periodo;
-        public Uri FilesUri;
+
+        public Cliente() { }
 
         public Cliente(
             Int32  Id,
-            Guid GUID,
             String Nombre,
             String Correo, 
             String Telefono,
@@ -40,11 +39,9 @@ namespace Contabilidad
             String CURP,
             String PasswordRFC,
             String PasswordFIEL, 
-            Periodos Periodo,
-            Uri FilesUri)
+            Periodos Periodo)
         {
             this.Id = Id;
-            this.GUID = GUID;
             this.Nombre = Nombre;
             this.Correo = Correo;
             this.Telefono = Telefono;
@@ -54,7 +51,6 @@ namespace Contabilidad
             this.PasswordRFC = PasswordRFC;
             this.PasswordFIEL = PasswordFIEL;
             this.Periodo = Periodo;
-            this.FilesUri = FilesUri;
         }
     }
 }

@@ -31,60 +31,64 @@ namespace Contabilidad
         
         private void _btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (_txtNombre != null)
+            if (_txtNombre.Text == "")
             {
-                int tipoCliente;
-                if (_rbtnMensual.Checked == true)
-                {
-                    tipoCliente = (Int32) Cliente.Periodos.MENSUAL;
-                }
-                else
-                {
-                    tipoCliente = (Int32) Cliente.Periodos.BIMESTRAL;
-                }
-                Guid _guid = Guid.NewGuid();
-                
-                SqlCommand nuevoCliente = new SqlCommand("INSERT INTO Clientes VALUES(@guid, @nombre, @correo, @telefono, @domicilio, @RFC, @CURP, @contrasenaRFC, @contrasenaFIEL, @periodo);", Connection.conn);
-                nuevoCliente.Parameters.Add(new SqlParameter("guid", _guid));
-                nuevoCliente.Parameters.Add(new SqlParameter("nombre", _txtNombre.Text));
-                nuevoCliente.Parameters.Add(new SqlParameter("correo", _txtCorreo.Text));
-                nuevoCliente.Parameters.Add(new SqlParameter("telefono", _txtTelefono.Text));
-                nuevoCliente.Parameters.Add(new SqlParameter("domicilio", _txtDomicilio.Text));
-                nuevoCliente.Parameters.Add(new SqlParameter("RFC", _txtRFC.Text));
-                nuevoCliente.Parameters.Add(new SqlParameter("CURP", _txtCURP.Text));
-                nuevoCliente.Parameters.Add(new SqlParameter("contrasenaRFC", _txtContrasenaRFC.Text));
-                nuevoCliente.Parameters.Add(new SqlParameter("contrasenaFIEL", _txtContrasenaFIEL.Text));
-                nuevoCliente.Parameters.Add(new SqlParameter("periodo", tipoCliente));
-                SqlCommand idNueva = new SqlCommand(" SELECT TOP 1 Id FROM Clientes ORDER BY Id DESC;", Connection.conn);
-                
-                try
-                {
-                    Connection.conn.Open();
-                    nuevoCliente.ExecuteNonQuery();
-                    MessageBox.Show("Cliente guardado correctamente.");
-                    using (SqlDataReader rdr = idNueva.ExecuteReader())
-                    {
-                        Cliente nuevo = new Cliente(rdr.GetByte(0), _guid, _txtNombre.Text, _txtCorreo.Text, _txtTelefono.Text, _txtDomicilio.Text, _txtRFC.Text, _txtCURP.Text, _txtContrasenaRFC.Text, _txtContrasenaFIEL.Text, (Cliente.Periodos) tipoCliente, null);
-                        Cliente.ListaClientes.Add(nuevo);
-                    }                        
-                    LimpiarCampos();
-                    _rbtnBimestral.Checked = false;
-                    _rbtnMensual.Checked = false;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString());
-                }
-                finally
-                {
-                    Connection.conn.Close();
-                }
+                MessageBox.Show("Ingrese el nombre del cliente");
+                return;
+            }
+
+            if (!_rbtnMensual.Checked && !_rbtnBimestral.Checked)
+            {
+                MessageBox.Show("Seleccione un perido");
+                return;
+            }
+
+            int tipoCliente;
+            if (_rbtnMensual.Checked == true)
+            {
+                tipoCliente = (Int32) Cliente.Periodos.MENSUAL;
             }
             else
             {
-                MessageBox.Show("El campo nombre se encuentra vacío");
+                tipoCliente = (Int32) Cliente.Periodos.BIMESTRAL;
             }
+                
+            SqlCommand nuevoCliente = new SqlCommand("INSERT INTO Clientes (Nombre, Correo, Telefono, Domicilio, RFC, CURP, PasswordRFC, PasswordFIEL, Periodo) VALUES(@Nombre, @Correo, @Telefono, @Domicilio, @RFC, @CURP, @PasswordRFC, @PasswordFIEL, @Periodo);", Connection.conn);
+            nuevoCliente.Parameters.Add(new SqlParameter("Nombre", _txtNombre.Text));
+            nuevoCliente.Parameters.Add(new SqlParameter("Correo", _txtCorreo.Text));
+            nuevoCliente.Parameters.Add(new SqlParameter("Telefono", _txtTelefono.Text));
+            nuevoCliente.Parameters.Add(new SqlParameter("Domicilio", _txtDomicilio.Text));
+            nuevoCliente.Parameters.Add(new SqlParameter("RFC", _txtRFC.Text));
+            nuevoCliente.Parameters.Add(new SqlParameter("CURP", _txtCURP.Text));
+            nuevoCliente.Parameters.Add(new SqlParameter("PasswordRFC", _txtContrasenaRFC.Text));
+            nuevoCliente.Parameters.Add(new SqlParameter("PasswordFIEL", _txtContrasenaFIEL.Text));
+            nuevoCliente.Parameters.Add(new SqlParameter("Periodo", tipoCliente));
+            SqlCommand idNueva = new SqlCommand("SELECT TOP 1 Id FROM Clientes ORDER BY Id DESC;", Connection.conn);
 
+            try
+            {
+                Connection.conn.Open();
+                nuevoCliente.ExecuteNonQuery();
+                MessageBox.Show("Cliente guardado correctamente.");
+                using (SqlDataReader rdr = idNueva.ExecuteReader())
+                {
+                    rdr.Read();
+                    Cliente nuevo = new Cliente(rdr.GetInt32(0), _txtNombre.Text, _txtCorreo.Text, _txtTelefono.Text, _txtDomicilio.Text, _txtRFC.Text, _txtCURP.Text, _txtContrasenaRFC.Text, _txtContrasenaFIEL.Text, (Cliente.Periodos) tipoCliente);
+                    Cliente.ListaClientes.Add(nuevo);
+                }                        
+                LimpiarCampos();
+                _rbtnBimestral.Checked = false;
+                _rbtnMensual.Checked = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                Connection.conn.Close();
+            }
+        }
         }
     }
 }

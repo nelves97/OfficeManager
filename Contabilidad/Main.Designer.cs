@@ -30,7 +30,6 @@
         {
             this.buttonInicio = new System.Windows.Forms.Button();
             this.buttonClientes = new System.Windows.Forms.Button();
-            this.buttonDocumentos = new System.Windows.Forms.Button();
             this.navigator1 = new Contabilidad.Navigator();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -39,7 +38,7 @@
             // buttonInicio
             // 
             this.buttonInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonInicio.Location = new System.Drawing.Point(0, 46);
+            this.buttonInicio.Location = new System.Drawing.Point(0, 23);
             this.buttonInicio.Name = "buttonInicio";
             this.buttonInicio.Size = new System.Drawing.Size(104, 23);
             this.buttonInicio.TabIndex = 0;
@@ -58,17 +57,6 @@
             this.buttonClientes.UseVisualStyleBackColor = true;
             this.buttonClientes.Click += new System.EventHandler(this.buttonClientes_Click);
             // 
-            // buttonDocumentos
-            // 
-            this.buttonDocumentos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonDocumentos.Location = new System.Drawing.Point(0, 23);
-            this.buttonDocumentos.Name = "buttonDocumentos";
-            this.buttonDocumentos.Size = new System.Drawing.Size(104, 23);
-            this.buttonDocumentos.TabIndex = 2;
-            this.buttonDocumentos.Text = "Documentos";
-            this.buttonDocumentos.UseVisualStyleBackColor = true;
-            this.buttonDocumentos.Click += new System.EventHandler(this.buttonDocumentos_Click);
-            // 
             // navigator1
             // 
             this.navigator1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -84,7 +72,6 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.buttonInicio);
-            this.panel1.Controls.Add(this.buttonDocumentos);
             this.panel1.Controls.Add(this.buttonClientes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -111,7 +98,6 @@
 
         private System.Windows.Forms.Button buttonInicio;
         private System.Windows.Forms.Button buttonClientes;
-        private System.Windows.Forms.Button buttonDocumentos;
         private Navigator navigator1;
         private System.Windows.Forms.Panel panel1;
     }
