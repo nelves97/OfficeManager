@@ -21,5 +21,10 @@ namespace Contabilidad
         {
             navigator1.NavigateTo(new RegistrarCliente());
         }
+
+        private void _btnConsultar_Click(object sender, EventArgs e)
+        {
+            navigator1.NavigateTo(new ConsultarCliente());
+        }
     }
 }

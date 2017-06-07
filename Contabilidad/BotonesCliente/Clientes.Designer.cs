@@ -52,6 +52,7 @@
             this._btnConsultar.TabIndex = 1;
             this._btnConsultar.Text = "Consultar";
             this._btnConsultar.UseVisualStyleBackColor = true;
+            this._btnConsultar.Click += new System.EventHandler(this._btnConsultar_Click);
             // 
             // _lblCliente
             // 
@@ -67,7 +68,7 @@
             // 
             this.navigator1.Location = new System.Drawing.Point(84, 3);
             this.navigator1.Name = "navigator1";
-            this.navigator1.Size = new System.Drawing.Size(373, 426);
+            this.navigator1.Size = new System.Drawing.Size(806, 426);
             this.navigator1.TabIndex = 3;
             // 
             // Clientes
@@ -79,7 +80,7 @@
             this.Controls.Add(this._btnConsultar);
             this.Controls.Add(this._btnRegistrar);
             this.Name = "Clientes";
-            this.Size = new System.Drawing.Size(470, 441);
+            this.Size = new System.Drawing.Size(904, 441);
             this.ResumeLayout(false);
             this.PerformLayout();
 

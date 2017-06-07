@@ -15,7 +15,11 @@ namespace Contabilidad
     {
         public RegistrarCliente()
         {
-            InitializeComponent();
+            InitializeComponent();   
+        }
+        private void RegistrarCliente_Load(object sender, EventArgs e)
+        {
+            _txtNombre.Focus();
         }
 
         private void LimpiarCampos()
@@ -31,6 +35,7 @@ namespace Contabilidad
         
         private void _btnRegistrar_Click(object sender, EventArgs e)
         {
+            _txtNombre.Focus();
             if (_txtNombre.Text == "")
             {
                 MessageBox.Show("Ingrese el nombre del cliente");
@@ -46,11 +51,11 @@ namespace Contabilidad
             int tipoCliente;
             if (_rbtnMensual.Checked == true)
             {
-                tipoCliente = (Int32) Cliente.Periodos.MENSUAL;
+                tipoCliente = (Int32) Cliente.Periodos.Mensual;
             }
             else
             {
-                tipoCliente = (Int32) Cliente.Periodos.BIMESTRAL;
+                tipoCliente = (Int32) Cliente.Periodos.Bimestral;
             }
                 
             SqlCommand nuevoCliente = new SqlCommand("INSERT INTO Clientes (Nombre, Correo, Telefono, Domicilio, RFC, CURP, PasswordRFC, PasswordFIEL, Periodo) VALUES(@Nombre, @Correo, @Telefono, @Domicilio, @RFC, @CURP, @PasswordRFC, @PasswordFIEL, @Periodo);", Connection.conn);
@@ -89,6 +94,7 @@ namespace Contabilidad
                 Connection.conn.Close();
             }
         }
-        }
+
     }
-}
+    }
+

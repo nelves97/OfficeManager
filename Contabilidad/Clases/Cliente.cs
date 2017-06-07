@@ -9,11 +9,11 @@ namespace Contabilidad
     public class Cliente
     {
         public static List<Cliente> ListaClientes;
-
+        public static Cliente consulta;
         public enum Periodos
         {
-            MENSUAL = 1,
-            BIMESTRAL = 2
+            Mensual = 1,
+            Bimestral = 2
         }
 
         public Int32 Id;
@@ -51,6 +51,10 @@ namespace Contabilidad
             this.PasswordRFC = PasswordRFC;
             this.PasswordFIEL = PasswordFIEL;
             this.Periodo = Periodo;
+        }
+        public override string ToString()
+        {
+            return Nombre;
         }
     }
 }
