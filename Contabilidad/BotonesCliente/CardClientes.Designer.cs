@@ -44,8 +44,13 @@
             this._txtRFC = new System.Windows.Forms.TextBox();
             this._txtCURP = new System.Windows.Forms.TextBox();
             this._txtContrasenaRFC = new System.Windows.Forms.TextBox();
-            this._txtContrasenaFirma = new System.Windows.Forms.TextBox();
+            this._txtContrasenaFIEL = new System.Windows.Forms.TextBox();
             this._txtTipoCliente = new System.Windows.Forms.TextBox();
+            this._btnRegistrar = new System.Windows.Forms.Button();
+            this._btnEliminar = new System.Windows.Forms.Button();
+            this._btnEditar = new System.Windows.Forms.Button();
+            this._lstbClienteCliente = new System.Windows.Forms.ListBox();
+            this.navigator1 = new Contabilidad.Navigator();
             this.SuspendLayout();
             // 
             // _lblNombre
@@ -147,7 +152,7 @@
             this._txtNombre.Size = new System.Drawing.Size(184, 13);
             this._txtNombre.TabIndex = 1;
             this._txtNombre.TabStop = false;
-            this._txtNombre.Text = "Luis Enrique Rodriguez Delgado";
+            this._txtNombre.Text = ".";
             // 
             // _txtCorreo
             // 
@@ -158,7 +163,7 @@
             this._txtCorreo.Size = new System.Drawing.Size(184, 13);
             this._txtCorreo.TabIndex = 2;
             this._txtCorreo.TabStop = false;
-            this._txtCorreo.Text = "luiserd97@gmail.com";
+            this._txtCorreo.Text = ".";
             // 
             // _txtTelefono
             // 
@@ -169,11 +174,11 @@
             this._txtTelefono.Size = new System.Drawing.Size(184, 13);
             this._txtTelefono.TabIndex = 3;
             this._txtTelefono.TabStop = false;
-            this._txtTelefono.Text = "5520446623588717";
+            this._txtTelefono.Text = ".";
             // 
             // _txtDomicilio
             // 
-            this._txtDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this._txtDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this._txtDomicilio.Location = new System.Drawing.Point(15, 230);
             this._txtDomicilio.Multiline = true;
             this._txtDomicilio.Name = "_txtDomicilio";
@@ -181,7 +186,7 @@
             this._txtDomicilio.Size = new System.Drawing.Size(296, 51);
             this._txtDomicilio.TabIndex = 9;
             this._txtDomicilio.TabStop = false;
-            this._txtDomicilio.Text = "Calle ramon corona esquina con carlos caturegli. Col. Los Jardines";
+            this._txtDomicilio.Text = ".";
             // 
             // _txtRFC
             // 
@@ -192,7 +197,7 @@
             this._txtRFC.Size = new System.Drawing.Size(184, 13);
             this._txtRFC.TabIndex = 4;
             this._txtRFC.TabStop = false;
-            this._txtRFC.Text = "ASZXDCFVGBHNM";
+            this._txtRFC.Text = ".";
             // 
             // _txtCURP
             // 
@@ -203,7 +208,7 @@
             this._txtCURP.Size = new System.Drawing.Size(184, 13);
             this._txtCURP.TabIndex = 5;
             this._txtCURP.TabStop = false;
-            this._txtCURP.Text = "QWERTYUIOPLKJHGFDS";
+            this._txtCURP.Text = ".";
             // 
             // _txtContrasenaRFC
             // 
@@ -214,18 +219,18 @@
             this._txtContrasenaRFC.Size = new System.Drawing.Size(184, 13);
             this._txtContrasenaRFC.TabIndex = 6;
             this._txtContrasenaRFC.TabStop = false;
-            this._txtContrasenaRFC.Text = "Asdfghjy";
+            this._txtContrasenaRFC.Text = ".";
             // 
-            // _txtContrasenaFirma
+            // _txtContrasenaFIEL
             // 
-            this._txtContrasenaFirma.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this._txtContrasenaFirma.Location = new System.Drawing.Point(127, 161);
-            this._txtContrasenaFirma.Name = "_txtContrasenaFirma";
-            this._txtContrasenaFirma.ReadOnly = true;
-            this._txtContrasenaFirma.Size = new System.Drawing.Size(184, 13);
-            this._txtContrasenaFirma.TabIndex = 7;
-            this._txtContrasenaFirma.TabStop = false;
-            this._txtContrasenaFirma.Text = "Estaesunacontrasena";
+            this._txtContrasenaFIEL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this._txtContrasenaFIEL.Location = new System.Drawing.Point(127, 161);
+            this._txtContrasenaFIEL.Name = "_txtContrasenaFIEL";
+            this._txtContrasenaFIEL.ReadOnly = true;
+            this._txtContrasenaFIEL.Size = new System.Drawing.Size(184, 13);
+            this._txtContrasenaFIEL.TabIndex = 7;
+            this._txtContrasenaFIEL.TabStop = false;
+            this._txtContrasenaFIEL.Text = ".";
             // 
             // _txtTipoCliente
             // 
@@ -236,15 +241,67 @@
             this._txtTipoCliente.Size = new System.Drawing.Size(184, 13);
             this._txtTipoCliente.TabIndex = 8;
             this._txtTipoCliente.TabStop = false;
-            this._txtTipoCliente.Text = "Bimestral";
+            this._txtTipoCliente.Text = ".";
+            // 
+            // _btnRegistrar
+            // 
+            this._btnRegistrar.Location = new System.Drawing.Point(15, 388);
+            this._btnRegistrar.Name = "_btnRegistrar";
+            this._btnRegistrar.Size = new System.Drawing.Size(87, 23);
+            this._btnRegistrar.TabIndex = 10;
+            this._btnRegistrar.Text = "Registrar";
+            this._btnRegistrar.UseVisualStyleBackColor = true;
+            this._btnRegistrar.Click += new System.EventHandler(this._btnRegistrar_Click);
+            // 
+            // _btnEliminar
+            // 
+            this._btnEliminar.Location = new System.Drawing.Point(224, 388);
+            this._btnEliminar.Name = "_btnEliminar";
+            this._btnEliminar.Size = new System.Drawing.Size(87, 23);
+            this._btnEliminar.TabIndex = 12;
+            this._btnEliminar.Text = "Eliminar";
+            this._btnEliminar.UseVisualStyleBackColor = true;
+            this._btnEliminar.Click += new System.EventHandler(this._btnEliminar_Click);
+            // 
+            // _btnEditar
+            // 
+            this._btnEditar.Location = new System.Drawing.Point(119, 388);
+            this._btnEditar.Name = "_btnEditar";
+            this._btnEditar.Size = new System.Drawing.Size(87, 23);
+            this._btnEditar.TabIndex = 11;
+            this._btnEditar.Text = "Editar";
+            this._btnEditar.UseVisualStyleBackColor = true;
+            this._btnEditar.Click += new System.EventHandler(this._btnEditar_Click);
+            // 
+            // _lstbClienteCliente
+            // 
+            this._lstbClienteCliente.FormattingEnabled = true;
+            this._lstbClienteCliente.Location = new System.Drawing.Point(15, 287);
+            this._lstbClienteCliente.Name = "_lstbClienteCliente";
+            this._lstbClienteCliente.Size = new System.Drawing.Size(296, 95);
+            this._lstbClienteCliente.Sorted = true;
+            this._lstbClienteCliente.TabIndex = 13;
+            this._lstbClienteCliente.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this._lstbClienteCliente_MouseDoubleClick);
+            // 
+            // navigator1
+            // 
+            this.navigator1.Location = new System.Drawing.Point(317, 287);
+            this.navigator1.Name = "navigator1";
+            this.navigator1.Size = new System.Drawing.Size(291, 124);
+            this.navigator1.TabIndex = 14;
             // 
             // CardClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.navigator1);
+            this.Controls.Add(this._lstbClienteCliente);
+            this.Controls.Add(this._btnRegistrar);
+            this.Controls.Add(this._btnEliminar);
+            this.Controls.Add(this._btnEditar);
             this.Controls.Add(this._txtTipoCliente);
-            this.Controls.Add(this._txtContrasenaFirma);
+            this.Controls.Add(this._txtContrasenaFIEL);
             this.Controls.Add(this._txtContrasenaRFC);
             this.Controls.Add(this._txtCURP);
             this.Controls.Add(this._txtRFC);
@@ -262,7 +319,7 @@
             this.Controls.Add(this._lblTelefono);
             this.Controls.Add(this._lblCorreo);
             this.Name = "CardClientes";
-            this.Size = new System.Drawing.Size(322, 297);
+            this.Size = new System.Drawing.Size(616, 424);
             this.Load += new System.EventHandler(this.CardClientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -287,7 +344,12 @@
         private System.Windows.Forms.TextBox _txtRFC;
         private System.Windows.Forms.TextBox _txtCURP;
         private System.Windows.Forms.TextBox _txtContrasenaRFC;
-        private System.Windows.Forms.TextBox _txtContrasenaFirma;
+        private System.Windows.Forms.TextBox _txtContrasenaFIEL;
         private System.Windows.Forms.TextBox _txtTipoCliente;
+        private System.Windows.Forms.Button _btnRegistrar;
+        private System.Windows.Forms.Button _btnEliminar;
+        private System.Windows.Forms.Button _btnEditar;
+        private System.Windows.Forms.ListBox _lstbClienteCliente;
+        private Navigator navigator1;
     }
 }

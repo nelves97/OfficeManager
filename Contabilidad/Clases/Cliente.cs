@@ -9,7 +9,7 @@ namespace Contabilidad
     public class Cliente
     {
         public static List<Cliente> ListaClientes;
-        public static Cliente consulta;
+        public static Cliente auxiliar;
         public enum Periodos
         {
             Mensual = 1,

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Contabilidad
 {
-    class ClienteDeCliente
+    public class ClienteDeCliente
     {
         public static List<ClienteDeCliente> ListaClientesDeClientes;
+        public static ClienteDeCliente auxiliar;
 
         public Int32 Id;
         public String Nombre;
@@ -31,6 +32,11 @@ namespace Contabilidad
             this.Telefono = Telefono;
             this.RFC = RFC;
             this.IdCliente = IdCliente;
+        }
+
+        public override string ToString()
+        {
+            return Nombre;
         }
     }
 }

@@ -22,9 +22,11 @@ namespace Contabilidad
             DM = new DirectoryManager();
             DM.InitialSetup();
             Cliente.ListaClientes = new List<Cliente>();
+            ClienteDeCliente.ListaClientesDeClientes = new List<ClienteDeCliente>();
             Connection.conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             SqlCommand selectClientes = new SqlCommand("SELECT * FROM Clientes;", Connection.conn);
-
+            SqlCommand selectClientesClientes = new SqlCommand("SELECT * FROM ClientesDeClientes;", Connection.conn);
+            navigator1.NavigateTo(new CatalogoClientes());
             try
             {
                 Connection.conn.Open();
@@ -49,6 +51,23 @@ namespace Contabilidad
                         Cliente.ListaClientes.Add(nuevoCliente);
                     }
                 }
+
+                using (SqlDataReader rdr = selectClientesClientes.ExecuteReader())
+                {
+                    while (rdr.Read())
+                    {
+                        ClienteDeCliente nuevoCliente = new ClienteDeCliente(
+                            rdr.GetInt32(0),
+                            rdr.GetString(1),
+                            rdr.GetString(2),
+                            rdr.GetString(3),
+                            rdr.GetString(4),
+                            rdr.GetInt32(5)
+                            );
+
+                        ClienteDeCliente.ListaClientesDeClientes.Add(nuevoCliente);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -58,21 +77,8 @@ namespace Contabilidad
             {
                 Connection.conn.Close();
             }
+
         }
 
-        private void buttonInicio_Click(object sender, EventArgs e)
-        {
-            navigator1.NavigateTo(new Inicio());
-        }
-
-        private void buttonClientes_Click(object sender, EventArgs e)
-        {
-            navigator1.NavigateTo(new Clientes());
-        }
-
-        private void buttonDocumentos_Click(object sender, EventArgs e)
-        {
-            navigator1.NavigateTo(new Documentos());
-        }
     }
 }

@@ -27,5 +27,10 @@ namespace Contabilidad
             Controls.Clear();
             Controls.Add(View);
         }
+
+        public void ClearNavigator()
+        {
+            Controls.Clear();
+        }
     }
 }

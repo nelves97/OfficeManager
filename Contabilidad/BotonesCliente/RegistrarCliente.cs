@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,31 +11,16 @@ using System.Data.SqlClient;
 
 namespace Contabilidad
 {
-    public partial class RegistrarCliente : UserControl
+    public partial class RegistrarCliente : Form
     {
         public RegistrarCliente()
         {
-            InitializeComponent();   
-        }
-        private void RegistrarCliente_Load(object sender, EventArgs e)
-        {
+            InitializeComponent();
             _txtNombre.Focus();
         }
 
-        private void LimpiarCampos()
-        {
-            foreach(Control c in Controls)
-            {
-                if(c is TextBox || c is RichTextBox)
-                {
-                    c.Text = "";
-                }
-            }
-        }
-        
         private void _btnRegistrar_Click(object sender, EventArgs e)
         {
-            _txtNombre.Focus();
             if (_txtNombre.Text == "")
             {
                 MessageBox.Show("Ingrese el nombre del cliente");
@@ -51,13 +36,13 @@ namespace Contabilidad
             int tipoCliente;
             if (_rbtnMensual.Checked == true)
             {
-                tipoCliente = (Int32) Cliente.Periodos.Mensual;
+                tipoCliente = (Int32)Cliente.Periodos.Mensual;
             }
             else
             {
-                tipoCliente = (Int32) Cliente.Periodos.Bimestral;
+                tipoCliente = (Int32)Cliente.Periodos.Bimestral;
             }
-                
+
             SqlCommand nuevoCliente = new SqlCommand("INSERT INTO Clientes (Nombre, Correo, Telefono, Domicilio, RFC, CURP, PasswordRFC, PasswordFIEL, Periodo) VALUES(@Nombre, @Correo, @Telefono, @Domicilio, @RFC, @CURP, @PasswordRFC, @PasswordFIEL, @Periodo);", Connection.conn);
             nuevoCliente.Parameters.Add(new SqlParameter("Nombre", _txtNombre.Text));
             nuevoCliente.Parameters.Add(new SqlParameter("Correo", _txtCorreo.Text));
@@ -78,10 +63,9 @@ namespace Contabilidad
                 using (SqlDataReader rdr = idNueva.ExecuteReader())
                 {
                     rdr.Read();
-                    Cliente nuevo = new Cliente(rdr.GetInt32(0), _txtNombre.Text, _txtCorreo.Text, _txtTelefono.Text, _txtDomicilio.Text, _txtRFC.Text, _txtCURP.Text, _txtContrasenaRFC.Text, _txtContrasenaFIEL.Text, (Cliente.Periodos) tipoCliente);
+                    Cliente nuevo = new Cliente(rdr.GetInt32(0), _txtNombre.Text, _txtCorreo.Text, _txtTelefono.Text, _txtDomicilio.Text, _txtRFC.Text, _txtCURP.Text, _txtContrasenaRFC.Text, _txtContrasenaFIEL.Text, (Cliente.Periodos)tipoCliente);
                     Cliente.ListaClientes.Add(nuevo);
-                }                        
-                LimpiarCampos();
+                }
                 _rbtnBimestral.Checked = false;
                 _rbtnMensual.Checked = false;
             }
@@ -92,9 +76,13 @@ namespace Contabilidad
             finally
             {
                 Connection.conn.Close();
+                this.Close();
             }
         }
 
+        private void _btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
-    }
-
+}
