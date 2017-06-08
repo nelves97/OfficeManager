@@ -55,15 +55,6 @@ namespace Contabilidad
 
         }
 
-        private void _lstbClienteCliente_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (_lstbClienteCliente.SelectedItem != null)
-            {
-                ClienteDeCliente.auxiliar = (ClienteDeCliente)_lstbClienteCliente.SelectedItem;
-                navigator1.NavigateTo(new CardClienteCliente());
-            }
-        }
-
         private void _btnEliminar_Click(object sender, EventArgs e)
         {
             if (_lstbClienteCliente.SelectedIndex != -1)
@@ -119,6 +110,15 @@ namespace Contabilidad
                 }
                 _lstbClienteCliente.EndUpdate();
                 navigator1.ClearNavigator();
+            }
+        }
+
+        private void _lstbClienteCliente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_lstbClienteCliente.SelectedItem != null)
+            {
+                ClienteDeCliente.auxiliar = (ClienteDeCliente)_lstbClienteCliente.SelectedItem;
+                navigator1.NavigateTo(new CardClienteCliente());
             }
         }
     }

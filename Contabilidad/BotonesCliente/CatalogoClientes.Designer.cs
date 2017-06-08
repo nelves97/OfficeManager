@@ -42,10 +42,10 @@
             this._lstbConsulta.FormattingEnabled = true;
             this._lstbConsulta.Location = new System.Drawing.Point(3, 30);
             this._lstbConsulta.Name = "_lstbConsulta";
-            this._lstbConsulta.Size = new System.Drawing.Size(273, 251);
+            this._lstbConsulta.Size = new System.Drawing.Size(273, 524);
             this._lstbConsulta.Sorted = true;
             this._lstbConsulta.TabIndex = 2;
-            this._lstbConsulta.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this._lstbConsulta_MouseDoubleClick);
+            this._lstbConsulta.SelectedIndexChanged += new System.EventHandler(this._lstbConsulta_SelectedIndexChanged);
             // 
             // _txtBuscar
             // 
@@ -73,7 +73,7 @@
             // 
             // _btnEditar
             // 
-            this._btnEditar.Location = new System.Drawing.Point(96, 285);
+            this._btnEditar.Location = new System.Drawing.Point(96, 565);
             this._btnEditar.Name = "_btnEditar";
             this._btnEditar.Size = new System.Drawing.Size(87, 23);
             this._btnEditar.TabIndex = 6;
@@ -83,7 +83,7 @@
             // 
             // _btnEliminar
             // 
-            this._btnEliminar.Location = new System.Drawing.Point(189, 285);
+            this._btnEliminar.Location = new System.Drawing.Point(189, 565);
             this._btnEliminar.Name = "_btnEliminar";
             this._btnEliminar.Size = new System.Drawing.Size(87, 23);
             this._btnEliminar.TabIndex = 7;
@@ -93,7 +93,7 @@
             // 
             // _btnRegistrar
             // 
-            this._btnRegistrar.Location = new System.Drawing.Point(3, 285);
+            this._btnRegistrar.Location = new System.Drawing.Point(3, 565);
             this._btnRegistrar.Name = "_btnRegistrar";
             this._btnRegistrar.Size = new System.Drawing.Size(87, 23);
             this._btnRegistrar.TabIndex = 5;

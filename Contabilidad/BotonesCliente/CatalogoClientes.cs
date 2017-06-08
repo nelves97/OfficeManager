@@ -35,21 +35,12 @@ namespace Contabilidad
             _lstbConsulta.Items.Clear();
             foreach (Cliente row in Cliente.ListaClientes)
             {
-                if(row.Nombre.Contains(_txtBuscar.Text))
+                if(row.Nombre.ToLower().Contains(_txtBuscar.Text))
                 {
                     _lstbConsulta.Items.Add(row);
                 }
             }
             _lstbConsulta.EndUpdate();
-        }
-
-        private void _lstbConsulta_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            if (_lstbConsulta.SelectedItem != null)
-            {
-                Cliente.auxiliar = (Cliente)_lstbConsulta.SelectedItem;
-                navigator1.NavigateTo(new CardClientes());
-            }
         }
 
         private void _btnEliminar_Click(object sender, EventArgs e)
@@ -121,6 +112,15 @@ namespace Contabilidad
             _lstbConsulta.EndUpdate();
             navigator1.ClearNavigator();
 
+        }
+
+        private void _lstbConsulta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_lstbConsulta.SelectedItem != null)
+            {
+                Cliente.auxiliar = (Cliente)_lstbConsulta.SelectedItem;
+                navigator1.NavigateTo(new CardClientes());
+            }
         }
     }
 }

@@ -281,7 +281,7 @@
             this._lstbClienteCliente.Size = new System.Drawing.Size(296, 95);
             this._lstbClienteCliente.Sorted = true;
             this._lstbClienteCliente.TabIndex = 13;
-            this._lstbClienteCliente.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this._lstbClienteCliente_MouseDoubleClick);
+            this._lstbClienteCliente.SelectedIndexChanged += new System.EventHandler(this._lstbClienteCliente_SelectedIndexChanged);
             // 
             // navigator1
             // 
