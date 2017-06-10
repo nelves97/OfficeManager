@@ -20,6 +20,7 @@ namespace Contabilidad
 
         private void CatalogoClientes_Load(object sender, EventArgs e)
         {
+            this.Dock = DockStyle.Fill;
             _txtBuscar.Focus();
             _lstbConsulta.BeginUpdate();
             foreach(Cliente row in Cliente.ListaClientes)
