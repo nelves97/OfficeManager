@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,16 +15,40 @@ namespace Contabilidad
 {
     public partial class Main : Form
     {
-        DirectoryManager DM;  
-   
+        //DirectoryManager DM;
+        String DataSource;
+        String InitialCatalog;
+        String UserId = "ContabilidadLogin";
+        String Password = "xDfpm5magbWyomzjtjk5wbzbmsFT72356j8ADpiszgvnrqmw";
+
         public Main()
         {
             InitializeComponent();
-            DM = new DirectoryManager();
-            DM.InitialSetup();
+            //DM = new DirectoryManager();
+            //DM.InitialSetup();
+            Console.WriteLine(Application.ExecutablePath);
+            using (StreamReader sr = new StreamReader(Application.StartupPath + @"\contabilidad.properties"))
+            {
+                while (!sr.EndOfStream)
+                {
+                    String[] tmp = sr.ReadLine().Split('=');
+                    switch (tmp[0])
+                    {
+                        case "DataSource":
+                            DataSource = tmp[1];
+                            break;
+                        case "InitialCatalog":
+                            InitialCatalog = tmp[1];
+                            break;
+                    }
+                }
+            }
+            if (DataSource == null) DataSource = "localhost";
+            if (InitialCatalog == null) InitialCatalog = "ContabilidadDB";
             Cliente.ListaClientes = new List<Cliente>();
             ClienteDeCliente.ListaClientesDeClientes = new List<ClienteDeCliente>();
-            Connection.conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            //Connection.conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            Connection.conn = new SqlConnection($"Data Source={DataSource};Initial Catalog={InitialCatalog};User Id={UserId};Password={Password};");
             SqlCommand selectClientes = new SqlCommand("SELECT * FROM Clientes;", Connection.conn);
             SqlCommand selectClientesClientes = new SqlCommand("SELECT * FROM ClientesDeClientes;", Connection.conn);
             navigator1.NavigateTo(new CatalogoClientes());
