@@ -44,6 +44,9 @@ namespace Contabilidad
                         }
                     }
                 }
+            } else
+            {
+                Console.WriteLine("El archivo no existe");
             }
             if (DataSource == null) DataSource = "localhost";
             if (InitialCatalog == null) InitialCatalog = "ContabilidadDB";
