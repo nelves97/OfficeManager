@@ -95,8 +95,8 @@ namespace Contabilidad
                 {
                     _lstbConsulta.Items.Add(row);
                 }
-                _lstbConsulta.EndUpdate();
-                navigator1.ClearNavigator();
+                _lstbConsulta.SelectedItem = Cliente.auxiliar;
+                _lstbConsulta.EndUpdate();               
             }
         }
 

@@ -26,20 +26,22 @@ namespace Contabilidad
             InitializeComponent();
             //DM = new DirectoryManager();
             //DM.InitialSetup();
-            Console.WriteLine(Application.ExecutablePath);
-            using (StreamReader sr = new StreamReader(Application.StartupPath + @"\contabilidad.properties"))
+            if (File.Exists(Application.StartupPath + @"\contabilidad.properties"))
             {
-                while (!sr.EndOfStream)
+                using (StreamReader sr = new StreamReader(Application.StartupPath + @"\contabilidad.properties"))
                 {
-                    String[] tmp = sr.ReadLine().Split('=');
-                    switch (tmp[0])
+                    while (!sr.EndOfStream)
                     {
-                        case "DataSource":
-                            DataSource = tmp[1];
-                            break;
-                        case "InitialCatalog":
-                            InitialCatalog = tmp[1];
-                            break;
+                        String[] tmp = sr.ReadLine().Split('=');
+                        switch (tmp[0])
+                        {
+                            case "DataSource":
+                                DataSource = tmp[1];
+                                break;
+                            case "InitialCatalog":
+                                InitialCatalog = tmp[1];
+                                break;
+                        }
                     }
                 }
             }
