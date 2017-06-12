@@ -108,8 +108,9 @@ namespace Contabilidad
                     if (row.IdCliente == Cliente.auxiliar.Id)
                         _lstbClienteCliente.Items.Add(row);
                 }
+                _lstbClienteCliente.SelectedItem = ClienteDeCliente.auxiliar;
                 _lstbClienteCliente.EndUpdate();
-                navigator1.ClearNavigator();
+                
             }
         }
 
