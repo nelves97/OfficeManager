@@ -68,4 +68,7 @@
     <None Include="MAGI.ContabilidadDB.publish.xml" />
     <None Include="NAVY.ContabilidadDB.publish.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="ContabilidadDB.refactorlog" />
+  </ItemGroup>
 </Project>

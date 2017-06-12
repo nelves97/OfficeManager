@@ -39,11 +39,15 @@
             this._txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this._lblRegistrarClienteCliente = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this._txtDomicilio = new System.Windows.Forms.TextBox();
+            this._txtComentarios = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // _btnCancelar
             // 
-            this._btnCancelar.Location = new System.Drawing.Point(191, 190);
+            this._btnCancelar.Location = new System.Drawing.Point(191, 335);
             this._btnCancelar.Name = "_btnCancelar";
             this._btnCancelar.Size = new System.Drawing.Size(75, 23);
             this._btnCancelar.TabIndex = 83;
@@ -53,7 +57,7 @@
             // 
             // _btnRegistrar
             // 
-            this._btnRegistrar.Location = new System.Drawing.Point(87, 190);
+            this._btnRegistrar.Location = new System.Drawing.Point(87, 335);
             this._btnRegistrar.Name = "_btnRegistrar";
             this._btnRegistrar.Size = new System.Drawing.Size(75, 23);
             this._btnRegistrar.TabIndex = 79;
@@ -63,7 +67,7 @@
             // 
             // _txtRFC
             // 
-            this._txtRFC.Location = new System.Drawing.Point(116, 142);
+            this._txtRFC.Location = new System.Drawing.Point(110, 142);
             this._txtRFC.Name = "_txtRFC";
             this._txtRFC.Size = new System.Drawing.Size(219, 20);
             this._txtRFC.TabIndex = 68;
@@ -71,7 +75,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 145);
+            this.label5.Location = new System.Drawing.Point(23, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 13);
             this.label5.TabIndex = 75;
@@ -79,7 +83,7 @@
             // 
             // _txtCorreo
             // 
-            this._txtCorreo.Location = new System.Drawing.Point(116, 88);
+            this._txtCorreo.Location = new System.Drawing.Point(110, 88);
             this._txtCorreo.Name = "_txtCorreo";
             this._txtCorreo.Size = new System.Drawing.Size(219, 20);
             this._txtCorreo.TabIndex = 65;
@@ -87,7 +91,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 91);
+            this.label3.Location = new System.Drawing.Point(23, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 70;
@@ -95,7 +99,7 @@
             // 
             // _txtTelefono
             // 
-            this._txtTelefono.Location = new System.Drawing.Point(116, 115);
+            this._txtTelefono.Location = new System.Drawing.Point(110, 115);
             this._txtTelefono.Name = "_txtTelefono";
             this._txtTelefono.Size = new System.Drawing.Size(219, 20);
             this._txtTelefono.TabIndex = 67;
@@ -103,7 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 118);
+            this.label2.Location = new System.Drawing.Point(23, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 66;
@@ -111,7 +115,7 @@
             // 
             // _txtNombre
             // 
-            this._txtNombre.Location = new System.Drawing.Point(116, 61);
+            this._txtNombre.Location = new System.Drawing.Point(110, 61);
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.Size = new System.Drawing.Size(219, 20);
             this._txtNombre.TabIndex = 63;
@@ -119,7 +123,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 64);
+            this.label1.Location = new System.Drawing.Point(23, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 64;
@@ -135,11 +139,49 @@
             this._lblRegistrarClienteCliente.TabIndex = 62;
             this._lblRegistrarClienteCliente.Text = "Registrar cliente de cliente";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(23, 172);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.TabIndex = 84;
+            this.label4.Text = "Domicilio";
+            // 
+            // _txtDomicilio
+            // 
+            this._txtDomicilio.Location = new System.Drawing.Point(110, 169);
+            this._txtDomicilio.Multiline = true;
+            this._txtDomicilio.Name = "_txtDomicilio";
+            this._txtDomicilio.Size = new System.Drawing.Size(219, 67);
+            this._txtDomicilio.TabIndex = 69;
+            // 
+            // _txtComentarios
+            // 
+            this._txtComentarios.Location = new System.Drawing.Point(110, 242);
+            this._txtComentarios.Multiline = true;
+            this._txtComentarios.Name = "_txtComentarios";
+            this._txtComentarios.Size = new System.Drawing.Size(219, 67);
+            this._txtComentarios.TabIndex = 70;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(23, 245);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.TabIndex = 102;
+            this.label6.Text = "Comentarios";
+            // 
             // RegistrarClienteCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 230);
+            this.ClientSize = new System.Drawing.Size(352, 376);
+            this.Controls.Add(this._txtComentarios);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this._txtDomicilio);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this._btnCancelar);
             this.Controls.Add(this._btnRegistrar);
             this.Controls.Add(this._txtRFC);
@@ -171,5 +213,9 @@
         private System.Windows.Forms.TextBox _txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label _lblRegistrarClienteCliente;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox _txtDomicilio;
+        private System.Windows.Forms.TextBox _txtComentarios;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -27,11 +27,13 @@ namespace Contabilidad
                 return;
             }
 
-            SqlCommand nuevoCliente = new SqlCommand("INSERT INTO ClientesDeClientes (Nombre, Correo, Telefono, RFC, IdCliente) VALUES(@Nombre, @Correo, @Telefono, @RFC, @IdCliente);", Connection.conn);
+            SqlCommand nuevoCliente = new SqlCommand("INSERT INTO ClientesDeClientes (Nombre, Correo, Telefono, RFC, Domicilio, Comentarios, IdCliente) VALUES(@Nombre, @Correo, @Telefono, @RFC, @Domicilio, @Comentarios, @IdCliente);", Connection.conn);
             nuevoCliente.Parameters.Add(new SqlParameter("Nombre", _txtNombre.Text));
             nuevoCliente.Parameters.Add(new SqlParameter("Correo", _txtCorreo.Text));
             nuevoCliente.Parameters.Add(new SqlParameter("Telefono", _txtTelefono.Text));
             nuevoCliente.Parameters.Add(new SqlParameter("RFC", _txtRFC.Text));
+            nuevoCliente.Parameters.Add(new SqlParameter("Domicilio", _txtDomicilio.Text));
+            nuevoCliente.Parameters.Add(new SqlParameter("Comentarios", _txtComentarios.Text));
             nuevoCliente.Parameters.Add(new SqlParameter("IdCliente", Cliente.auxiliar.Id));
             SqlCommand idNueva = new SqlCommand("SELECT TOP 1 Id FROM ClientesDeClientes ORDER BY Id DESC;", Connection.conn);
 
@@ -43,7 +45,7 @@ namespace Contabilidad
                 using (SqlDataReader rdr = idNueva.ExecuteReader())
                 {
                     rdr.Read();
-                    ClienteDeCliente nuevo = new ClienteDeCliente(rdr.GetInt32(0), _txtNombre.Text, _txtCorreo.Text, _txtTelefono.Text, _txtRFC.Text, Cliente.auxiliar.Id);
+                    ClienteDeCliente nuevo = new ClienteDeCliente(rdr.GetInt32(0), _txtNombre.Text, _txtCorreo.Text, _txtTelefono.Text, _txtRFC.Text, _txtDomicilio.Text, _txtComentarios.Text, Cliente.auxiliar.Id);
                     ClienteDeCliente.ListaClientesDeClientes.Add(nuevo);
                 }
             }

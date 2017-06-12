@@ -46,9 +46,9 @@ namespace Contabilidad
                 }
             } else
             {
-                Console.WriteLine("El archivo no existe");
+                MessageBox.Show("El archivo contabilidad.properties no existe");
             }
-            if (DataSource == null) DataSource = "localhost";
+            if (DataSource == null) DataSource = "localhost\\SQLEXPRESS";
             if (InitialCatalog == null) InitialCatalog = "ContabilidadDB";
             Cliente.ListaClientes = new List<Cliente>();
             ClienteDeCliente.ListaClientesDeClientes = new List<ClienteDeCliente>();
@@ -75,6 +75,8 @@ namespace Contabilidad
                             rdr.GetString(6),
                             rdr.GetString(7),
                             rdr.GetString(8),
+                            rdr.GetString(10),
+                            rdr.GetString(11),
                             (Cliente.Periodos) rdr.GetInt32(9)
                         );
 
@@ -92,6 +94,8 @@ namespace Contabilidad
                             rdr.GetString(2),
                             rdr.GetString(3),
                             rdr.GetString(4),
+                            rdr.GetString(6),
+                            rdr.GetString(7),
                             rdr.GetInt32(5)
                             );
 

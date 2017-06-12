@@ -9,5 +9,7 @@
     [CURP] NVARCHAR(20) NOT NULL, 
     [PasswordRFC] NVARCHAR(20) NOT NULL, 
     [PasswordFIEL] NVARCHAR(100) NOT NULL, 
-    [Periodo] INT NOT NULL 
+    [Periodo] INT NOT NULL, 
+    [Comentarios] NVARCHAR(MAX) NULL, 
+    [RegPatronal] NVARCHAR(20) NULL 
 )

@@ -16,6 +16,8 @@ namespace Contabilidad
         public String Correo;
         public String Telefono;
         public String RFC;
+        public String Domicilio;
+        public String Comentarios;
         public Int32 IdCliente;
 
         public ClienteDeCliente(
@@ -24,6 +26,8 @@ namespace Contabilidad
             String Correo,
             String Telefono,
             String RFC,
+            String Domicilio,
+            String Comentarios,
             Int32 IdCliente)
         {
             this.Id = Id;
@@ -31,6 +35,8 @@ namespace Contabilidad
             this.Correo = Correo;
             this.Telefono = Telefono;
             this.RFC = RFC;
+            this.Domicilio = Domicilio;
+            this.Comentarios = Comentarios;
             this.IdCliente = IdCliente;
         }
 

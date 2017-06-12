@@ -51,6 +51,10 @@
             this._btnEditar = new System.Windows.Forms.Button();
             this._lstbClienteCliente = new System.Windows.Forms.ListBox();
             this.navigator1 = new Contabilidad.Navigator();
+            this._txtComentarios = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this._txtRegPatronal = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // _lblNombre
@@ -245,7 +249,7 @@
             // 
             // _btnRegistrar
             // 
-            this._btnRegistrar.Location = new System.Drawing.Point(15, 388);
+            this._btnRegistrar.Location = new System.Drawing.Point(15, 440);
             this._btnRegistrar.Name = "_btnRegistrar";
             this._btnRegistrar.Size = new System.Drawing.Size(87, 23);
             this._btnRegistrar.TabIndex = 10;
@@ -255,7 +259,7 @@
             // 
             // _btnEliminar
             // 
-            this._btnEliminar.Location = new System.Drawing.Point(224, 388);
+            this._btnEliminar.Location = new System.Drawing.Point(224, 440);
             this._btnEliminar.Name = "_btnEliminar";
             this._btnEliminar.Size = new System.Drawing.Size(87, 23);
             this._btnEliminar.TabIndex = 12;
@@ -265,7 +269,7 @@
             // 
             // _btnEditar
             // 
-            this._btnEditar.Location = new System.Drawing.Point(119, 388);
+            this._btnEditar.Location = new System.Drawing.Point(119, 440);
             this._btnEditar.Name = "_btnEditar";
             this._btnEditar.Size = new System.Drawing.Size(87, 23);
             this._btnEditar.TabIndex = 11;
@@ -278,23 +282,70 @@
             this._lstbClienteCliente.FormattingEnabled = true;
             this._lstbClienteCliente.Location = new System.Drawing.Point(15, 287);
             this._lstbClienteCliente.Name = "_lstbClienteCliente";
-            this._lstbClienteCliente.Size = new System.Drawing.Size(296, 95);
+            this._lstbClienteCliente.Size = new System.Drawing.Size(296, 147);
             this._lstbClienteCliente.Sorted = true;
             this._lstbClienteCliente.TabIndex = 13;
             this._lstbClienteCliente.SelectedIndexChanged += new System.EventHandler(this._lstbClienteCliente_SelectedIndexChanged);
             // 
             // navigator1
             // 
-            this.navigator1.Location = new System.Drawing.Point(317, 287);
+            this.navigator1.Location = new System.Drawing.Point(317, 161);
             this.navigator1.Name = "navigator1";
-            this.navigator1.Size = new System.Drawing.Size(291, 124);
+            this.navigator1.Size = new System.Drawing.Size(291, 302);
             this.navigator1.TabIndex = 14;
+            // 
+            // _txtComentarios
+            // 
+            this._txtComentarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this._txtComentarios.Location = new System.Drawing.Point(317, 62);
+            this._txtComentarios.Multiline = true;
+            this._txtComentarios.Name = "_txtComentarios";
+            this._txtComentarios.ReadOnly = true;
+            this._txtComentarios.Size = new System.Drawing.Size(296, 88);
+            this._txtComentarios.TabIndex = 16;
+            this._txtComentarios.TabStop = false;
+            this._txtComentarios.Text = ".";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(314, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Comentarios";
+            // 
+            // _txtRegPatronal
+            // 
+            this._txtRegPatronal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this._txtRegPatronal.Location = new System.Drawing.Point(422, 17);
+            this._txtRegPatronal.Name = "_txtRegPatronal";
+            this._txtRegPatronal.ReadOnly = true;
+            this._txtRegPatronal.Size = new System.Drawing.Size(191, 13);
+            this._txtRegPatronal.TabIndex = 17;
+            this._txtRegPatronal.TabStop = false;
+            this._txtRegPatronal.Text = ".";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(314, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Reg. Patronal";
             // 
             // CardClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this._txtRegPatronal);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this._txtComentarios);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.navigator1);
             this.Controls.Add(this._lstbClienteCliente);
             this.Controls.Add(this._btnRegistrar);
@@ -319,7 +370,7 @@
             this.Controls.Add(this._lblTelefono);
             this.Controls.Add(this._lblCorreo);
             this.Name = "CardClientes";
-            this.Size = new System.Drawing.Size(616, 424);
+            this.Size = new System.Drawing.Size(620, 475);
             this.Load += new System.EventHandler(this.CardClientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -351,5 +402,9 @@
         private System.Windows.Forms.Button _btnEditar;
         private System.Windows.Forms.ListBox _lstbClienteCliente;
         private Navigator navigator1;
+        private System.Windows.Forms.TextBox _txtComentarios;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox _txtRegPatronal;
+        private System.Windows.Forms.Label label2;
     }
 }

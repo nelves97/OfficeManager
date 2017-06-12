@@ -43,7 +43,7 @@ namespace Contabilidad
                 tipoCliente = (Int32)Cliente.Periodos.Bimestral;
             }
 
-            SqlCommand nuevoCliente = new SqlCommand("INSERT INTO Clientes (Nombre, Correo, Telefono, Domicilio, RFC, CURP, PasswordRFC, PasswordFIEL, Periodo) VALUES(@Nombre, @Correo, @Telefono, @Domicilio, @RFC, @CURP, @PasswordRFC, @PasswordFIEL, @Periodo);", Connection.conn);
+            SqlCommand nuevoCliente = new SqlCommand("INSERT INTO Clientes (Nombre, Correo, Telefono, Domicilio, RFC, CURP, PasswordRFC, PasswordFIEL, Comentarios, RegPatronal, Periodo) VALUES(@Nombre, @Correo, @Telefono, @Domicilio, @RFC, @CURP, @PasswordRFC, @PasswordFIEL, @Comentarios, @RegPatronal, @Periodo);", Connection.conn);
             nuevoCliente.Parameters.Add(new SqlParameter("Nombre", _txtNombre.Text));
             nuevoCliente.Parameters.Add(new SqlParameter("Correo", _txtCorreo.Text));
             nuevoCliente.Parameters.Add(new SqlParameter("Telefono", _txtTelefono.Text));
@@ -52,6 +52,8 @@ namespace Contabilidad
             nuevoCliente.Parameters.Add(new SqlParameter("CURP", _txtCURP.Text));
             nuevoCliente.Parameters.Add(new SqlParameter("PasswordRFC", _txtContrasenaRFC.Text));
             nuevoCliente.Parameters.Add(new SqlParameter("PasswordFIEL", _txtContrasenaFIEL.Text));
+            nuevoCliente.Parameters.Add(new SqlParameter("Comentarios", _txtComentarios.Text));
+            nuevoCliente.Parameters.Add(new SqlParameter("RegPatronal", _txtRegPatronal.Text));
             nuevoCliente.Parameters.Add(new SqlParameter("Periodo", tipoCliente));
             SqlCommand idNueva = new SqlCommand("SELECT TOP 1 Id FROM Clientes ORDER BY Id DESC;", Connection.conn);
 
@@ -63,7 +65,7 @@ namespace Contabilidad
                 using (SqlDataReader rdr = idNueva.ExecuteReader())
                 {
                     rdr.Read();
-                    Cliente nuevo = new Cliente(rdr.GetInt32(0), _txtNombre.Text, _txtCorreo.Text, _txtTelefono.Text, _txtDomicilio.Text, _txtRFC.Text, _txtCURP.Text, _txtContrasenaRFC.Text, _txtContrasenaFIEL.Text, (Cliente.Periodos)tipoCliente);
+                    Cliente nuevo = new Cliente(rdr.GetInt32(0), _txtNombre.Text, _txtCorreo.Text, _txtTelefono.Text, _txtDomicilio.Text, _txtRFC.Text, _txtCURP.Text, _txtContrasenaRFC.Text, _txtContrasenaFIEL.Text, _txtComentarios.Text, _txtRegPatronal.Text, (Cliente.Periodos)tipoCliente);
                     Cliente.ListaClientes.Add(nuevo);
                 }
                 _rbtnBimestral.Checked = false;

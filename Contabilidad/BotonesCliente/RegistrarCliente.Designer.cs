@@ -50,11 +50,15 @@
             this._txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this._lblRegistrarCliente = new System.Windows.Forms.Label();
+            this._txtComentarios = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this._txtRegPatronal = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // _btnCancelar
             // 
-            this._btnCancelar.Location = new System.Drawing.Point(191, 368);
+            this._btnCancelar.Location = new System.Drawing.Point(191, 492);
             this._btnCancelar.Name = "_btnCancelar";
             this._btnCancelar.Size = new System.Drawing.Size(75, 23);
             this._btnCancelar.TabIndex = 61;
@@ -64,7 +68,7 @@
             // 
             // _btnRegistrar
             // 
-            this._btnRegistrar.Location = new System.Drawing.Point(87, 368);
+            this._btnRegistrar.Location = new System.Drawing.Point(87, 492);
             this._btnRegistrar.Name = "_btnRegistrar";
             this._btnRegistrar.Size = new System.Drawing.Size(75, 23);
             this._btnRegistrar.TabIndex = 57;
@@ -96,16 +100,16 @@
             // 
             // _txtDomicilio
             // 
-            this._txtDomicilio.Location = new System.Drawing.Point(78, 280);
+            this._txtDomicilio.Location = new System.Drawing.Point(116, 310);
             this._txtDomicilio.Multiline = true;
             this._txtDomicilio.Name = "_txtDomicilio";
-            this._txtDomicilio.Size = new System.Drawing.Size(257, 73);
-            this._txtDomicilio.TabIndex = 55;
+            this._txtDomicilio.Size = new System.Drawing.Size(219, 73);
+            this._txtDomicilio.TabIndex = 54;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(18, 280);
+            this.label9.Location = new System.Drawing.Point(18, 310);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 60;
@@ -242,11 +246,48 @@
             this._lblRegistrarCliente.TabIndex = 40;
             this._lblRegistrarCliente.Text = "Registrar Cliente";
             // 
-            // RegistrarClienteForm
+            // _txtComentarios
+            // 
+            this._txtComentarios.Location = new System.Drawing.Point(116, 389);
+            this._txtComentarios.Multiline = true;
+            this._txtComentarios.Name = "_txtComentarios";
+            this._txtComentarios.Size = new System.Drawing.Size(219, 73);
+            this._txtComentarios.TabIndex = 55;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(18, 389);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.TabIndex = 63;
+            this.label10.Text = "Comentarios";
+            // 
+            // _txtRegPatronal
+            // 
+            this._txtRegPatronal.Location = new System.Drawing.Point(116, 274);
+            this._txtRegPatronal.Name = "_txtRegPatronal";
+            this._txtRegPatronal.Size = new System.Drawing.Size(219, 20);
+            this._txtRegPatronal.TabIndex = 53;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(18, 277);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 13);
+            this.label11.TabIndex = 65;
+            this.label11.Text = "Reg. Patronal";
+            // 
+            // RegistrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 408);
+            this.ClientSize = new System.Drawing.Size(352, 528);
+            this.Controls.Add(this._txtRegPatronal);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this._txtComentarios);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this._btnCancelar);
             this.Controls.Add(this._btnRegistrar);
             this.Controls.Add(this._rbtnBimestral);
@@ -300,5 +341,9 @@
         private System.Windows.Forms.TextBox _txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label _lblRegistrarCliente;
+        private System.Windows.Forms.TextBox _txtComentarios;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox _txtRegPatronal;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -22,7 +22,10 @@ namespace Contabilidad
             _txtNombre.Text = ClienteDeCliente.auxiliar.Nombre;
             _txtTelefono.Text = ClienteDeCliente.auxiliar.Telefono;
             _txtCorreo.Text = ClienteDeCliente.auxiliar.Correo;
+            _txtDomicilio.Text = ClienteDeCliente.auxiliar.Domicilio;
             _txtRFC.Text = ClienteDeCliente.auxiliar.RFC;
+            _txtComentarios.Text = ClienteDeCliente.auxiliar.Comentarios;
+            
         }
     }
 }

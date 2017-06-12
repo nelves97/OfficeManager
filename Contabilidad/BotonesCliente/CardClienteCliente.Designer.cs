@@ -36,6 +36,10 @@
             this._lblRFC = new System.Windows.Forms.Label();
             this._lblTelefono = new System.Windows.Forms.Label();
             this._lblCorreo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this._txtDomicilio = new System.Windows.Forms.TextBox();
+            this._txtComentarios = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // _txtRFC
@@ -122,11 +126,59 @@
             this._lblCorreo.TabIndex = 7;
             this._lblCorreo.Text = "Correo:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Domicilio:";
+            // 
+            // _txtDomicilio
+            // 
+            this._txtDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this._txtDomicilio.Location = new System.Drawing.Point(6, 112);
+            this._txtDomicilio.Multiline = true;
+            this._txtDomicilio.Name = "_txtDomicilio";
+            this._txtDomicilio.ReadOnly = true;
+            this._txtDomicilio.Size = new System.Drawing.Size(269, 56);
+            this._txtDomicilio.TabIndex = 14;
+            this._txtDomicilio.TabStop = false;
+            this._txtDomicilio.Text = ".";
+            // 
+            // _txtComentarios
+            // 
+            this._txtComentarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this._txtComentarios.Location = new System.Drawing.Point(6, 187);
+            this._txtComentarios.Multiline = true;
+            this._txtComentarios.Name = "_txtComentarios";
+            this._txtComentarios.ReadOnly = true;
+            this._txtComentarios.Size = new System.Drawing.Size(269, 56);
+            this._txtComentarios.TabIndex = 16;
+            this._txtComentarios.TabStop = false;
+            this._txtComentarios.Text = ".";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 171);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Comentarios:";
+            // 
             // CardClienteCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this._txtComentarios);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this._txtDomicilio);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this._txtRFC);
             this.Controls.Add(this._txtTelefono);
             this.Controls.Add(this._txtCorreo);
@@ -136,7 +188,7 @@
             this.Controls.Add(this._lblTelefono);
             this.Controls.Add(this._lblCorreo);
             this.Name = "CardClienteCliente";
-            this.Size = new System.Drawing.Size(287, 95);
+            this.Size = new System.Drawing.Size(287, 262);
             this.Load += new System.EventHandler(this.CardClienteCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -153,5 +205,9 @@
         private System.Windows.Forms.Label _lblRFC;
         private System.Windows.Forms.Label _lblTelefono;
         private System.Windows.Forms.Label _lblCorreo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox _txtDomicilio;
+        private System.Windows.Forms.TextBox _txtComentarios;
+        private System.Windows.Forms.Label label2;
     }
 }

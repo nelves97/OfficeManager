@@ -31,8 +31,6 @@
             this._btnEditar = new System.Windows.Forms.Button();
             this._rbtnBimestral = new System.Windows.Forms.RadioButton();
             this._rbtnMensual = new System.Windows.Forms.RadioButton();
-            this._txtDomicilio = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this._txtContrasenaFIEL = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -50,11 +48,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this._lblEditarCliente = new System.Windows.Forms.Label();
             this._btnCancelar = new System.Windows.Forms.Button();
+            this._txtRegPatronal = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this._txtComentarios = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this._txtDomicilio = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // _btnEditar
             // 
-            this._btnEditar.Location = new System.Drawing.Point(87, 368);
+            this._btnEditar.Location = new System.Drawing.Point(75, 502);
             this._btnEditar.Name = "_btnEditar";
             this._btnEditar.Size = new System.Drawing.Size(75, 23);
             this._btnEditar.TabIndex = 35;
@@ -83,23 +87,6 @@
             this._rbtnMensual.TabStop = true;
             this._rbtnMensual.Text = "Mensual";
             this._rbtnMensual.UseVisualStyleBackColor = true;
-            // 
-            // _txtDomicilio
-            // 
-            this._txtDomicilio.Location = new System.Drawing.Point(78, 280);
-            this._txtDomicilio.Multiline = true;
-            this._txtDomicilio.Name = "_txtDomicilio";
-            this._txtDomicilio.Size = new System.Drawing.Size(257, 73);
-            this._txtDomicilio.TabIndex = 33;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(18, 280);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 13);
-            this.label9.TabIndex = 38;
-            this.label9.Text = "Domicilio";
             // 
             // label8
             // 
@@ -234,7 +221,7 @@
             // 
             // _btnCancelar
             // 
-            this._btnCancelar.Location = new System.Drawing.Point(191, 368);
+            this._btnCancelar.Location = new System.Drawing.Point(179, 502);
             this._btnCancelar.Name = "_btnCancelar";
             this._btnCancelar.Size = new System.Drawing.Size(75, 23);
             this._btnCancelar.TabIndex = 39;
@@ -242,17 +229,71 @@
             this._btnCancelar.UseVisualStyleBackColor = true;
             this._btnCancelar.Click += new System.EventHandler(this._btnCancelar_Click);
             // 
+            // _txtRegPatronal
+            // 
+            this._txtRegPatronal.Location = new System.Drawing.Point(116, 277);
+            this._txtRegPatronal.Name = "_txtRegPatronal";
+            this._txtRegPatronal.Size = new System.Drawing.Size(219, 20);
+            this._txtRegPatronal.TabIndex = 31;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(18, 280);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 13);
+            this.label11.TabIndex = 71;
+            this.label11.Text = "Reg. Patronal";
+            // 
+            // _txtComentarios
+            // 
+            this._txtComentarios.Location = new System.Drawing.Point(116, 392);
+            this._txtComentarios.Multiline = true;
+            this._txtComentarios.Name = "_txtComentarios";
+            this._txtComentarios.Size = new System.Drawing.Size(219, 73);
+            this._txtComentarios.TabIndex = 33;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(18, 392);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 13);
+            this.label10.TabIndex = 69;
+            this.label10.Text = "Comentarios";
+            // 
+            // _txtDomicilio
+            // 
+            this._txtDomicilio.Location = new System.Drawing.Point(116, 313);
+            this._txtDomicilio.Multiline = true;
+            this._txtDomicilio.Name = "_txtDomicilio";
+            this._txtDomicilio.Size = new System.Drawing.Size(219, 73);
+            this._txtDomicilio.TabIndex = 32;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(18, 313);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 13);
+            this.label9.TabIndex = 67;
+            this.label9.Text = "Domicilio";
+            // 
             // EditarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 408);
+            this.ClientSize = new System.Drawing.Size(352, 537);
+            this.Controls.Add(this._txtRegPatronal);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this._txtComentarios);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this._txtDomicilio);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this._btnCancelar);
             this.Controls.Add(this._btnEditar);
             this.Controls.Add(this._rbtnBimestral);
             this.Controls.Add(this._rbtnMensual);
-            this.Controls.Add(this._txtDomicilio);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this._txtContrasenaFIEL);
             this.Controls.Add(this.label7);
@@ -282,8 +323,6 @@
         private System.Windows.Forms.Button _btnEditar;
         private System.Windows.Forms.RadioButton _rbtnBimestral;
         private System.Windows.Forms.RadioButton _rbtnMensual;
-        private System.Windows.Forms.TextBox _txtDomicilio;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox _txtContrasenaFIEL;
         private System.Windows.Forms.Label label7;
@@ -301,5 +340,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label _lblEditarCliente;
         private System.Windows.Forms.Button _btnCancelar;
+        private System.Windows.Forms.TextBox _txtRegPatronal;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox _txtComentarios;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox _txtDomicilio;
+        private System.Windows.Forms.Label label9;
     }
 }

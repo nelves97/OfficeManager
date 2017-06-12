@@ -25,6 +25,8 @@ namespace Contabilidad
         public String CURP;
         public String PasswordRFC;
         public String PasswordFIEL;
+        public String Comentarios;
+        public String RegPatronal;
         public Periodos Periodo;
 
         public Cliente() { }
@@ -39,6 +41,8 @@ namespace Contabilidad
             String CURP,
             String PasswordRFC,
             String PasswordFIEL, 
+            String Comentarios,
+            String RegPatronal,
             Periodos Periodo)
         {
             this.Id = Id;
@@ -50,6 +54,8 @@ namespace Contabilidad
             this.CURP = CURP;
             this.PasswordRFC = PasswordRFC;
             this.PasswordFIEL = PasswordFIEL;
+            this.Comentarios = Comentarios;
+            this.RegPatronal = RegPatronal;
             this.Periodo = Periodo;
         }
         public override string ToString()

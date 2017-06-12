@@ -29,6 +29,8 @@ namespace Contabilidad
             _txtContrasenaFIEL.Text = Cliente.auxiliar.PasswordFIEL;
             _txtTipoCliente.Text = Cliente.auxiliar.Periodo.ToString();
             _txtDomicilio.Text = Cliente.auxiliar.Domicilio;
+            _txtComentarios.Text = Cliente.auxiliar.Comentarios;
+            _txtRegPatronal.Text = Cliente.auxiliar.RegPatronal;
 
             _lstbClienteCliente.BeginUpdate();
             foreach (ClienteDeCliente row in ClienteDeCliente.ListaClientesDeClientes)

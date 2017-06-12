@@ -28,6 +28,8 @@ namespace Contabilidad
             _txtContrasenaRFC.Text = Cliente.auxiliar.PasswordRFC;
             _txtContrasenaFIEL.Text = Cliente.auxiliar.PasswordFIEL;
             _txtDomicilio.Text = Cliente.auxiliar.Domicilio;
+            _txtComentarios.Text = Cliente.auxiliar.Comentarios;
+            _txtRegPatronal.Text = Cliente.auxiliar.RegPatronal;
             if(Cliente.auxiliar.Periodo == Cliente.Periodos.Bimestral)
             {
                 _rbtnBimestral.Checked = true;
@@ -51,7 +53,7 @@ namespace Contabilidad
                 tipoCliente = (Int32)Cliente.Periodos.Bimestral;
             }
 
-            SqlCommand editarCliente = new SqlCommand("UPDATE Clientes SET Nombre = @Nombre, Correo = @Correo, Telefono = @Telefono, Domicilio = @Domicilio, RFC = @RFC, CURP = @CURP, PasswordRFC = @PasswordRFC, PasswordFIEL = @PasswordFIEL, Periodo = @Periodo WHERE Id = @Id;", Connection.conn);
+            SqlCommand editarCliente = new SqlCommand("UPDATE Clientes SET Nombre = @Nombre, Correo = @Correo, Telefono = @Telefono, Domicilio = @Domicilio, RFC = @RFC, CURP = @CURP, PasswordRFC = @PasswordRFC, PasswordFIEL = @PasswordFIEL, RegPatronal = @RegPatronal, Comentarios = @Comentarios, Periodo = @Periodo WHERE Id = @Id;", Connection.conn);
             editarCliente.Parameters.Add(new SqlParameter("Nombre", _txtNombre.Text));
             editarCliente.Parameters.Add(new SqlParameter("Correo", _txtCorreo.Text));
             editarCliente.Parameters.Add(new SqlParameter("Telefono", _txtTelefono.Text));
@@ -61,6 +63,8 @@ namespace Contabilidad
             editarCliente.Parameters.Add(new SqlParameter("PasswordRFC", _txtContrasenaRFC.Text));
             editarCliente.Parameters.Add(new SqlParameter("PasswordFIEL", _txtContrasenaFIEL.Text));
             editarCliente.Parameters.Add(new SqlParameter("Periodo", tipoCliente));
+            editarCliente.Parameters.Add(new SqlParameter("Comentarios", _txtComentarios.Text));
+            editarCliente.Parameters.Add(new SqlParameter("RegPatronal", _txtRegPatronal.Text));
             editarCliente.Parameters.Add(new SqlParameter("Id", Cliente.auxiliar.Id));
 
             Cliente.auxiliar.Nombre = _txtNombre.Text;
@@ -72,7 +76,8 @@ namespace Contabilidad
             Cliente.auxiliar.PasswordFIEL = _txtContrasenaFIEL.Text;
             Cliente.auxiliar.Periodo = (Cliente.Periodos)tipoCliente;
             Cliente.auxiliar.Domicilio = _txtDomicilio.Text;
-
+            Cliente.auxiliar.Comentarios = _txtComentarios.Text;
+            Cliente.auxiliar.RegPatronal = _txtRegPatronal.Text;
             try
             {
                 Connection.conn.Open();
