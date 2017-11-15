@@ -26,6 +26,7 @@ namespace Contabilidad
             InitializeComponent();
             //DM = new DirectoryManager();
             //DM.InitialSetup();
+
             if (File.Exists(Application.StartupPath + @"\contabilidad.properties"))
             {
                 using (StreamReader sr = new StreamReader(Application.StartupPath + @"\contabilidad.properties"))
@@ -53,7 +54,7 @@ namespace Contabilidad
             Cliente.ListaClientes = new List<Cliente>();
             ClienteDeCliente.ListaClientesDeClientes = new List<ClienteDeCliente>();
             //Connection.conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            Connection.conn = new SqlConnection($"Data Source={DataSource};Initial Catalog={InitialCatalog};User Id={UserId};Password={Password};");
+            Connection.conn = new SqlConnection(@"Data Source=(localdb)\ProjectsV13;Initial Catalog=ContabilidadDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             SqlCommand selectClientes = new SqlCommand("SELECT * FROM Clientes;", Connection.conn);
             SqlCommand selectClientesClientes = new SqlCommand("SELECT * FROM ClientesDeClientes;", Connection.conn);
             navigator1.NavigateTo(new CatalogoClientes());
