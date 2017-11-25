@@ -98,6 +98,10 @@ namespace Contabilidad
                 _lstbConsulta.SelectedItem = Cliente.auxiliar;
                 _lstbConsulta.EndUpdate();               
             }
+            else
+            {
+                MessageBox.Show("Seleccione a un cliente para editar");
+            }
         }
 
         private void _btnRegistrar_Click(object sender, EventArgs e)

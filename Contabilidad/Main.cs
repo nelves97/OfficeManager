@@ -57,6 +57,7 @@ namespace Contabilidad
             Connection.conn = new SqlConnection(@"Data Source=(localdb)\ProjectsV13;Initial Catalog=ContabilidadDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             SqlCommand selectClientes = new SqlCommand("SELECT * FROM Clientes;", Connection.conn);
             SqlCommand selectClientesClientes = new SqlCommand("SELECT * FROM ClientesDeClientes;", Connection.conn);
+            SqlCommand selectEmpleados = new SqlCommand("SELECT * FROM Empleados;", Connection.conn);
             navigator1.NavigateTo(new CatalogoClientes());
             try
             {
@@ -103,6 +104,25 @@ namespace Contabilidad
                         ClienteDeCliente.ListaClientesDeClientes.Add(nuevoCliente);
                     }
                 }
+
+                using (SqlDataReader rdr = selectEmpleados.ExecuteReader())
+                {
+                    while(rdr.Read())
+                    {
+                        Empleado nuevoEmpleado = new Empleado(
+                            rdr.GetInt32(0),
+                            rdr.GetString(1),
+                            rdr.GetDateTime(2),
+                            rdr.GetString(3),
+                            rdr.GetString(4),
+                            rdr.GetInt32(5),
+                            rdr.GetInt32(6),
+                            rdr.GetDateTime(7)
+                            );
+
+                        Empleado.ListaEmpleados.Add(nuevoEmpleado);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -118,6 +138,11 @@ namespace Contabilidad
         private void Main_Load(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void _btnCatalogoEmpleados_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

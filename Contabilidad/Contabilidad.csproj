@@ -82,28 +82,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BotonesCliente\CatalogoClientes.cs">
+    <Compile Include="Pantallas\CardEmpleado.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BotonesCliente\CatalogoClientes.Designer.cs">
+    <Compile Include="Pantallas\CardEmpleado.Designer.cs">
+      <DependentUpon>CardEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\CatalogoClientes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas\CatalogoClientes.Designer.cs">
       <DependentUpon>CatalogoClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="BotonesCliente\CardClientes.cs">
+    <Compile Include="Pantallas\CardClientes.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BotonesCliente\CardClientes.Designer.cs">
+    <Compile Include="Pantallas\CardClientes.Designer.cs">
       <DependentUpon>CardClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="BotonesCliente\CardClienteCliente.cs">
+    <Compile Include="Pantallas\CardClienteCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BotonesCliente\CardClienteCliente.Designer.cs">
+    <Compile Include="Pantallas\CardClienteCliente.Designer.cs">
       <DependentUpon>CardClienteCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Cliente.cs" />
     <Compile Include="Clases\ClienteDeCliente.cs" />
     <Compile Include="Clases\Connection.cs" />
     <Compile Include="Clases\DirectoryManager.cs" />
+    <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Documentos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -111,16 +118,22 @@
       <DependentUpon>Documentos.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\FileManager.cs" />
-    <Compile Include="BotonesCliente\EditarCliente.cs">
+    <Compile Include="Pantallas\CatalogoEmpleados.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pantallas\CatalogoEmpleados.Designer.cs">
+      <DependentUpon>CatalogoEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\EditarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BotonesCliente\EditarCliente.Designer.cs">
+    <Compile Include="Pantallas\EditarCliente.Designer.cs">
       <DependentUpon>EditarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="BotonesCliente\EditarClienteCliente.cs">
+    <Compile Include="Pantallas\EditarClienteCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BotonesCliente\EditarClienteCliente.Designer.cs">
+    <Compile Include="Pantallas\EditarClienteCliente.Designer.cs">
       <DependentUpon>EditarClienteCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
@@ -141,36 +154,54 @@
     <Compile Include="Navigator.Designer.cs">
       <DependentUpon>Navigator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\EditarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\EditarEmpleado.Designer.cs">
+      <DependentUpon>EditarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\RegistrarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\RegistrarEmpleado.Designer.cs">
+      <DependentUpon>RegistrarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="BotonesCliente\RegistrarCliente.cs">
+    <Compile Include="Pantallas\RegistrarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BotonesCliente\RegistrarCliente.Designer.cs">
+    <Compile Include="Pantallas\RegistrarCliente.Designer.cs">
       <DependentUpon>RegistrarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="BotonesCliente\RegistrarClienteCliente.cs">
+    <Compile Include="Pantallas\RegistrarClienteCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BotonesCliente\RegistrarClienteCliente.Designer.cs">
+    <Compile Include="Pantallas\RegistrarClienteCliente.Designer.cs">
       <DependentUpon>RegistrarClienteCliente.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BotonesCliente\CatalogoClientes.resx">
+    <EmbeddedResource Include="Pantallas\CardEmpleado.resx">
+      <DependentUpon>CardEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\CatalogoClientes.resx">
       <DependentUpon>CatalogoClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BotonesCliente\CardClientes.resx">
+    <EmbeddedResource Include="Pantallas\CardClientes.resx">
       <DependentUpon>CardClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BotonesCliente\EditarClienteCliente.resx">
+    <EmbeddedResource Include="Pantallas\CatalogoEmpleados.resx">
+      <DependentUpon>CatalogoEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\EditarClienteCliente.resx">
       <DependentUpon>EditarClienteCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BotonesCliente\CardClienteCliente.resx">
+    <EmbeddedResource Include="Pantallas\CardClienteCliente.resx">
       <DependentUpon>CardClienteCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documentos.resx">
       <DependentUpon>Documentos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BotonesCliente\EditarCliente.resx">
+    <EmbeddedResource Include="Pantallas\EditarCliente.resx">
       <DependentUpon>EditarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
@@ -178,6 +209,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Navigator.resx">
       <DependentUpon>Navigator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\EditarEmpleado.resx">
+      <DependentUpon>EditarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\RegistrarEmpleado.resx">
+      <DependentUpon>RegistrarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -188,10 +225,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BotonesCliente\RegistrarCliente.resx">
+    <EmbeddedResource Include="Pantallas\RegistrarCliente.resx">
       <DependentUpon>RegistrarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BotonesCliente\RegistrarClienteCliente.resx">
+    <EmbeddedResource Include="Pantallas\RegistrarClienteCliente.resx">
       <DependentUpon>RegistrarClienteCliente.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

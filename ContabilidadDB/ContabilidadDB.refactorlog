@@ -7,4 +7,32 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="RegPatronal" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="2fe1ca13-e937-4895-adab-53e4b501e6ee" ChangeDateTime="11/23/2017 00:09:46">
+    <Property Name="ElementName" Value="[dbo].[Empleados].[Telefono]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Empleados]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Correo" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e3c2dc1a-35c2-4858-9e76-826c873ae6ac" ChangeDateTime="11/23/2017 00:09:50">
+    <Property Name="ElementName" Value="[dbo].[Empleados].[Correo]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Empleados]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Telefono" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0f985dfa-e01f-48c4-a2f2-bc5a4c9eba32" ChangeDateTime="11/23/2017 00:13:02">
+    <Property Name="ElementName" Value="[dbo].[Calendario].[Concepto]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Calendario]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Motivo" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cfc2acc2-fecc-4121-82f2-bcda36276b02" ChangeDateTime="11/24/2017 04:47:35">
+    <Property Name="ElementName" Value="[dbo].[Empleados].[Horas Semanales]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Empleados]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Horas semanales" />
+  </Operation>
 </Operations>

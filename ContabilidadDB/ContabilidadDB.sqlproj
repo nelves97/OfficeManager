@@ -63,6 +63,7 @@
     <Build Include="ClientesDeClientes.sql" />
     <Build Include="ContabilidadLogin.sql" />
     <Build Include="ContabilidadUser.sql" />
+    <Build Include="Empleados.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ContabilidadDB.refactorlog" />

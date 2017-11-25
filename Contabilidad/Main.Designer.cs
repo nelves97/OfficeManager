@@ -28,23 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.navigator1 = new Contabilidad.Navigator();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.navigator1 = new Contabilidad.Navigator();
+            this._btnCatalogoEmpleados = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // navigator1
-            // 
-            this.navigator1.AutoSize = true;
-            this.navigator1.BackColor = System.Drawing.SystemColors.Control;
-            this.navigator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigator1.Location = new System.Drawing.Point(0, 30);
-            this.navigator1.Name = "navigator1";
-            this.navigator1.Size = new System.Drawing.Size(573, 429);
-            this.navigator1.TabIndex = 3;
             // 
             // label1
             // 
@@ -69,12 +60,33 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this._btnCatalogoEmpleados);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(573, 30);
             this.panel2.TabIndex = 0;
+            // 
+            // navigator1
+            // 
+            this.navigator1.AutoSize = true;
+            this.navigator1.BackColor = System.Drawing.SystemColors.Control;
+            this.navigator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigator1.Location = new System.Drawing.Point(0, 30);
+            this.navigator1.Name = "navigator1";
+            this.navigator1.Size = new System.Drawing.Size(573, 429);
+            this.navigator1.TabIndex = 3;
+            // 
+            // _btnCatalogoEmpleados
+            // 
+            this._btnCatalogoEmpleados.Location = new System.Drawing.Point(405, 4);
+            this._btnCatalogoEmpleados.Name = "_btnCatalogoEmpleados";
+            this._btnCatalogoEmpleados.Size = new System.Drawing.Size(165, 23);
+            this._btnCatalogoEmpleados.TabIndex = 6;
+            this._btnCatalogoEmpleados.Text = "Catalogo de Empleados";
+            this._btnCatalogoEmpleados.UseVisualStyleBackColor = true;
+            this._btnCatalogoEmpleados.Click += new System.EventHandler(this._btnCatalogoEmpleados_Click);
             // 
             // Main
             // 
@@ -94,10 +106,11 @@
         }
 
         #endregion
-        private Navigator navigator1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private Navigator navigator1;
+        private System.Windows.Forms.Button _btnCatalogoEmpleados;
     }
 }
 
