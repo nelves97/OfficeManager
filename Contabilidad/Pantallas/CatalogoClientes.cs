@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace Contabilidad
+namespace Contabilidad.Pantallas
 {
     public partial class CatalogoClientes : UserControl
     {

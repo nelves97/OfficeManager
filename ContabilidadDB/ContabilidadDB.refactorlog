@@ -35,4 +35,39 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Horas semanales" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="807883df-7347-4e2e-b4ff-51f4dd0ec921" ChangeDateTime="11/26/2017 07:24:05">
+    <Property Name="ElementName" Value="[dbo].[Empleados].[Fecha de nacimiento]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Empleados]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Fechanacimiento" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5b5593ca-18d2-48dc-af2f-986c6cb9f255" ChangeDateTime="11/26/2017 07:24:13">
+    <Property Name="ElementName" Value="[dbo].[Empleados].[Horas semanales]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Empleados]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Horassemanales" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cfff3ca8-5750-4f57-93a6-17752d0f3d62" ChangeDateTime="11/26/2017 07:24:18">
+    <Property Name="ElementName" Value="[dbo].[Empleados].[Fecha de ingreso]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Empleados]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FechaIngreso" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="bc1e7f9d-af24-4f24-892e-6288811fe926" ChangeDateTime="11/26/2017 07:24:22">
+    <Property Name="ElementName" Value="[dbo].[Empleados].[Horassemanales]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Empleados]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="HorasSemanales" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="50bff4c3-0fb4-46eb-9698-c0a05a275381" ChangeDateTime="11/26/2017 07:24:25">
+    <Property Name="ElementName" Value="[dbo].[Empleados].[Fechanacimiento]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Empleados]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="FechaNacimiento" />
+  </Operation>
 </Operations>

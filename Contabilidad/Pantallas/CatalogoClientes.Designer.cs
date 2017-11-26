@@ -1,4 +1,4 @@
-﻿namespace Contabilidad
+﻿namespace Contabilidad.Pantallas
 {
     partial class CatalogoClientes
     {

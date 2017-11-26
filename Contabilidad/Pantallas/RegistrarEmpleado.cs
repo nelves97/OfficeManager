@@ -27,15 +27,15 @@ namespace Contabilidad.Pantallas
                 return;
             }
 
-            SqlCommand nuevoEmpleado = new SqlCommand("INSERT INTO Empleados (Nombre, Fecha de nacimiento, Correo, Telefono, Horas semanales, Salario, Fecha de ingreso) " +
-                "VALUES(@Nombre, @Fecha de nacimiento, @Correo, @Telefono, @Horas semanales, @Salario, @Fecha de ingreso);", Connection.conn);
+            SqlCommand nuevoEmpleado = new SqlCommand("INSERT INTO Empleados (Nombre, FechaNacimiento, Correo, Telefono, HorasSemanales, Salario, FechaIngreso) " +
+                "VALUES(@Nombre, @FechaNacimiento, @Correo, @Telefono, @HorasSemanales, @Salario, @FechaIngreso);", Connection.conn);
             nuevoEmpleado.Parameters.Add(new SqlParameter("Nombre", _txtNombre.Text));
-            nuevoEmpleado.Parameters.Add(new SqlParameter("Fecha de nacimiento", _dtpFechaNacimiento));
+            nuevoEmpleado.Parameters.Add(new SqlParameter("FechaNacimiento", _dtpFechaNacimiento.Value));
             nuevoEmpleado.Parameters.Add(new SqlParameter("Correo", _txtCorreo.Text));
             nuevoEmpleado.Parameters.Add(new SqlParameter("Telefono", _txtTelefono.Text));
-            nuevoEmpleado.Parameters.Add(new SqlParameter("Horas semanales", _txtHorasSemanales.Text));
+            nuevoEmpleado.Parameters.Add(new SqlParameter("HorasSemanales", _txtHorasSemanales.Text));
             nuevoEmpleado.Parameters.Add(new SqlParameter("Salario", _txtSalario.Text));
-            nuevoEmpleado.Parameters.Add(new SqlParameter("Fecha de ingreso", _dtpFechaIngreso.Text));
+            nuevoEmpleado.Parameters.Add(new SqlParameter("FechaIngreso", _dtpFechaIngreso.Value));
 
             SqlCommand idNueva = new SqlCommand("SELECT TOP 1 Id FROM Empleados ORDER BY Id DESC;", Connection.conn);
 

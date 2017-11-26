@@ -31,14 +31,14 @@ namespace Contabilidad.Pantallas
 
         private void _btnEditar_Click(object sender, EventArgs e)
         {
-            SqlCommand editarEmpleado = new SqlCommand("UPDATE Empleados SET Nombre = @Nombre, Fecha de nacimiento = @Fecha de nacimiento, Correo = @Correo, Telefono = @Telefono, Horas semanales = @Horas semanales, Salario = @Salario, Fecha de ingreso = @Fecha de ingreso, WHERE Id = @Id;", Connection.conn);
+            SqlCommand editarEmpleado = new SqlCommand("UPDATE Empleados SET Nombre = @Nombre, FechaNacimiento = @FechaNacimiento, Correo = @Correo, Telefono = @Telefono, HorasSemanales = @HorasSemanales, Salario = @Salario, FechaIngreso = @FechaIngreso WHERE Id = @Id;", Connection.conn);
             editarEmpleado.Parameters.Add(new SqlParameter("Nombre", _txtNombre.Text));
-            editarEmpleado.Parameters.Add(new SqlParameter("Fecha de nacimiento", _dtpFechaNacimiento.Value));
+            editarEmpleado.Parameters.Add(new SqlParameter("FechaNacimiento", _dtpFechaNacimiento.Value));
             editarEmpleado.Parameters.Add(new SqlParameter("Correo", _txtCorreo.Text));
             editarEmpleado.Parameters.Add(new SqlParameter("Telefono", _txtTelefono.Text));
-            editarEmpleado.Parameters.Add(new SqlParameter("Horas semanales", _txtHorasSemanales.Text));
+            editarEmpleado.Parameters.Add(new SqlParameter("HorasSemanales", _txtHorasSemanales.Text));
             editarEmpleado.Parameters.Add(new SqlParameter("Salario", _txtSalario.Text));
-            editarEmpleado.Parameters.Add(new SqlParameter("Fecha de ingreso", _dtpFechaIngreso.Value));
+            editarEmpleado.Parameters.Add(new SqlParameter("FechaIngreso", _dtpFechaIngreso.Value));
             editarEmpleado.Parameters.Add(new SqlParameter("Id", Empleado.auxiliar.Id));
 
             Empleado.auxiliar.Nombre = _txtNombre.Text;

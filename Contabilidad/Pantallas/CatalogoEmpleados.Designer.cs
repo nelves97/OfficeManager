@@ -62,6 +62,7 @@
             this._lstbConsulta.Name = "_lstbConsulta";
             this._lstbConsulta.Size = new System.Drawing.Size(292, 279);
             this._lstbConsulta.TabIndex = 2;
+            this._lstbConsulta.SelectedIndexChanged += new System.EventHandler(this._lstbConsulta_SelectedIndexChanged);
             // 
             // panel3
             // 

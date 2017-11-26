@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Contabilidad.Pantallas;
 
 namespace Contabilidad
 {
@@ -53,6 +54,7 @@ namespace Contabilidad
             if (InitialCatalog == null) InitialCatalog = "ContabilidadDB";
             Cliente.ListaClientes = new List<Cliente>();
             ClienteDeCliente.ListaClientesDeClientes = new List<ClienteDeCliente>();
+            Empleado.ListaEmpleados = new List<Empleado>();
             //Connection.conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             Connection.conn = new SqlConnection(@"Data Source=(localdb)\ProjectsV13;Initial Catalog=ContabilidadDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             SqlCommand selectClientes = new SqlCommand("SELECT * FROM Clientes;", Connection.conn);
@@ -142,7 +144,12 @@ namespace Contabilidad
 
         private void _btnCatalogoEmpleados_Click(object sender, EventArgs e)
         {
-            
+            navigator1.NavigateTo(new CatalogoEmpleados());
+        }
+
+        private void _btnCatalogoClientes_Click(object sender, EventArgs e)
+        {
+            navigator1.NavigateTo(new CatalogoClientes());
         }
     }
 }

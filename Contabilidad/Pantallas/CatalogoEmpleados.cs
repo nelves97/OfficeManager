@@ -117,5 +117,14 @@ namespace Contabilidad.Pantallas
                 }
             }
         }
+
+        private void _lstbConsulta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_lstbConsulta.SelectedItem != null)
+            {
+                Empleado.auxiliar = (Empleado)_lstbConsulta.SelectedItem;
+                navigator1.NavigateTo(new CardEmpleado());
+            }
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace Contabilidad.Pantallas
             _txtHorasSemanales.Text = Empleado.auxiliar.HorasSemanales.ToString();
             _txtSalario.Text = Empleado.auxiliar.Salario.ToString();
             _txtFechaIngreso.Text = Empleado.auxiliar.FechadeIngreso.ToString();
-            _txtEdad.Text = Empleado.auxiliar.CalcularEdad(Empleado.auxiliar.FechadeNacimiento).ToString();
+            _txtEdad.Text = Empleado.auxiliar.CalcularEdad(Empleado.auxiliar.FechadeNacimiento).ToString() + " años";
         }
     }
 }
