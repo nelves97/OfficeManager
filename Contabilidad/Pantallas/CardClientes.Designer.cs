@@ -341,7 +341,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this._txtRegPatronal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this._txtComentarios);
@@ -370,7 +369,7 @@
             this.Controls.Add(this._lblTelefono);
             this.Controls.Add(this._lblCorreo);
             this.Name = "CardClientes";
-            this.Size = new System.Drawing.Size(620, 475);
+            this.Size = new System.Drawing.Size(622, 477);
             this.Load += new System.EventHandler(this.CardClientes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
