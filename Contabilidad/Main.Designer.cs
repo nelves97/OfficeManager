@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.navigator1 = new Contabilidad.Navigator();
             this.panel2 = new System.Windows.Forms.Panel();
+            this._menu = new System.Windows.Forms.MenuStrip();
             this.pantallasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catálogoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catálogoDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._menu = new System.Windows.Forms.MenuStrip();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.navigator1 = new Contabilidad.Navigator();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this._menu.SuspendLayout();
@@ -51,8 +51,17 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(622, 499);
+            this.panel1.Size = new System.Drawing.Size(651, 520);
             this.panel1.TabIndex = 5;
+            // 
+            // navigator1
+            // 
+            this.navigator1.AutoSize = true;
+            this.navigator1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigator1.Location = new System.Drawing.Point(0, 26);
+            this.navigator1.Name = "navigator1";
+            this.navigator1.Size = new System.Drawing.Size(651, 494);
+            this.navigator1.TabIndex = 3;
             // 
             // panel2
             // 
@@ -60,8 +69,19 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(622, 26);
+            this.panel2.Size = new System.Drawing.Size(651, 26);
             this.panel2.TabIndex = 0;
+            // 
+            // _menu
+            // 
+            this._menu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this._menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pantallasToolStripMenuItem});
+            this._menu.Location = new System.Drawing.Point(0, 0);
+            this._menu.Name = "_menu";
+            this._menu.Size = new System.Drawing.Size(651, 24);
+            this._menu.TabIndex = 0;
+            this._menu.Text = "menuStrip1";
             // 
             // pantallasToolStripMenuItem
             // 
@@ -94,16 +114,6 @@
             this.calendarioToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.calendarioToolStripMenuItem.Text = "Calendario";
             // 
-            // _menu
-            // 
-            this._menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pantallasToolStripMenuItem});
-            this._menu.Location = new System.Drawing.Point(0, 0);
-            this._menu.Name = "_menu";
-            this._menu.Size = new System.Drawing.Size(622, 24);
-            this._menu.TabIndex = 0;
-            this._menu.Text = "menuStrip1";
-            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
@@ -111,21 +121,11 @@
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // navigator1
-            // 
-            this.navigator1.AutoSize = true;
-            this.navigator1.BackColor = System.Drawing.SystemColors.Control;
-            this.navigator1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigator1.Location = new System.Drawing.Point(0, 26);
-            this.navigator1.Name = "navigator1";
-            this.navigator1.Size = new System.Drawing.Size(622, 473);
-            this.navigator1.TabIndex = 3;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(646, 523);
+            this.ClientSize = new System.Drawing.Size(655, 523);
             this.Controls.Add(this.panel1);
             this.Name = "Main";
             this.Text = "Contabilidad";
@@ -143,13 +143,13 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.MenuStrip _menu;
         private System.Windows.Forms.ToolStripMenuItem pantallasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem catálogoDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem catálogoDeEmpleadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calendarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private Navigator navigator1;
+        private System.Windows.Forms.MenuStrip _menu;
     }
 }
 

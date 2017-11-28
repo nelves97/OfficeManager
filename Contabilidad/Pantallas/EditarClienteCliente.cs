@@ -24,6 +24,8 @@ namespace Contabilidad
             _txtTelefono.Text = ClienteDeCliente.auxiliar.Telefono;
             _txtCorreo.Text = ClienteDeCliente.auxiliar.Correo;
             _txtRFC.Text = ClienteDeCliente.auxiliar.RFC;
+            _txtComentarios.Text = ClienteDeCliente.auxiliar.Comentarios;
+            _txtDomicilio.Text = ClienteDeCliente.auxiliar.Domicilio;
         }
         private void _btnEditar_Click(object sender, EventArgs e)
         {          

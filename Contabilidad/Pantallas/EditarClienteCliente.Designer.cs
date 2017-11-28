@@ -48,10 +48,11 @@
             // _txtDomicilio
             // 
             this._txtDomicilio.Location = new System.Drawing.Point(110, 170);
+            this._txtDomicilio.MaxLength = 256;
             this._txtDomicilio.Multiline = true;
             this._txtDomicilio.Name = "_txtDomicilio";
             this._txtDomicilio.Size = new System.Drawing.Size(219, 67);
-            this._txtDomicilio.TabIndex = 98;
+            this._txtDomicilio.TabIndex = 5;
             // 
             // label4
             // 
@@ -67,25 +68,28 @@
             this._btnCancelar.Location = new System.Drawing.Point(192, 330);
             this._btnCancelar.Name = "_btnCancelar";
             this._btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this._btnCancelar.TabIndex = 96;
+            this._btnCancelar.TabIndex = 8;
             this._btnCancelar.Text = "Cancelar";
             this._btnCancelar.UseVisualStyleBackColor = true;
+            this._btnCancelar.Click += new System.EventHandler(this._btnCancelar_Click);
             // 
             // _btnEditar
             // 
             this._btnEditar.Location = new System.Drawing.Point(88, 330);
             this._btnEditar.Name = "_btnEditar";
             this._btnEditar.Size = new System.Drawing.Size(75, 23);
-            this._btnEditar.TabIndex = 95;
+            this._btnEditar.TabIndex = 7;
             this._btnEditar.Text = "Editar";
             this._btnEditar.UseVisualStyleBackColor = true;
+            this._btnEditar.Click += new System.EventHandler(this._btnEditar_Click);
             // 
             // _txtRFC
             // 
             this._txtRFC.Location = new System.Drawing.Point(110, 143);
+            this._txtRFC.MaxLength = 20;
             this._txtRFC.Name = "_txtRFC";
             this._txtRFC.Size = new System.Drawing.Size(219, 20);
-            this._txtRFC.TabIndex = 92;
+            this._txtRFC.TabIndex = 4;
             // 
             // label5
             // 
@@ -99,9 +103,10 @@
             // _txtCorreo
             // 
             this._txtCorreo.Location = new System.Drawing.Point(110, 89);
+            this._txtCorreo.MaxLength = 100;
             this._txtCorreo.Name = "_txtCorreo";
             this._txtCorreo.Size = new System.Drawing.Size(219, 20);
-            this._txtCorreo.TabIndex = 89;
+            this._txtCorreo.TabIndex = 2;
             // 
             // label3
             // 
@@ -115,9 +120,10 @@
             // _txtTelefono
             // 
             this._txtTelefono.Location = new System.Drawing.Point(110, 116);
+            this._txtTelefono.MaxLength = 20;
             this._txtTelefono.Name = "_txtTelefono";
             this._txtTelefono.Size = new System.Drawing.Size(219, 20);
-            this._txtTelefono.TabIndex = 91;
+            this._txtTelefono.TabIndex = 3;
             // 
             // label2
             // 
@@ -131,9 +137,10 @@
             // _txtNombre
             // 
             this._txtNombre.Location = new System.Drawing.Point(110, 62);
+            this._txtNombre.MaxLength = 100;
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.Size = new System.Drawing.Size(219, 20);
-            this._txtNombre.TabIndex = 87;
+            this._txtNombre.TabIndex = 1;
             // 
             // label1
             // 
@@ -166,10 +173,11 @@
             // _txtComentarios
             // 
             this._txtComentarios.Location = new System.Drawing.Point(110, 246);
+            this._txtComentarios.MaxLength = 256;
             this._txtComentarios.Multiline = true;
             this._txtComentarios.Name = "_txtComentarios";
             this._txtComentarios.Size = new System.Drawing.Size(219, 67);
-            this._txtComentarios.TabIndex = 101;
+            this._txtComentarios.TabIndex = 6;
             // 
             // EditarClienteCliente
             // 

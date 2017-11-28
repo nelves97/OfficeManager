@@ -52,7 +52,7 @@
             this._dtpFechaIngreso.Location = new System.Drawing.Point(167, 227);
             this._dtpFechaIngreso.Name = "_dtpFechaIngreso";
             this._dtpFechaIngreso.Size = new System.Drawing.Size(219, 20);
-            this._dtpFechaIngreso.TabIndex = 116;
+            this._dtpFechaIngreso.TabIndex = 7;
             // 
             // label7
             // 
@@ -66,9 +66,11 @@
             // _txtSalario
             // 
             this._txtSalario.Location = new System.Drawing.Point(167, 201);
+            this._txtSalario.MaxLength = 10;
             this._txtSalario.Name = "_txtSalario";
             this._txtSalario.Size = new System.Drawing.Size(219, 20);
-            this._txtSalario.TabIndex = 114;
+            this._txtSalario.TabIndex = 6;
+            this._txtSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this._txtSalario_KeyPress);
             // 
             // label6
             // 
@@ -82,9 +84,11 @@
             // _txtHorasSemanales
             // 
             this._txtHorasSemanales.Location = new System.Drawing.Point(167, 175);
+            this._txtHorasSemanales.MaxLength = 10;
             this._txtHorasSemanales.Name = "_txtHorasSemanales";
             this._txtHorasSemanales.Size = new System.Drawing.Size(219, 20);
-            this._txtHorasSemanales.TabIndex = 112;
+            this._txtHorasSemanales.TabIndex = 5;
+            this._txtHorasSemanales.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this._txtHorasSemanales_KeyPress);
             // 
             // label5
             // 
@@ -100,7 +104,7 @@
             this._dtpFechaNacimiento.Location = new System.Drawing.Point(167, 149);
             this._dtpFechaNacimiento.Name = "_dtpFechaNacimiento";
             this._dtpFechaNacimiento.Size = new System.Drawing.Size(219, 20);
-            this._dtpFechaNacimiento.TabIndex = 110;
+            this._dtpFechaNacimiento.TabIndex = 4;
             // 
             // label4
             // 
@@ -116,7 +120,7 @@
             this._btnCancelar.Location = new System.Drawing.Point(219, 271);
             this._btnCancelar.Name = "_btnCancelar";
             this._btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this._btnCancelar.TabIndex = 108;
+            this._btnCancelar.TabIndex = 9;
             this._btnCancelar.Text = "Cancelar";
             this._btnCancelar.UseVisualStyleBackColor = true;
             this._btnCancelar.Click += new System.EventHandler(this._btnCancelar_Click);
@@ -126,7 +130,7 @@
             this._btnEditar.Location = new System.Drawing.Point(115, 271);
             this._btnEditar.Name = "_btnEditar";
             this._btnEditar.Size = new System.Drawing.Size(75, 23);
-            this._btnEditar.TabIndex = 107;
+            this._btnEditar.TabIndex = 8;
             this._btnEditar.Text = "Editar";
             this._btnEditar.UseVisualStyleBackColor = true;
             this._btnEditar.Click += new System.EventHandler(this._btnEditar_Click);
@@ -134,9 +138,10 @@
             // _txtCorreo
             // 
             this._txtCorreo.Location = new System.Drawing.Point(167, 96);
+            this._txtCorreo.MaxLength = 50;
             this._txtCorreo.Name = "_txtCorreo";
             this._txtCorreo.Size = new System.Drawing.Size(219, 20);
-            this._txtCorreo.TabIndex = 103;
+            this._txtCorreo.TabIndex = 2;
             // 
             // label3
             // 
@@ -150,9 +155,10 @@
             // _txtTelefono
             // 
             this._txtTelefono.Location = new System.Drawing.Point(167, 123);
+            this._txtTelefono.MaxLength = 20;
             this._txtTelefono.Name = "_txtTelefono";
             this._txtTelefono.Size = new System.Drawing.Size(219, 20);
-            this._txtTelefono.TabIndex = 105;
+            this._txtTelefono.TabIndex = 3;
             // 
             // label2
             // 
@@ -166,9 +172,10 @@
             // _txtNombre
             // 
             this._txtNombre.Location = new System.Drawing.Point(167, 70);
+            this._txtNombre.MaxLength = 100;
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.Size = new System.Drawing.Size(219, 20);
-            this._txtNombre.TabIndex = 101;
+            this._txtNombre.TabIndex = 1;
             // 
             // label1
             // 

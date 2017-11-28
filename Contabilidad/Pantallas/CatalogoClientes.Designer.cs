@@ -54,33 +54,36 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(790, 48);
+            this.panel3.Size = new System.Drawing.Size(790, 55);
             this.panel3.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 13);
+            this.label1.Size = new System.Drawing.Size(181, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Catálogo de Clientes:";
             // 
             // _txtBuscar
             // 
-            this._txtBuscar.Location = new System.Drawing.Point(50, 22);
+            this._txtBuscar.Location = new System.Drawing.Point(71, 28);
             this._txtBuscar.Name = "_txtBuscar";
-            this._txtBuscar.Size = new System.Drawing.Size(227, 20);
+            this._txtBuscar.Size = new System.Drawing.Size(221, 20);
             this._txtBuscar.TabIndex = 7;
+            this._txtBuscar.TextChanged += new System.EventHandler(this._txtBuscar_TextChanged);
             // 
             // _lblBuscar
             // 
             this._lblBuscar.AutoSize = true;
-            this._lblBuscar.Location = new System.Drawing.Point(4, 25);
+            this._lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblBuscar.Location = new System.Drawing.Point(5, 29);
             this._lblBuscar.Name = "_lblBuscar";
-            this._lblBuscar.Size = new System.Drawing.Size(40, 13);
+            this._lblBuscar.Size = new System.Drawing.Size(60, 16);
             this._lblBuscar.TabIndex = 8;
-            this._lblBuscar.Text = "Buscar";
+            this._lblBuscar.Text = "Buscar:";
             // 
             // panel1
             // 
@@ -89,7 +92,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(292, 371);
+            this.panel1.Size = new System.Drawing.Size(292, 364);
             this.panel1.TabIndex = 8;
             // 
             // _lstbConsulta
@@ -98,7 +101,7 @@
             this._lstbConsulta.FormattingEnabled = true;
             this._lstbConsulta.Location = new System.Drawing.Point(0, 0);
             this._lstbConsulta.Name = "_lstbConsulta";
-            this._lstbConsulta.Size = new System.Drawing.Size(292, 334);
+            this._lstbConsulta.Size = new System.Drawing.Size(292, 327);
             this._lstbConsulta.Sorted = true;
             this._lstbConsulta.TabIndex = 2;
             this._lstbConsulta.SelectedIndexChanged += new System.EventHandler(this._lstbConsulta_SelectedIndexChanged);
@@ -109,7 +112,7 @@
             this.panel2.Controls.Add(this._btnRegistrar);
             this.panel2.Controls.Add(this._btnEliminar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 334);
+            this.panel2.Location = new System.Drawing.Point(0, 327);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(292, 37);
             this.panel2.TabIndex = 0;
@@ -152,9 +155,9 @@
             this.panel5.Controls.Add(this.navigator1);
             this.panel5.Controls.Add(this.panel1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 48);
+            this.panel5.Location = new System.Drawing.Point(0, 55);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(790, 371);
+            this.panel5.Size = new System.Drawing.Size(790, 364);
             this.panel5.TabIndex = 11;
             // 
             // navigator1
@@ -162,7 +165,7 @@
             this.navigator1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navigator1.Location = new System.Drawing.Point(292, 0);
             this.navigator1.Name = "navigator1";
-            this.navigator1.Size = new System.Drawing.Size(498, 371);
+            this.navigator1.Size = new System.Drawing.Size(498, 364);
             this.navigator1.TabIndex = 4;
             // 
             // CatalogoClientes

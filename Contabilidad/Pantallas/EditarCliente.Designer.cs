@@ -100,6 +100,7 @@
             // _txtContrasenaFIEL
             // 
             this._txtContrasenaFIEL.Location = new System.Drawing.Point(116, 223);
+            this._txtContrasenaFIEL.MaxLength = 100;
             this._txtContrasenaFIEL.Name = "_txtContrasenaFIEL";
             this._txtContrasenaFIEL.Size = new System.Drawing.Size(219, 20);
             this._txtContrasenaFIEL.TabIndex = 29;
@@ -116,6 +117,7 @@
             // _txtContrasenaRFC
             // 
             this._txtContrasenaRFC.Location = new System.Drawing.Point(116, 196);
+            this._txtContrasenaRFC.MaxLength = 20;
             this._txtContrasenaRFC.Name = "_txtContrasenaRFC";
             this._txtContrasenaRFC.Size = new System.Drawing.Size(219, 20);
             this._txtContrasenaRFC.TabIndex = 27;
@@ -132,6 +134,7 @@
             // _txtRFC
             // 
             this._txtRFC.Location = new System.Drawing.Point(116, 142);
+            this._txtRFC.MaxLength = 20;
             this._txtRFC.Name = "_txtRFC";
             this._txtRFC.Size = new System.Drawing.Size(219, 20);
             this._txtRFC.TabIndex = 24;
@@ -148,6 +151,7 @@
             // _txtCURP
             // 
             this._txtCURP.Location = new System.Drawing.Point(116, 169);
+            this._txtCURP.MaxLength = 20;
             this._txtCURP.Name = "_txtCURP";
             this._txtCURP.Size = new System.Drawing.Size(219, 20);
             this._txtCURP.TabIndex = 25;
@@ -164,6 +168,7 @@
             // _txtCorreo
             // 
             this._txtCorreo.Location = new System.Drawing.Point(116, 88);
+            this._txtCorreo.MaxLength = 100;
             this._txtCorreo.Name = "_txtCorreo";
             this._txtCorreo.Size = new System.Drawing.Size(219, 20);
             this._txtCorreo.TabIndex = 21;
@@ -180,6 +185,7 @@
             // _txtTelefono
             // 
             this._txtTelefono.Location = new System.Drawing.Point(116, 115);
+            this._txtTelefono.MaxLength = 20;
             this._txtTelefono.Name = "_txtTelefono";
             this._txtTelefono.Size = new System.Drawing.Size(219, 20);
             this._txtTelefono.TabIndex = 23;
@@ -196,6 +202,7 @@
             // _txtNombre
             // 
             this._txtNombre.Location = new System.Drawing.Point(116, 61);
+            this._txtNombre.MaxLength = 100;
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.Size = new System.Drawing.Size(219, 20);
             this._txtNombre.TabIndex = 19;
@@ -232,6 +239,7 @@
             // _txtRegPatronal
             // 
             this._txtRegPatronal.Location = new System.Drawing.Point(116, 277);
+            this._txtRegPatronal.MaxLength = 20;
             this._txtRegPatronal.Name = "_txtRegPatronal";
             this._txtRegPatronal.Size = new System.Drawing.Size(219, 20);
             this._txtRegPatronal.TabIndex = 31;
@@ -248,6 +256,7 @@
             // _txtComentarios
             // 
             this._txtComentarios.Location = new System.Drawing.Point(116, 392);
+            this._txtComentarios.MaxLength = 256;
             this._txtComentarios.Multiline = true;
             this._txtComentarios.Name = "_txtComentarios";
             this._txtComentarios.Size = new System.Drawing.Size(219, 73);
@@ -265,6 +274,7 @@
             // _txtDomicilio
             // 
             this._txtDomicilio.Location = new System.Drawing.Point(116, 313);
+            this._txtDomicilio.MaxLength = 256;
             this._txtDomicilio.Multiline = true;
             this._txtDomicilio.Name = "_txtDomicilio";
             this._txtDomicilio.Size = new System.Drawing.Size(219, 73);

@@ -127,10 +127,5 @@ namespace Contabilidad.Pantallas
                 navigator1.NavigateTo(new CardClientes());
             }
         }
-
-        private void _btnRegistrar_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

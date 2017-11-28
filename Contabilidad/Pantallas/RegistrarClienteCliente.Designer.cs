@@ -68,6 +68,7 @@
             // _txtRFC
             // 
             this._txtRFC.Location = new System.Drawing.Point(110, 142);
+            this._txtRFC.MaxLength = 20;
             this._txtRFC.Name = "_txtRFC";
             this._txtRFC.Size = new System.Drawing.Size(219, 20);
             this._txtRFC.TabIndex = 68;
@@ -84,6 +85,7 @@
             // _txtCorreo
             // 
             this._txtCorreo.Location = new System.Drawing.Point(110, 88);
+            this._txtCorreo.MaxLength = 100;
             this._txtCorreo.Name = "_txtCorreo";
             this._txtCorreo.Size = new System.Drawing.Size(219, 20);
             this._txtCorreo.TabIndex = 65;
@@ -100,6 +102,7 @@
             // _txtTelefono
             // 
             this._txtTelefono.Location = new System.Drawing.Point(110, 115);
+            this._txtTelefono.MaxLength = 20;
             this._txtTelefono.Name = "_txtTelefono";
             this._txtTelefono.Size = new System.Drawing.Size(219, 20);
             this._txtTelefono.TabIndex = 67;
@@ -116,6 +119,7 @@
             // _txtNombre
             // 
             this._txtNombre.Location = new System.Drawing.Point(110, 61);
+            this._txtNombre.MaxLength = 100;
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.Size = new System.Drawing.Size(219, 20);
             this._txtNombre.TabIndex = 63;
@@ -151,6 +155,7 @@
             // _txtDomicilio
             // 
             this._txtDomicilio.Location = new System.Drawing.Point(110, 169);
+            this._txtDomicilio.MaxLength = 256;
             this._txtDomicilio.Multiline = true;
             this._txtDomicilio.Name = "_txtDomicilio";
             this._txtDomicilio.Size = new System.Drawing.Size(219, 67);
@@ -159,6 +164,7 @@
             // _txtComentarios
             // 
             this._txtComentarios.Location = new System.Drawing.Point(110, 242);
+            this._txtComentarios.MaxLength = 256;
             this._txtComentarios.Multiline = true;
             this._txtComentarios.Name = "_txtComentarios";
             this._txtComentarios.Size = new System.Drawing.Size(219, 67);

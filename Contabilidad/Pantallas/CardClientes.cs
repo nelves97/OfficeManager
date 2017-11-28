@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace Contabilidad
 {
     public partial class CardClientes : UserControl
@@ -123,6 +124,11 @@ namespace Contabilidad
                 ClienteDeCliente.auxiliar = (ClienteDeCliente)_lstbClienteCliente.SelectedItem;
                 navigator1.NavigateTo(new CardClienteCliente());
             }
+        }
+
+        private void _btnEditarCliente_Click(object sender, EventArgs e)
+        {          
+            
         }
     }
 }
