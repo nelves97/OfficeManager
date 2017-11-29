@@ -127,8 +127,20 @@ namespace Contabilidad
         }
 
         private void _btnEditarCliente_Click(object sender, EventArgs e)
-        {          
+        {
+            Pantallas.CatalogoClientes cc = new Pantallas.CatalogoClientes();
+            var editarCliente = new EditarCliente();
             
+            //editarCliente.ShowDialog();
+            //_lstbConsulta.BeginUpdate();
+            //_lstbConsulta.Items.Clear();
+            //foreach (Cliente row in Cliente.ListaClientes)
+            //{
+            //    _lstbConsulta.Items.Add(row);
+            //}
+            //_lstbConsulta.SelectedItem = Cliente.auxiliar;
+            //_lstbConsulta.EndUpdate();
         }
     }
 }
+

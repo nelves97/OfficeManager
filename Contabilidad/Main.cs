@@ -48,7 +48,7 @@ namespace Contabilidad
                 }
             } else
             {
-                MessageBox.Show("El archivo contabilidad.properties no existe");
+                //MessageBox.Show("El archivo contabilidad.properties no existe");
             }
             if (DataSource == null) DataSource = "localhost\\SQLEXPRESS";
             if (InitialCatalog == null) InitialCatalog = "ContabilidadDB";

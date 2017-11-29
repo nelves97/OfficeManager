@@ -98,14 +98,14 @@
             // 
             this.catálogoDeClientesToolStripMenuItem.Name = "catálogoDeClientesToolStripMenuItem";
             this.catálogoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.catálogoDeClientesToolStripMenuItem.Text = "Catálogo de clientes";
+            this.catálogoDeClientesToolStripMenuItem.Text = "Catálogo de Clientes";
             this.catálogoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.catálogoDeClientesToolStripMenuItem_Click);
             // 
             // catálogoDeEmpleadosToolStripMenuItem
             // 
             this.catálogoDeEmpleadosToolStripMenuItem.Name = "catálogoDeEmpleadosToolStripMenuItem";
             this.catálogoDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.catálogoDeEmpleadosToolStripMenuItem.Text = "Catálogo de empleados";
+            this.catálogoDeEmpleadosToolStripMenuItem.Text = "Catálogo de Empleados";
             this.catálogoDeEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.catálogoDeEmpleadosToolStripMenuItem_Click);
             // 
             // calendarioToolStripMenuItem
