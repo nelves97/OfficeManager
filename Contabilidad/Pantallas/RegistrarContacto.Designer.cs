@@ -1,6 +1,6 @@
 ﻿namespace Contabilidad
 {
-    partial class RegistrarClienteCliente
+    partial class RegistrarContacto
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this._txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this._lblRegistrarClienteCliente = new System.Windows.Forms.Label();
+            this._lblRegistrarContacto = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this._txtDomicilio = new System.Windows.Forms.TextBox();
             this._txtComentarios = new System.Windows.Forms.TextBox();
@@ -133,15 +133,15 @@
             this.label1.TabIndex = 64;
             this.label1.Text = "Nombre";
             // 
-            // _lblRegistrarClienteCliente
+            // _lblRegistrarContacto
             // 
-            this._lblRegistrarClienteCliente.AutoSize = true;
-            this._lblRegistrarClienteCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblRegistrarClienteCliente.Location = new System.Drawing.Point(29, 18);
-            this._lblRegistrarClienteCliente.Name = "_lblRegistrarClienteCliente";
-            this._lblRegistrarClienteCliente.Size = new System.Drawing.Size(295, 25);
-            this._lblRegistrarClienteCliente.TabIndex = 62;
-            this._lblRegistrarClienteCliente.Text = "Registrar cliente de cliente";
+            this._lblRegistrarContacto.AutoSize = true;
+            this._lblRegistrarContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblRegistrarContacto.Location = new System.Drawing.Point(74, 18);
+            this._lblRegistrarContacto.Name = "_lblRegistrarContacto";
+            this._lblRegistrarContacto.Size = new System.Drawing.Size(205, 25);
+            this._lblRegistrarContacto.TabIndex = 62;
+            this._lblRegistrarContacto.Text = "Registrar contacto";
             // 
             // label4
             // 
@@ -179,7 +179,7 @@
             this.label6.TabIndex = 102;
             this.label6.Text = "Comentarios";
             // 
-            // RegistrarClienteCliente
+            // RegistrarContacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -198,9 +198,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this._txtNombre);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this._lblRegistrarClienteCliente);
-            this.Name = "RegistrarClienteCliente";
-            this.Text = "Registrar cliente de cliente";
+            this.Controls.Add(this._lblRegistrarContacto);
+            this.Name = "RegistrarContacto";
+            this.Text = "OfficeManager";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,7 +218,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox _txtNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label _lblRegistrarClienteCliente;
+        private System.Windows.Forms.Label _lblRegistrarContacto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox _txtDomicilio;
         private System.Windows.Forms.TextBox _txtComentarios;

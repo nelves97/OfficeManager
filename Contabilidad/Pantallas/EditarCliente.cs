@@ -53,7 +53,7 @@ namespace Contabilidad
                 tipoCliente = (Int32)Cliente.Periodos.Bimestral;
             }
 
-            SqlCommand editarCliente = new SqlCommand("UPDATE Clientes SET Nombre = @Nombre, Correo = @Correo, Telefono = @Telefono, Domicilio = @Domicilio, RFC = @RFC, CURP = @CURP, PasswordRFC = @PasswordRFC, PasswordFIEL = @PasswordFIEL, RegPatronal = @RegPatronal, Comentarios = @Comentarios, Periodo = @Periodo WHERE Id = @Id;", Connection.conn);
+            SqlCommand editarCliente = new SqlCommand("UPDATE Clientes SET Nombre = @Nombre, Correo = @Correo, Telefono = @Telefono, Domicilio = @Domicilio, RFC = @RFC, CURP = @CURP, PasswordRFC = @PasswordRFC, PasswordFIEL = @PasswordFIEL, RegPatronal = @RegPatronal, Comentarios = @Comentarios, Periodo = @Periodo WHERE IdCliente = @IdCliente;", Connection.conn);
             editarCliente.Parameters.Add(new SqlParameter("Nombre", _txtNombre.Text));
             editarCliente.Parameters.Add(new SqlParameter("Correo", _txtCorreo.Text));
             editarCliente.Parameters.Add(new SqlParameter("Telefono", _txtTelefono.Text));
@@ -65,7 +65,7 @@ namespace Contabilidad
             editarCliente.Parameters.Add(new SqlParameter("Periodo", tipoCliente));
             editarCliente.Parameters.Add(new SqlParameter("Comentarios", _txtComentarios.Text));
             editarCliente.Parameters.Add(new SqlParameter("RegPatronal", _txtRegPatronal.Text));
-            editarCliente.Parameters.Add(new SqlParameter("Id", Cliente.auxiliar.Id));
+            editarCliente.Parameters.Add(new SqlParameter("IdCliente", Cliente.auxiliar.Id));
 
             Cliente.auxiliar.Nombre = _txtNombre.Text;
             Cliente.auxiliar.Telefono = _txtTelefono.Text;
@@ -93,7 +93,6 @@ namespace Contabilidad
                     }
                     i += 1;
                 }
-
             }
             catch (Exception ex)
             {

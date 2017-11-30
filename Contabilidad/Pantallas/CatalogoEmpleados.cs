@@ -11,11 +11,12 @@ using System.Data.SqlClient;
 
 namespace Contabilidad.Pantallas
 {
-    public partial class CatalogoEmpleados : UserControl
+    public partial class CatalogoEmpleados : UserControl, Listener
     {
         public CatalogoEmpleados()
         {
             InitializeComponent();
+            NotificationCenter.main.subscribe("EditarEmpleado", this);
         }
 
         private void CatalogoEmpleados_Load(object sender, EventArgs e)
@@ -58,26 +59,16 @@ namespace Contabilidad.Pantallas
             navigator1.ClearNavigator();
         }
 
-        private void _btnEditar_Click(object sender, EventArgs e)
+        public void listen(string evento)
         {
-            if (_lstbConsulta.SelectedIndex != -1)
+            _lstbConsulta.BeginUpdate();
+            _lstbConsulta.Items.Clear();
+            foreach (Empleado row in Empleado.ListaEmpleados)
             {
-                Empleado.auxiliar = (Empleado)_lstbConsulta.SelectedItem;
-                var editarEmpleado = new EditarEmpleado();
-                editarEmpleado.ShowDialog();
-                _lstbConsulta.BeginUpdate();
-                _lstbConsulta.Items.Clear();
-                foreach (Empleado row in Empleado.ListaEmpleados)
-                {
-                    _lstbConsulta.Items.Add(row);
-                }
-                _lstbConsulta.SelectedItem = Empleado.auxiliar;
-                _lstbConsulta.EndUpdate();
+                _lstbConsulta.Items.Add(row);
             }
-            else
-            {
-                MessageBox.Show("Seleccione a un empleado para editar");
-            }
+            _lstbConsulta.SelectedItem = Empleado.auxiliar;
+            _lstbConsulta.EndUpdate();
         }
 
         private void _btnEliminar_Click(object sender, EventArgs e)
@@ -89,7 +80,7 @@ namespace Contabilidad.Pantallas
                 if (respuesta == DialogResult.OK)
                 {
                     Empleado empleadoBorrado = (Empleado)_lstbConsulta.SelectedItem;
-                    SqlCommand eliminarEmpleado = new SqlCommand("DELETE FROM Empleados WHERE Id = " + empleadoBorrado.Id + ";", Connection.conn);
+                    SqlCommand eliminarEmpleado = new SqlCommand("DELETE FROM Empleados WHERE IdEmpleado = " + empleadoBorrado.Id + ";", Connection.conn);
 
                     try
                     {

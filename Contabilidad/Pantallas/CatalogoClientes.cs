@@ -11,12 +11,14 @@ using System.Data.SqlClient;
 
 namespace Contabilidad.Pantallas
 {
-    public partial class CatalogoClientes : UserControl
+    public partial class CatalogoClientes : UserControl, Listener
     {
         public CatalogoClientes()
         {
             InitializeComponent();
+            NotificationCenter.main.subscribe("EditarCliente", this);
         }
+
 
         private void CatalogoClientes_Load(object sender, EventArgs e)
         {
@@ -53,7 +55,7 @@ namespace Contabilidad.Pantallas
                 if (respuesta == DialogResult.OK)
                 {
                     Cliente clienteBorrado = (Cliente)_lstbConsulta.SelectedItem;
-                    SqlCommand eliminarCliente = new SqlCommand("DELETE FROM Clientes WHERE Id = " + clienteBorrado.Id + ";", Connection.conn);
+                    SqlCommand eliminarCliente = new SqlCommand("DELETE FROM Clientes WHERE IdCliente = " + clienteBorrado.Id + ";", Connection.conn);
 
                     try
                     {
@@ -82,27 +84,18 @@ namespace Contabilidad.Pantallas
             }
         }
 
-        private void _btnEditar_Click(object sender, EventArgs e)
+        public void listen(string evento)
         {
-            if (_lstbConsulta.SelectedIndex != -1)
+            _lstbConsulta.BeginUpdate();
+            _lstbConsulta.Items.Clear();
+            foreach (Cliente row in Cliente.ListaClientes)
             {
-                Cliente.auxiliar = (Cliente)_lstbConsulta.SelectedItem;
-                var editarCliente = new EditarCliente();
-                editarCliente.ShowDialog();
-                _lstbConsulta.BeginUpdate();
-                _lstbConsulta.Items.Clear();
-                foreach (Cliente row in Cliente.ListaClientes)
-                {
-                    _lstbConsulta.Items.Add(row);
-                }
-                _lstbConsulta.SelectedItem = Cliente.auxiliar;
-                _lstbConsulta.EndUpdate();               
+                _lstbConsulta.Items.Add(row);
             }
-            else
-            {
-                MessageBox.Show("Seleccione a un cliente para editar");
-            }
+            _lstbConsulta.SelectedItem = Cliente.auxiliar;
+            _lstbConsulta.EndUpdate();
         }
+ 
 
         private void _btnRegistrar_Click(object sender, EventArgs e)
         {

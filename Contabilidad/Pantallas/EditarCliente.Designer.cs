@@ -61,7 +61,7 @@
             this._btnEditar.Location = new System.Drawing.Point(75, 502);
             this._btnEditar.Name = "_btnEditar";
             this._btnEditar.Size = new System.Drawing.Size(75, 23);
-            this._btnEditar.TabIndex = 35;
+            this._btnEditar.TabIndex = 13;
             this._btnEditar.Text = "Editar";
             this._btnEditar.UseVisualStyleBackColor = true;
             this._btnEditar.Click += new System.EventHandler(this._btnEditar_Click);
@@ -72,7 +72,7 @@
             this._rbtnBimestral.Location = new System.Drawing.Point(205, 251);
             this._rbtnBimestral.Name = "_rbtnBimestral";
             this._rbtnBimestral.Size = new System.Drawing.Size(67, 17);
-            this._rbtnBimestral.TabIndex = 32;
+            this._rbtnBimestral.TabIndex = 9;
             this._rbtnBimestral.TabStop = true;
             this._rbtnBimestral.Text = "Bimestral";
             this._rbtnBimestral.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             this._rbtnMensual.Location = new System.Drawing.Point(116, 251);
             this._rbtnMensual.Name = "_rbtnMensual";
             this._rbtnMensual.Size = new System.Drawing.Size(65, 17);
-            this._rbtnMensual.TabIndex = 30;
+            this._rbtnMensual.TabIndex = 8;
             this._rbtnMensual.TabStop = true;
             this._rbtnMensual.Text = "Mensual";
             this._rbtnMensual.UseVisualStyleBackColor = true;
@@ -103,7 +103,7 @@
             this._txtContrasenaFIEL.MaxLength = 100;
             this._txtContrasenaFIEL.Name = "_txtContrasenaFIEL";
             this._txtContrasenaFIEL.Size = new System.Drawing.Size(219, 20);
-            this._txtContrasenaFIEL.TabIndex = 29;
+            this._txtContrasenaFIEL.TabIndex = 7;
             // 
             // label7
             // 
@@ -120,7 +120,7 @@
             this._txtContrasenaRFC.MaxLength = 20;
             this._txtContrasenaRFC.Name = "_txtContrasenaRFC";
             this._txtContrasenaRFC.Size = new System.Drawing.Size(219, 20);
-            this._txtContrasenaRFC.TabIndex = 27;
+            this._txtContrasenaRFC.TabIndex = 6;
             // 
             // label6
             // 
@@ -137,7 +137,7 @@
             this._txtRFC.MaxLength = 20;
             this._txtRFC.Name = "_txtRFC";
             this._txtRFC.Size = new System.Drawing.Size(219, 20);
-            this._txtRFC.TabIndex = 24;
+            this._txtRFC.TabIndex = 4;
             // 
             // label5
             // 
@@ -154,7 +154,7 @@
             this._txtCURP.MaxLength = 20;
             this._txtCURP.Name = "_txtCURP";
             this._txtCURP.Size = new System.Drawing.Size(219, 20);
-            this._txtCURP.TabIndex = 25;
+            this._txtCURP.TabIndex = 5;
             // 
             // label4
             // 
@@ -171,7 +171,7 @@
             this._txtCorreo.MaxLength = 100;
             this._txtCorreo.Name = "_txtCorreo";
             this._txtCorreo.Size = new System.Drawing.Size(219, 20);
-            this._txtCorreo.TabIndex = 21;
+            this._txtCorreo.TabIndex = 2;
             // 
             // label3
             // 
@@ -188,7 +188,7 @@
             this._txtTelefono.MaxLength = 20;
             this._txtTelefono.Name = "_txtTelefono";
             this._txtTelefono.Size = new System.Drawing.Size(219, 20);
-            this._txtTelefono.TabIndex = 23;
+            this._txtTelefono.TabIndex = 3;
             // 
             // label2
             // 
@@ -205,7 +205,7 @@
             this._txtNombre.MaxLength = 100;
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.Size = new System.Drawing.Size(219, 20);
-            this._txtNombre.TabIndex = 19;
+            this._txtNombre.TabIndex = 1;
             // 
             // label1
             // 
@@ -231,7 +231,7 @@
             this._btnCancelar.Location = new System.Drawing.Point(179, 502);
             this._btnCancelar.Name = "_btnCancelar";
             this._btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this._btnCancelar.TabIndex = 39;
+            this._btnCancelar.TabIndex = 14;
             this._btnCancelar.Text = "Cancelar";
             this._btnCancelar.UseVisualStyleBackColor = true;
             this._btnCancelar.Click += new System.EventHandler(this._btnCancelar_Click);
@@ -242,7 +242,7 @@
             this._txtRegPatronal.MaxLength = 20;
             this._txtRegPatronal.Name = "_txtRegPatronal";
             this._txtRegPatronal.Size = new System.Drawing.Size(219, 20);
-            this._txtRegPatronal.TabIndex = 31;
+            this._txtRegPatronal.TabIndex = 10;
             // 
             // label11
             // 
@@ -260,7 +260,7 @@
             this._txtComentarios.Multiline = true;
             this._txtComentarios.Name = "_txtComentarios";
             this._txtComentarios.Size = new System.Drawing.Size(219, 73);
-            this._txtComentarios.TabIndex = 33;
+            this._txtComentarios.TabIndex = 12;
             // 
             // label10
             // 
@@ -278,7 +278,7 @@
             this._txtDomicilio.Multiline = true;
             this._txtDomicilio.Name = "_txtDomicilio";
             this._txtDomicilio.Size = new System.Drawing.Size(219, 73);
-            this._txtDomicilio.TabIndex = 32;
+            this._txtDomicilio.TabIndex = 11;
             // 
             // label9
             // 

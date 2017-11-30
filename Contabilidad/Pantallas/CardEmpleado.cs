@@ -28,6 +28,16 @@ namespace Contabilidad.Pantallas
             _txtSalario.Text = Empleado.auxiliar.Salario.ToString();
             _txtFechaIngreso.Text = Empleado.auxiliar.FechadeIngreso.ToString();
             _txtEdad.Text = Empleado.auxiliar.CalcularEdad(Empleado.auxiliar.FechadeNacimiento).ToString() + " años";
+            _txtSexo.Text = Empleado.auxiliar.Sexo;
+            _txtNombreUsuario.Text = Empleado.auxiliar.NombreUsuario;
+            _txtContrasena.Text = Empleado.auxiliar.Contrasena;
+        }
+
+        private void _btnEditarEmpleado_Click(object sender, EventArgs e)
+        {
+            var editarEmpleado = new EditarEmpleado();
+            editarEmpleado.ShowDialog();
+            NotificationCenter.main.emit("EditarEmpleado");
         }
     }
 }

@@ -48,9 +48,7 @@
             this._txtTipoCliente = new System.Windows.Forms.TextBox();
             this._btnRegistrar = new System.Windows.Forms.Button();
             this._btnEliminar = new System.Windows.Forms.Button();
-            this._btnEditar = new System.Windows.Forms.Button();
-            this._lstbClienteCliente = new System.Windows.Forms.ListBox();
-            this.navigator1 = new Contabilidad.Navigator();
+            this._lstbContacto = new System.Windows.Forms.ListBox();
             this._txtComentarios = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this._txtRegPatronal = new System.Windows.Forms.TextBox();
@@ -60,6 +58,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this._btnEditarCliente = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.navigator1 = new Contabilidad.Navigator();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -265,7 +264,7 @@
             // 
             // _btnRegistrar
             // 
-            this._btnRegistrar.Location = new System.Drawing.Point(20, 120);
+            this._btnRegistrar.Location = new System.Drawing.Point(131, 122);
             this._btnRegistrar.Name = "_btnRegistrar";
             this._btnRegistrar.Size = new System.Drawing.Size(87, 23);
             this._btnRegistrar.TabIndex = 10;
@@ -275,7 +274,7 @@
             // 
             // _btnEliminar
             // 
-            this._btnEliminar.Location = new System.Drawing.Point(113, 120);
+            this._btnEliminar.Location = new System.Drawing.Point(224, 122);
             this._btnEliminar.Name = "_btnEliminar";
             this._btnEliminar.Size = new System.Drawing.Size(87, 23);
             this._btnEliminar.TabIndex = 12;
@@ -283,32 +282,15 @@
             this._btnEliminar.UseVisualStyleBackColor = true;
             this._btnEliminar.Click += new System.EventHandler(this._btnEliminar_Click);
             // 
-            // _btnEditar
+            // _lstbContacto
             // 
-            this._btnEditar.Location = new System.Drawing.Point(206, 120);
-            this._btnEditar.Name = "_btnEditar";
-            this._btnEditar.Size = new System.Drawing.Size(87, 23);
-            this._btnEditar.TabIndex = 11;
-            this._btnEditar.Text = "Editar";
-            this._btnEditar.UseVisualStyleBackColor = true;
-            this._btnEditar.Click += new System.EventHandler(this._btnEditar_Click);
-            // 
-            // _lstbClienteCliente
-            // 
-            this._lstbClienteCliente.FormattingEnabled = true;
-            this._lstbClienteCliente.Location = new System.Drawing.Point(20, 32);
-            this._lstbClienteCliente.Name = "_lstbClienteCliente";
-            this._lstbClienteCliente.Size = new System.Drawing.Size(291, 82);
-            this._lstbClienteCliente.Sorted = true;
-            this._lstbClienteCliente.TabIndex = 13;
-            this._lstbClienteCliente.SelectedIndexChanged += new System.EventHandler(this._lstbClienteCliente_SelectedIndexChanged);
-            // 
-            // navigator1
-            // 
-            this.navigator1.Location = new System.Drawing.Point(20, 149);
-            this.navigator1.Name = "navigator1";
-            this.navigator1.Size = new System.Drawing.Size(291, 314);
-            this.navigator1.TabIndex = 14;
+            this._lstbContacto.FormattingEnabled = true;
+            this._lstbContacto.Location = new System.Drawing.Point(20, 32);
+            this._lstbContacto.Name = "_lstbContacto";
+            this._lstbContacto.Size = new System.Drawing.Size(291, 82);
+            this._lstbContacto.Sorted = true;
+            this._lstbContacto.TabIndex = 13;
+            this._lstbContacto.SelectedIndexChanged += new System.EventHandler(this._lstbContacto_SelectedIndexChanged);
             // 
             // _txtComentarios
             // 
@@ -409,10 +391,10 @@
             // 
             // _btnEditarCliente
             // 
-            this._btnEditarCliente.Location = new System.Drawing.Point(17, 436);
+            this._btnEditarCliente.Location = new System.Drawing.Point(226, 436);
             this._btnEditarCliente.Name = "_btnEditarCliente";
-            this._btnEditarCliente.Size = new System.Drawing.Size(75, 23);
-            this._btnEditarCliente.TabIndex = 22;
+            this._btnEditarCliente.Size = new System.Drawing.Size(87, 23);
+            this._btnEditarCliente.TabIndex = 21;
             this._btnEditarCliente.Text = "Editar";
             this._btnEditarCliente.UseVisualStyleBackColor = true;
             this._btnEditarCliente.Click += new System.EventHandler(this._btnEditarCliente_Click);
@@ -422,14 +404,20 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this._btnEliminar);
-            this.panel2.Controls.Add(this._btnEditar);
             this.panel2.Controls.Add(this._btnRegistrar);
-            this.panel2.Controls.Add(this._lstbClienteCliente);
+            this.panel2.Controls.Add(this._lstbContacto);
             this.panel2.Controls.Add(this.navigator1);
             this.panel2.Location = new System.Drawing.Point(368, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(329, 464);
             this.panel2.TabIndex = 22;
+            // 
+            // navigator1
+            // 
+            this.navigator1.Location = new System.Drawing.Point(20, 149);
+            this.navigator1.Name = "navigator1";
+            this.navigator1.Size = new System.Drawing.Size(291, 314);
+            this.navigator1.TabIndex = 14;
             // 
             // CardClientes
             // 
@@ -470,8 +458,7 @@
         private System.Windows.Forms.TextBox _txtTipoCliente;
         private System.Windows.Forms.Button _btnRegistrar;
         private System.Windows.Forms.Button _btnEliminar;
-        private System.Windows.Forms.Button _btnEditar;
-        private System.Windows.Forms.ListBox _lstbClienteCliente;
+        private System.Windows.Forms.ListBox _lstbContacto;
         private Navigator navigator1;
         private System.Windows.Forms.TextBox _txtComentarios;
         private System.Windows.Forms.Label label1;
@@ -480,7 +467,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button _btnEditarCliente;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button _btnEditarCliente;
     }
 }

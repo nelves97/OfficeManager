@@ -1,6 +1,6 @@
 ﻿namespace Contabilidad
 {
-    partial class CardClienteCliente
+    partial class CardContacto
     {
         /// <summary> 
         /// Required designer variable.
@@ -40,8 +40,8 @@
             this._txtDomicilio = new System.Windows.Forms.TextBox();
             this._txtComentarios = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this._btnEditarContacto = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this._btnEditarContacto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // _txtRFC
@@ -51,7 +51,7 @@
             this._txtRFC.Location = new System.Drawing.Point(89, 109);
             this._txtRFC.Name = "_txtRFC";
             this._txtRFC.ReadOnly = true;
-            this._txtRFC.Size = new System.Drawing.Size(218, 13);
+            this._txtRFC.Size = new System.Drawing.Size(202, 13);
             this._txtRFC.TabIndex = 11;
             this._txtRFC.TabStop = false;
             this._txtRFC.Text = ".";
@@ -63,7 +63,7 @@
             this._txtTelefono.Location = new System.Drawing.Point(89, 85);
             this._txtTelefono.Name = "_txtTelefono";
             this._txtTelefono.ReadOnly = true;
-            this._txtTelefono.Size = new System.Drawing.Size(218, 13);
+            this._txtTelefono.Size = new System.Drawing.Size(202, 13);
             this._txtTelefono.TabIndex = 10;
             this._txtTelefono.TabStop = false;
             this._txtTelefono.Text = ".";
@@ -75,7 +75,7 @@
             this._txtCorreo.Location = new System.Drawing.Point(89, 61);
             this._txtCorreo.Name = "_txtCorreo";
             this._txtCorreo.ReadOnly = true;
-            this._txtCorreo.Size = new System.Drawing.Size(218, 13);
+            this._txtCorreo.Size = new System.Drawing.Size(202, 13);
             this._txtCorreo.TabIndex = 8;
             this._txtCorreo.TabStop = false;
             this._txtCorreo.Text = ".";
@@ -87,7 +87,7 @@
             this._txtNombre.Location = new System.Drawing.Point(89, 37);
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.ReadOnly = true;
-            this._txtNombre.Size = new System.Drawing.Size(218, 13);
+            this._txtNombre.Size = new System.Drawing.Size(202, 13);
             this._txtNombre.TabIndex = 6;
             this._txtNombre.TabStop = false;
             this._txtNombre.Text = ".";
@@ -150,7 +150,7 @@
             this._txtDomicilio.Multiline = true;
             this._txtDomicilio.Name = "_txtDomicilio";
             this._txtDomicilio.ReadOnly = true;
-            this._txtDomicilio.Size = new System.Drawing.Size(303, 50);
+            this._txtDomicilio.Size = new System.Drawing.Size(287, 50);
             this._txtDomicilio.TabIndex = 14;
             this._txtDomicilio.TabStop = false;
             this._txtDomicilio.Text = ".";
@@ -163,7 +163,7 @@
             this._txtComentarios.Multiline = true;
             this._txtComentarios.Name = "_txtComentarios";
             this._txtComentarios.ReadOnly = true;
-            this._txtComentarios.Size = new System.Drawing.Size(303, 57);
+            this._txtComentarios.Size = new System.Drawing.Size(287, 57);
             this._txtComentarios.TabIndex = 16;
             this._txtComentarios.TabStop = false;
             this._txtComentarios.Text = ".";
@@ -178,15 +178,6 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Comentarios:";
             // 
-            // _btnEditarContacto
-            // 
-            this._btnEditarContacto.Location = new System.Drawing.Point(0, 287);
-            this._btnEditarContacto.Name = "_btnEditarContacto";
-            this._btnEditarContacto.Size = new System.Drawing.Size(75, 23);
-            this._btnEditarContacto.TabIndex = 17;
-            this._btnEditarContacto.Text = "Editar";
-            this._btnEditarContacto.UseVisualStyleBackColor = true;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -197,12 +188,22 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Datos del Contacto:";
             // 
-            // CardClienteCliente
+            // _btnEditarContacto
+            // 
+            this._btnEditarContacto.Location = new System.Drawing.Point(204, 287);
+            this._btnEditarContacto.Name = "_btnEditarContacto";
+            this._btnEditarContacto.Size = new System.Drawing.Size(87, 23);
+            this._btnEditarContacto.TabIndex = 22;
+            this._btnEditarContacto.Text = "Editar";
+            this._btnEditarContacto.UseVisualStyleBackColor = true;
+            this._btnEditarContacto.Click += new System.EventHandler(this._btnEditarContacto_Click);
+            // 
+            // CardContacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label4);
             this.Controls.Add(this._btnEditarContacto);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this._txtComentarios);
             this.Controls.Add(this.label2);
             this.Controls.Add(this._txtDomicilio);
@@ -215,9 +216,9 @@
             this.Controls.Add(this._lblRFC);
             this.Controls.Add(this._lblTelefono);
             this.Controls.Add(this._lblCorreo);
-            this.Name = "CardClienteCliente";
-            this.Size = new System.Drawing.Size(313, 313);
-            this.Load += new System.EventHandler(this.CardClienteCliente_Load);
+            this.Name = "CardContacto";
+            this.Size = new System.Drawing.Size(291, 313);
+            this.Load += new System.EventHandler(this.CardContacto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,7 +238,7 @@
         private System.Windows.Forms.TextBox _txtDomicilio;
         private System.Windows.Forms.TextBox _txtComentarios;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button _btnEditarContacto;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button _btnEditarContacto;
     }
 }

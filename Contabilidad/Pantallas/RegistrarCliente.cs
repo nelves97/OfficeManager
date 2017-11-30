@@ -55,7 +55,7 @@ namespace Contabilidad
             nuevoCliente.Parameters.Add(new SqlParameter("Comentarios", _txtComentarios.Text));
             nuevoCliente.Parameters.Add(new SqlParameter("RegPatronal", _txtRegPatronal.Text));
             nuevoCliente.Parameters.Add(new SqlParameter("Periodo", tipoCliente));
-            SqlCommand idNueva = new SqlCommand("SELECT TOP 1 Id FROM Clientes ORDER BY Id DESC;", Connection.conn);
+            SqlCommand idNueva = new SqlCommand("SELECT TOP 1 IdCliente FROM Clientes ORDER BY IdCliente DESC;", Connection.conn);
 
             try
             {

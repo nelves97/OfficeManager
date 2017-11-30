@@ -1,6 +1,6 @@
 ﻿namespace Contabilidad
 {
-    partial class EditarClienteCliente
+    partial class EditarContacto
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this._txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this._lblEditarClienteCliente = new System.Windows.Forms.Label();
+            this._lblEditarContacto = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this._txtComentarios = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -151,15 +151,15 @@
             this.label1.TabIndex = 88;
             this.label1.Text = "Nombre";
             // 
-            // _lblEditarClienteCliente
+            // _lblEditarContacto
             // 
-            this._lblEditarClienteCliente.AutoSize = true;
-            this._lblEditarClienteCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblEditarClienteCliente.Location = new System.Drawing.Point(46, 19);
-            this._lblEditarClienteCliente.Name = "_lblEditarClienteCliente";
-            this._lblEditarClienteCliente.Size = new System.Drawing.Size(261, 25);
-            this._lblEditarClienteCliente.TabIndex = 86;
-            this._lblEditarClienteCliente.Text = "Editar cliente de cliente";
+            this._lblEditarContacto.AutoSize = true;
+            this._lblEditarContacto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._lblEditarContacto.Location = new System.Drawing.Point(91, 19);
+            this._lblEditarContacto.Name = "_lblEditarContacto";
+            this._lblEditarContacto.Size = new System.Drawing.Size(171, 25);
+            this._lblEditarContacto.TabIndex = 86;
+            this._lblEditarContacto.Text = "Editar contacto";
             // 
             // label6
             // 
@@ -179,7 +179,7 @@
             this._txtComentarios.Size = new System.Drawing.Size(219, 67);
             this._txtComentarios.TabIndex = 6;
             // 
-            // EditarClienteCliente
+            // EditarContacto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -198,10 +198,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this._txtNombre);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this._lblEditarClienteCliente);
-            this.Name = "EditarClienteCliente";
-            this.Text = "Editar cliente de cliente";
-            this.Load += new System.EventHandler(this.EditarClienteCliente_Load);
+            this.Controls.Add(this._lblEditarContacto);
+            this.Name = "EditarContacto";
+            this.Text = "OfficeManager";
+            this.Load += new System.EventHandler(this.EditarContacto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,7 +221,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox _txtNombre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label _lblEditarClienteCliente;
+        private System.Windows.Forms.Label _lblEditarContacto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox _txtComentarios;
     }

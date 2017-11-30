@@ -23,12 +23,12 @@ namespace Contabilidad.Pantallas
         {
             if (_txtNombre.Text == "")
             {
-                MessageBox.Show("Ingrese el nombre del cliente");
+                MessageBox.Show("Ingrese el nombre del Empleado");
                 return;
             }
 
-            SqlCommand nuevoEmpleado = new SqlCommand("INSERT INTO Empleados (Nombre, FechaNacimiento, Correo, Telefono, HorasSemanales, Salario, FechaIngreso) " +
-                "VALUES(@Nombre, @FechaNacimiento, @Correo, @Telefono, @HorasSemanales, @Salario, @FechaIngreso);", Connection.conn);
+            SqlCommand nuevoEmpleado = new SqlCommand("INSERT INTO Empleados (Nombre, FechaNacimiento, Correo, Telefono, HorasSemanales, Salario, FechaIngreso, Sexo, NombreUsuario, Contrasena) " +
+                "VALUES(@Nombre, @FechaNacimiento, @Correo, @Telefono, @HorasSemanales, @Salario, @FechaIngreso, @Sexo, @NombreUsuario, @Contrasena);", Connection.conn);
             nuevoEmpleado.Parameters.Add(new SqlParameter("Nombre", _txtNombre.Text));
             nuevoEmpleado.Parameters.Add(new SqlParameter("FechaNacimiento", _dtpFechaNacimiento.Value));
             nuevoEmpleado.Parameters.Add(new SqlParameter("Correo", _txtCorreo.Text));
@@ -36,8 +36,11 @@ namespace Contabilidad.Pantallas
             nuevoEmpleado.Parameters.Add(new SqlParameter("HorasSemanales", _txtHorasSemanales.Text));
             nuevoEmpleado.Parameters.Add(new SqlParameter("Salario", _txtSalario.Text));
             nuevoEmpleado.Parameters.Add(new SqlParameter("FechaIngreso", _dtpFechaIngreso.Value));
+            nuevoEmpleado.Parameters.Add(new SqlParameter("Sexo", _cmbSexo.Text));
+            nuevoEmpleado.Parameters.Add(new SqlParameter("NombreUsuario", _txtNombreUsuario.Text));
+            nuevoEmpleado.Parameters.Add(new SqlParameter("Contrasena", _txtContrasena.Text));
 
-            SqlCommand idNueva = new SqlCommand("SELECT TOP 1 Id FROM Empleados ORDER BY Id DESC;", Connection.conn);
+            SqlCommand idNueva = new SqlCommand("SELECT TOP 1 IdEmpleado FROM Empleados ORDER BY IdEmpleado DESC;", Connection.conn);
 
             try
             {
@@ -47,7 +50,7 @@ namespace Contabilidad.Pantallas
                 using (SqlDataReader rdr = idNueva.ExecuteReader())
                 {
                     rdr.Read();
-                    Empleado nuevo = new Empleado(rdr.GetInt32(0), _txtNombre.Text, _dtpFechaNacimiento.Value, _txtCorreo.Text, _txtTelefono.Text, Convert.ToInt32(_txtHorasSemanales.Text), Convert.ToInt32(_txtSalario.Text), _dtpFechaIngreso.Value);
+                    Empleado nuevo = new Empleado(rdr.GetInt32(0), _txtNombre.Text, _dtpFechaNacimiento.Value, _txtCorreo.Text, _txtTelefono.Text, Convert.ToInt32(_txtHorasSemanales.Text), Convert.ToInt32(_txtSalario.Text), _dtpFechaIngreso.Value, _cmbSexo.Text, _txtNombreUsuario.Text, _txtContrasena.Text);
                     Empleado.ListaEmpleados.Add(nuevo);
                 }
             }

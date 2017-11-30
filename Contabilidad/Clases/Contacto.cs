@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Contabilidad
 {
-    public class ClienteDeCliente
+    public class Contacto
     {
-        public static List<ClienteDeCliente> ListaClientesDeClientes;
-        public static ClienteDeCliente auxiliar;
+        public static List<Contacto> ListaContactos;
+        public static Contacto auxiliar;
 
         public Int32 Id;
         public String Nombre;
@@ -20,7 +20,7 @@ namespace Contabilidad
         public String Comentarios;
         public Int32 IdCliente;
 
-        public ClienteDeCliente(
+        public Contacto(
             Int32 Id,
             String Nombre,
             String Correo,
