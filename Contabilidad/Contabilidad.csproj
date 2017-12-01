@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -82,9 +82,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Cita.cs" />
+    <Compile Include="frmCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalendar.Designer.cs">
+      <DependentUpon>frmCalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Checador.cs" />
     <Compile Include="Clases\Listener.cs" />
     <Compile Include="Clases\NotificationCenter.cs" />
+
     <Compile Include="Pantallas\CardEmpleado.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,6 +171,11 @@
     <Compile Include="Pantallas\EditarEmpleado.Designer.cs">
       <DependentUpon>EditarEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\RegistrarCita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\RegistrarCita.Designer.cs">
+      <DependentUpon>RegistrarCita.cs</DependentUpon>
     <Compile Include="Pantallas\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +208,9 @@
     <Compile Include="Pantallas\RegistrarContacto.Designer.cs">
       <DependentUpon>RegistrarContacto.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmCalendar.resx">
+      <DependentUpon>frmCalendar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\CardEmpleado.resx">
       <DependentUpon>CardEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,6 +244,8 @@
     <EmbeddedResource Include="Pantallas\EditarEmpleado.resx">
       <DependentUpon>EditarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\RegistrarCita.resx">
+      <DependentUpon>RegistrarCita.cs</DependentUpon>
     <EmbeddedResource Include="Pantallas\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

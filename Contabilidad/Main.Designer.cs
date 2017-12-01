@@ -1,4 +1,4 @@
-﻿namespace Contabilidad
+namespace Contabilidad
 {
     partial class Main
     {
@@ -151,6 +151,7 @@
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private Navigator navigator1;
         private System.Windows.Forms.MenuStrip _menu;
+
     }
 }
 

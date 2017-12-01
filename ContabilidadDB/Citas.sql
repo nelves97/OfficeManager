@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Citas]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Dia] DATETIME NOT NULL, 
+    [Hora] DATETIME NOT NULL, 
+    [Info] NVARCHAR(MAX) NULL, 
+    [Color] NVARCHAR(10) NULL, 
+    [IdCliente] INT NOT NULL
+)
