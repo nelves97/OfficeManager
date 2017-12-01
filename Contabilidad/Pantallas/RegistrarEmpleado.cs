@@ -30,12 +30,12 @@ namespace Contabilidad.Pantallas
             SqlCommand nuevoEmpleado = new SqlCommand("INSERT INTO Empleados (Nombre, FechaNacimiento, Correo, Telefono, HorasSemanales, Salario, FechaIngreso, Sexo, NombreUsuario, Contrasena) " +
                 "VALUES(@Nombre, @FechaNacimiento, @Correo, @Telefono, @HorasSemanales, @Salario, @FechaIngreso, @Sexo, @NombreUsuario, @Contrasena);", Connection.conn);
             nuevoEmpleado.Parameters.Add(new SqlParameter("Nombre", _txtNombre.Text));
-            nuevoEmpleado.Parameters.Add(new SqlParameter("FechaNacimiento", _dtpFechaNacimiento.Value));
+            nuevoEmpleado.Parameters.Add(new SqlParameter("FechaNacimiento", _dtpFechaNacimiento.Value.Date));
             nuevoEmpleado.Parameters.Add(new SqlParameter("Correo", _txtCorreo.Text));
             nuevoEmpleado.Parameters.Add(new SqlParameter("Telefono", _txtTelefono.Text));
             nuevoEmpleado.Parameters.Add(new SqlParameter("HorasSemanales", _txtHorasSemanales.Text));
             nuevoEmpleado.Parameters.Add(new SqlParameter("Salario", _txtSalario.Text));
-            nuevoEmpleado.Parameters.Add(new SqlParameter("FechaIngreso", _dtpFechaIngreso.Value));
+            nuevoEmpleado.Parameters.Add(new SqlParameter("FechaIngreso", _dtpFechaIngreso.Value.Date));
             nuevoEmpleado.Parameters.Add(new SqlParameter("Sexo", _cmbSexo.Text));
             nuevoEmpleado.Parameters.Add(new SqlParameter("NombreUsuario", _txtNombreUsuario.Text));
             nuevoEmpleado.Parameters.Add(new SqlParameter("Contrasena", _txtContrasena.Text));

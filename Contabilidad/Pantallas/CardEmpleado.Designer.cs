@@ -55,6 +55,7 @@
             this._txtNombreUsuario = new System.Windows.Forms.TextBox();
             this._btnEditarEmpleado = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this._btnRegistros = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -201,9 +202,9 @@
             this._lblSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this._lblSalario.Location = new System.Drawing.Point(1, 250);
             this._lblSalario.Name = "_lblSalario";
-            this._lblSalario.Size = new System.Drawing.Size(50, 13);
+            this._lblSalario.Size = new System.Drawing.Size(102, 13);
             this._lblSalario.TabIndex = 18;
-            this._lblSalario.Text = "Salario:";
+            this._lblSalario.Text = "Salario Semanal:";
             // 
             // _lblHorasSemanales
             // 
@@ -298,6 +299,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this._btnRegistros);
             this.panel1.Controls.Add(this._txtContrasena);
             this.panel1.Controls.Add(this._txtNombreUsuario);
             this.panel1.Controls.Add(this._btnEditarEmpleado);
@@ -373,6 +375,16 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Datos del Empleado:";
             // 
+            // _btnRegistros
+            // 
+            this._btnRegistros.Location = new System.Drawing.Point(3, 389);
+            this._btnRegistros.Name = "_btnRegistros";
+            this._btnRegistros.Size = new System.Drawing.Size(185, 23);
+            this._btnRegistros.TabIndex = 35;
+            this._btnRegistros.Text = "Registros de Entrada y Salida";
+            this._btnRegistros.UseVisualStyleBackColor = true;
+            this._btnRegistros.Click += new System.EventHandler(this._btnRegistros_Click);
+            // 
             // CardEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,5 +429,6 @@
         private System.Windows.Forms.Button _btnEditarEmpleado;
         private System.Windows.Forms.TextBox _txtContrasena;
         private System.Windows.Forms.TextBox _txtNombreUsuario;
+        private System.Windows.Forms.Button _btnRegistros;
     }
 }

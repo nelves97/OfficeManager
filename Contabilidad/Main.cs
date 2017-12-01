@@ -164,5 +164,14 @@ namespace Contabilidad
         {
             this.Close();
         }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(Connection.rol == 0)
+            {
+                Checador.RegistrarSalida();
+            }
+            //Generar Backup
+        }
     }
 }

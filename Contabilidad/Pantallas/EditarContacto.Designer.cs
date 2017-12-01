@@ -199,6 +199,7 @@
             this.Controls.Add(this._txtNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this._lblEditarContacto);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditarContacto";
             this.Text = "OfficeManager";
             this.Load += new System.EventHandler(this.EditarContacto_Load);

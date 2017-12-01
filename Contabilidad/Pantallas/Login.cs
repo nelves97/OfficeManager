@@ -26,26 +26,47 @@ namespace Contabilidad
                 if (Connection.rol == -1)
                 {
                     MessageBox.Show("Error en los datos.");
+                    Connection.conn.Close();
+                }
+                else if (Connection.rol == 0)
+                {
+                    Connection.conn.Close();
+                    Checador.RegistrarEntrada();
+                    this.Hide();
                 }
                 else
                 {
                     Connection.conn.Close();
-                    this.Close();
+                    this.Hide();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-            finally
-            {
-                Connection.conn.Close();
-            }
         }
 
         private void _btnSalir_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(e.CloseReason == CloseReason.UserClosing)
+            Environment.Exit(0);
+        }
+
+        private void _txtNombreUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                _btnAceptar_Click(sender, e);
+        }
+
+        private void _txtContrasena_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                _btnAceptar_Click(sender, e);
         }
     }
 }

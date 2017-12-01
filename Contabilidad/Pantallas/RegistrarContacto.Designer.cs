@@ -199,6 +199,7 @@
             this.Controls.Add(this._txtNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this._lblRegistrarContacto);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RegistrarContacto";
             this.Text = "OfficeManager";
             this.ResumeLayout(false);

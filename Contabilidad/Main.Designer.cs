@@ -129,6 +129,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Main";
             this.Text = "Contabilidad";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

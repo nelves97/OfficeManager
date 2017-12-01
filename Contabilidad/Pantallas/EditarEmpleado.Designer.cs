@@ -285,8 +285,9 @@
             this.Controls.Add(this._btnCancelar);
             this.Controls.Add(this._btnEditar);
             this.Controls.Add(this._lblEditarEmpleado);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditarEmpleado";
-            this.Text = "Editar Empleado";
+            this.Text = "OfficeManager";
             this.Load += new System.EventHandler(this.EditarEmpleado_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -320,8 +320,9 @@
             this.Controls.Add(this._txtNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this._lblEditarCliente);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "EditarCliente";
-            this.Text = "Editar Cliente";
+            this.Text = "OfficeManager";
             this.Load += new System.EventHandler(this.EditarCliente_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

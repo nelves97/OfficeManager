@@ -285,8 +285,9 @@
             this.Controls.Add(this._txtNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this._lblRegistrarEmpleado);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "RegistrarEmpleado";
-            this.Text = "Registrar Empleado";
+            this.Text = "OfficeManager";
             this.ResumeLayout(false);
             this.PerformLayout();
 
