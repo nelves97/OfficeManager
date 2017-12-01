@@ -19,6 +19,9 @@ namespace Contabilidad
         public Int32 HorasSemanales;
         public Int32 Salario;
         public DateTime FechadeIngreso;
+        public String Sexo;
+        public String NombreUsuario;
+        public String Contrasena;
         
         public Empleado() { }
 
@@ -30,7 +33,10 @@ namespace Contabilidad
             String Telefono,
             Int32 HorasSemanales,
             Int32 Salario,
-            DateTime FechadeIngreso)
+            DateTime FechadeIngreso,
+            String Sexo,
+            String NombreUsuario,
+            String Contrasena)
         {
             this.Id = Id;
             this.Nombre = Nombre;
@@ -40,6 +46,9 @@ namespace Contabilidad
             this.HorasSemanales = HorasSemanales;
             this.Salario = Salario;
             this.FechadeIngreso = FechadeIngreso;
+            this.Sexo = Sexo;
+            this.NombreUsuario = NombreUsuario;
+            this.Contrasena = Contrasena;
         }
         public override string ToString()
         {

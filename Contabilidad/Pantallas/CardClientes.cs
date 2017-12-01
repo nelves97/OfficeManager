@@ -9,13 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
 namespace Contabilidad
 {
-    public partial class CardClientes : UserControl
+    public partial class CardClientes : UserControl, Listener
     {
         public CardClientes()
         {
             InitializeComponent();
+            NotificationCenter.main.subscribe("EditarContacto", this);
         }
 
         private void CardClientes_Load(object sender, EventArgs e)
@@ -32,56 +34,56 @@ namespace Contabilidad
             _txtComentarios.Text = Cliente.auxiliar.Comentarios;
             _txtRegPatronal.Text = Cliente.auxiliar.RegPatronal;
 
-            _lstbClienteCliente.BeginUpdate();
-            foreach (ClienteDeCliente row in ClienteDeCliente.ListaClientesDeClientes)
+            _lstbContacto.BeginUpdate();
+            foreach (Contacto row in Contacto.ListaContactos)
             {
                 if(row.IdCliente == Cliente.auxiliar.Id)
-                _lstbClienteCliente.Items.Add(row);
+                _lstbContacto.Items.Add(row);
             }
-            _lstbClienteCliente.EndUpdate();
+            _lstbContacto.EndUpdate();
         }
 
         private void _btnRegistrar_Click(object sender, EventArgs e)
         {
-            var registrarClienteCliente = new RegistrarClienteCliente();
-            registrarClienteCliente.ShowDialog();
-            _lstbClienteCliente.BeginUpdate();
-            _lstbClienteCliente.Items.Clear();
-            foreach (ClienteDeCliente row in ClienteDeCliente.ListaClientesDeClientes)
+            var registrarContacto = new RegistrarContacto();
+            registrarContacto.ShowDialog();
+            _lstbContacto.BeginUpdate();
+            _lstbContacto.Items.Clear();
+            foreach (Contacto row in Contacto.ListaContactos)
             {
                 if (row.IdCliente == Cliente.auxiliar.Id)
-                    _lstbClienteCliente.Items.Add(row);
+                    _lstbContacto.Items.Add(row);
             }
-            _lstbClienteCliente.EndUpdate();
+            _lstbContacto.EndUpdate();
             navigator1.ClearNavigator();
 
         }
 
         private void _btnEliminar_Click(object sender, EventArgs e)
         {
-            if (_lstbClienteCliente.SelectedIndex != -1)
+            if (_lstbContacto.SelectedIndex != -1)
             {
-                DialogResult respuesta = MessageBox.Show("¿Seguro que desea eliminar a " + _lstbClienteCliente.SelectedItem.ToString() + "?", "Eliminar Cliente", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                DialogResult respuesta = MessageBox.Show("¿Seguro que desea eliminar a " + _lstbContacto.SelectedItem.ToString() + "?", "Eliminar Contacto", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
 
                 if (respuesta == DialogResult.OK)
                 {
-                    ClienteDeCliente clienteBorrado = (ClienteDeCliente)_lstbClienteCliente.SelectedItem;
-                    SqlCommand eliminarCliente = new SqlCommand("DELETE FROM ClientesDeClientes WHERE Id = " + clienteBorrado.Id + ";", Connection.conn);
+                    Contacto contactoBorrado = (Contacto)_lstbContacto.SelectedItem;
+                    SqlCommand eliminarContacto = new SqlCommand("DELETE FROM Contactos WHERE IdContacto = " + contactoBorrado.Id + ";", Connection.conn);
 
                     try
                     {
                         Connection.conn.Open();
-                        eliminarCliente.ExecuteNonQuery();
-                        MessageBox.Show("Cliente eliminado correctamente.");
-                        ClienteDeCliente.ListaClientesDeClientes.Remove(clienteBorrado);
-                        _lstbClienteCliente.BeginUpdate();
-                        _lstbClienteCliente.Items.Clear();
-                        foreach (ClienteDeCliente row in ClienteDeCliente.ListaClientesDeClientes)
+                        eliminarContacto.ExecuteNonQuery();
+                        MessageBox.Show("Contacto eliminado correctamente.");
+                        Contacto.ListaContactos.Remove(contactoBorrado);
+                        _lstbContacto.BeginUpdate();
+                        _lstbContacto.Items.Clear();
+                        foreach (Contacto row in Contacto.ListaContactos)
                         {
                             if (row.IdCliente == Cliente.auxiliar.Id)
-                                _lstbClienteCliente.Items.Add(row);
+                                _lstbContacto.Items.Add(row);
                         }
-                        _lstbClienteCliente.EndUpdate();
+                        _lstbContacto.EndUpdate();
                     }
                     catch (Exception ex)
                     {
@@ -95,34 +97,35 @@ namespace Contabilidad
                 }
             }
         }
-
-        private void _btnEditar_Click(object sender, EventArgs e)
+        public void listen(string evento)
         {
-            if (_lstbClienteCliente.SelectedIndex != -1)
+            _lstbContacto.BeginUpdate();
+            _lstbContacto.Items.Clear();
+            foreach (Contacto row in Contacto.ListaContactos)
             {
-                ClienteDeCliente.auxiliar = (ClienteDeCliente)_lstbClienteCliente.SelectedItem;
-                var editarCliente = new EditarClienteCliente();
-                editarCliente.ShowDialog();
-                _lstbClienteCliente.BeginUpdate();
-                _lstbClienteCliente.Items.Clear();
-                foreach (ClienteDeCliente row in ClienteDeCliente.ListaClientesDeClientes)
-                {
-                    if (row.IdCliente == Cliente.auxiliar.Id)
-                        _lstbClienteCliente.Items.Add(row);
-                }
-                _lstbClienteCliente.SelectedItem = ClienteDeCliente.auxiliar;
-                _lstbClienteCliente.EndUpdate();
-                
+                if (row.IdCliente == Cliente.auxiliar.Id)
+                    _lstbContacto.Items.Add(row);
+            }
+            _lstbContacto.SelectedItem = Contacto.auxiliar;
+            _lstbContacto.EndUpdate();
+        }
+
+
+        private void _lstbContacto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_lstbContacto.SelectedItem != null)
+            {
+                Contacto.auxiliar = (Contacto)_lstbContacto.SelectedItem;
+                navigator1.NavigateTo(new CardContacto());
             }
         }
 
-        private void _lstbClienteCliente_SelectedIndexChanged(object sender, EventArgs e)
+        private void _btnEditarCliente_Click(object sender, EventArgs e)
         {
-            if (_lstbClienteCliente.SelectedItem != null)
-            {
-                ClienteDeCliente.auxiliar = (ClienteDeCliente)_lstbClienteCliente.SelectedItem;
-                navigator1.NavigateTo(new CardClienteCliente());
-            }
+            var editarCliente = new EditarCliente();
+            editarCliente.ShowDialog();
+            NotificationCenter.main.emit("EditarCliente");
         }
     }
 }
+

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -48,17 +48,17 @@ namespace Contabilidad
                 }
             } else
             {
-                MessageBox.Show("El archivo contabilidad.properties no existe");
+                //MessageBox.Show("El archivo contabilidad.properties no existe");
             }
             if (DataSource == null) DataSource = "localhost\\SQLEXPRESS";
             if (InitialCatalog == null) InitialCatalog = "ContabilidadDB";
             Cliente.ListaClientes = new List<Cliente>();
-            ClienteDeCliente.ListaClientesDeClientes = new List<ClienteDeCliente>();
+            Contacto.ListaContactos = new List<Contacto>();
             Empleado.ListaEmpleados = new List<Empleado>();
             //Connection.conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             Connection.conn = new SqlConnection(@"Data Source=(localdb)\ProjectsV13;Initial Catalog=ContabilidadDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             SqlCommand selectClientes = new SqlCommand("SELECT * FROM Clientes;", Connection.conn);
-            SqlCommand selectClientesClientes = new SqlCommand("SELECT * FROM ClientesDeClientes;", Connection.conn);
+            SqlCommand selectContactos = new SqlCommand("SELECT * FROM Contactos;", Connection.conn);
             SqlCommand selectEmpleados = new SqlCommand("SELECT * FROM Empleados;", Connection.conn);
             navigator1.NavigateTo(new CatalogoClientes());
             try
@@ -88,11 +88,11 @@ namespace Contabilidad
                     }
                 }
 
-                using (SqlDataReader rdr = selectClientesClientes.ExecuteReader())
+                using (SqlDataReader rdr = selectContactos.ExecuteReader())
                 {
                     while (rdr.Read())
                     {
-                        ClienteDeCliente nuevoCliente = new ClienteDeCliente(
+                        Contacto nuevoCliente = new Contacto(
                             rdr.GetInt32(0),
                             rdr.GetString(1),
                             rdr.GetString(2),
@@ -103,7 +103,7 @@ namespace Contabilidad
                             rdr.GetInt32(5)
                             );
 
-                        ClienteDeCliente.ListaClientesDeClientes.Add(nuevoCliente);
+                        Contacto.ListaContactos.Add(nuevoCliente);
                     }
                 }
 
@@ -119,7 +119,10 @@ namespace Contabilidad
                             rdr.GetString(4),
                             rdr.GetInt32(5),
                             rdr.GetInt32(6),
-                            rdr.GetDateTime(7)
+                            rdr.GetDateTime(7),
+                            rdr.GetString(8),
+                            rdr.GetString(9),
+                            rdr.GetString(10)
                             );
 
                         Empleado.ListaEmpleados.Add(nuevoEmpleado);
@@ -139,8 +142,36 @@ namespace Contabilidad
 
         private void Main_Load(object sender, EventArgs e)
         {
+            Login login = new Login();
+            login.ShowDialog();
             this.WindowState = FormWindowState.Maximized;
         }
 
+        private void catálogoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            navigator1.NavigateTo(new CatalogoClientes());
+        }
+
+        private void catálogoDeEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Connection.rol == 1)
+                navigator1.NavigateTo(new CatalogoEmpleados());
+            else
+                MessageBox.Show("No tiene permisos de acceso");
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(Connection.rol == 0)
+            {
+                Checador.RegistrarSalida();
+            }
+            //Generar Backup
+        }
     }
 }

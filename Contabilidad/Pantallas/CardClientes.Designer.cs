@@ -48,20 +48,26 @@
             this._txtTipoCliente = new System.Windows.Forms.TextBox();
             this._btnRegistrar = new System.Windows.Forms.Button();
             this._btnEliminar = new System.Windows.Forms.Button();
-            this._btnEditar = new System.Windows.Forms.Button();
-            this._lstbClienteCliente = new System.Windows.Forms.ListBox();
-            this.navigator1 = new Contabilidad.Navigator();
+            this._lstbContacto = new System.Windows.Forms.ListBox();
             this._txtComentarios = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this._txtRegPatronal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this._btnEditarCliente = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.navigator1 = new Contabilidad.Navigator();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // _lblNombre
             // 
             this._lblNombre.AutoSize = true;
             this._lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblNombre.Location = new System.Drawing.Point(12, 17);
+            this._lblNombre.Location = new System.Drawing.Point(14, 31);
             this._lblNombre.Name = "_lblNombre";
             this._lblNombre.Size = new System.Drawing.Size(54, 13);
             this._lblNombre.TabIndex = 0;
@@ -71,7 +77,7 @@
             // 
             this._lblCorreo.AutoSize = true;
             this._lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblCorreo.Location = new System.Drawing.Point(12, 41);
+            this._lblCorreo.Location = new System.Drawing.Point(14, 55);
             this._lblCorreo.Name = "_lblCorreo";
             this._lblCorreo.Size = new System.Drawing.Size(48, 13);
             this._lblCorreo.TabIndex = 1;
@@ -81,7 +87,7 @@
             // 
             this._lblTelefono.AutoSize = true;
             this._lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblTelefono.Location = new System.Drawing.Point(12, 65);
+            this._lblTelefono.Location = new System.Drawing.Point(14, 79);
             this._lblTelefono.Name = "_lblTelefono";
             this._lblTelefono.Size = new System.Drawing.Size(61, 13);
             this._lblTelefono.TabIndex = 2;
@@ -91,7 +97,7 @@
             // 
             this._lblDomicilio.AutoSize = true;
             this._lblDomicilio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblDomicilio.Location = new System.Drawing.Point(12, 209);
+            this._lblDomicilio.Location = new System.Drawing.Point(14, 247);
             this._lblDomicilio.Name = "_lblDomicilio";
             this._lblDomicilio.Size = new System.Drawing.Size(62, 13);
             this._lblDomicilio.TabIndex = 3;
@@ -101,7 +107,7 @@
             // 
             this._lblRFC.AutoSize = true;
             this._lblRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblRFC.Location = new System.Drawing.Point(12, 89);
+            this._lblRFC.Location = new System.Drawing.Point(14, 103);
             this._lblRFC.Name = "_lblRFC";
             this._lblRFC.Size = new System.Drawing.Size(35, 13);
             this._lblRFC.TabIndex = 4;
@@ -111,7 +117,7 @@
             // 
             this._lblCURP.AutoSize = true;
             this._lblCURP.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblCURP.Location = new System.Drawing.Point(12, 113);
+            this._lblCURP.Location = new System.Drawing.Point(14, 127);
             this._lblCURP.Name = "_lblCURP";
             this._lblCURP.Size = new System.Drawing.Size(45, 13);
             this._lblCURP.TabIndex = 5;
@@ -121,7 +127,7 @@
             // 
             this._lblContrasenaRFC.AutoSize = true;
             this._lblContrasenaRFC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblContrasenaRFC.Location = new System.Drawing.Point(12, 137);
+            this._lblContrasenaRFC.Location = new System.Drawing.Point(14, 151);
             this._lblContrasenaRFC.Name = "_lblContrasenaRFC";
             this._lblContrasenaRFC.Size = new System.Drawing.Size(103, 13);
             this._lblContrasenaRFC.TabIndex = 6;
@@ -131,7 +137,7 @@
             // 
             this._lblContrasenaFirma.AutoSize = true;
             this._lblContrasenaFirma.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblContrasenaFirma.Location = new System.Drawing.Point(12, 161);
+            this._lblContrasenaFirma.Location = new System.Drawing.Point(14, 175);
             this._lblContrasenaFirma.Name = "_lblContrasenaFirma";
             this._lblContrasenaFirma.Size = new System.Drawing.Size(105, 13);
             this._lblContrasenaFirma.TabIndex = 7;
@@ -141,7 +147,7 @@
             // 
             this._lblPeriodo.AutoSize = true;
             this._lblPeriodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._lblPeriodo.Location = new System.Drawing.Point(12, 185);
+            this._lblPeriodo.Location = new System.Drawing.Point(14, 199);
             this._lblPeriodo.Name = "_lblPeriodo";
             this._lblPeriodo.Size = new System.Drawing.Size(54, 13);
             this._lblPeriodo.TabIndex = 8;
@@ -149,8 +155,9 @@
             // 
             // _txtNombre
             // 
+            this._txtNombre.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this._txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this._txtNombre.Location = new System.Drawing.Point(127, 17);
+            this._txtNombre.Location = new System.Drawing.Point(129, 31);
             this._txtNombre.Name = "_txtNombre";
             this._txtNombre.ReadOnly = true;
             this._txtNombre.Size = new System.Drawing.Size(184, 13);
@@ -160,8 +167,9 @@
             // 
             // _txtCorreo
             // 
+            this._txtCorreo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this._txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this._txtCorreo.Location = new System.Drawing.Point(127, 41);
+            this._txtCorreo.Location = new System.Drawing.Point(129, 55);
             this._txtCorreo.Name = "_txtCorreo";
             this._txtCorreo.ReadOnly = true;
             this._txtCorreo.Size = new System.Drawing.Size(184, 13);
@@ -171,8 +179,9 @@
             // 
             // _txtTelefono
             // 
+            this._txtTelefono.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this._txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this._txtTelefono.Location = new System.Drawing.Point(127, 65);
+            this._txtTelefono.Location = new System.Drawing.Point(129, 79);
             this._txtTelefono.Name = "_txtTelefono";
             this._txtTelefono.ReadOnly = true;
             this._txtTelefono.Size = new System.Drawing.Size(184, 13);
@@ -182,20 +191,22 @@
             // 
             // _txtDomicilio
             // 
-            this._txtDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._txtDomicilio.Location = new System.Drawing.Point(15, 230);
+            this._txtDomicilio.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this._txtDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this._txtDomicilio.Location = new System.Drawing.Point(17, 263);
             this._txtDomicilio.Multiline = true;
             this._txtDomicilio.Name = "_txtDomicilio";
             this._txtDomicilio.ReadOnly = true;
-            this._txtDomicilio.Size = new System.Drawing.Size(296, 51);
+            this._txtDomicilio.Size = new System.Drawing.Size(296, 64);
             this._txtDomicilio.TabIndex = 9;
             this._txtDomicilio.TabStop = false;
             this._txtDomicilio.Text = ".";
             // 
             // _txtRFC
             // 
+            this._txtRFC.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this._txtRFC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this._txtRFC.Location = new System.Drawing.Point(127, 89);
+            this._txtRFC.Location = new System.Drawing.Point(129, 103);
             this._txtRFC.Name = "_txtRFC";
             this._txtRFC.ReadOnly = true;
             this._txtRFC.Size = new System.Drawing.Size(184, 13);
@@ -205,8 +216,9 @@
             // 
             // _txtCURP
             // 
+            this._txtCURP.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this._txtCURP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this._txtCURP.Location = new System.Drawing.Point(127, 113);
+            this._txtCURP.Location = new System.Drawing.Point(129, 127);
             this._txtCURP.Name = "_txtCURP";
             this._txtCURP.ReadOnly = true;
             this._txtCURP.Size = new System.Drawing.Size(184, 13);
@@ -216,8 +228,9 @@
             // 
             // _txtContrasenaRFC
             // 
+            this._txtContrasenaRFC.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this._txtContrasenaRFC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this._txtContrasenaRFC.Location = new System.Drawing.Point(127, 137);
+            this._txtContrasenaRFC.Location = new System.Drawing.Point(129, 151);
             this._txtContrasenaRFC.Name = "_txtContrasenaRFC";
             this._txtContrasenaRFC.ReadOnly = true;
             this._txtContrasenaRFC.Size = new System.Drawing.Size(184, 13);
@@ -227,8 +240,9 @@
             // 
             // _txtContrasenaFIEL
             // 
+            this._txtContrasenaFIEL.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this._txtContrasenaFIEL.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this._txtContrasenaFIEL.Location = new System.Drawing.Point(127, 161);
+            this._txtContrasenaFIEL.Location = new System.Drawing.Point(129, 175);
             this._txtContrasenaFIEL.Name = "_txtContrasenaFIEL";
             this._txtContrasenaFIEL.ReadOnly = true;
             this._txtContrasenaFIEL.Size = new System.Drawing.Size(184, 13);
@@ -238,8 +252,9 @@
             // 
             // _txtTipoCliente
             // 
+            this._txtTipoCliente.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this._txtTipoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this._txtTipoCliente.Location = new System.Drawing.Point(127, 185);
+            this._txtTipoCliente.Location = new System.Drawing.Point(129, 199);
             this._txtTipoCliente.Name = "_txtTipoCliente";
             this._txtTipoCliente.ReadOnly = true;
             this._txtTipoCliente.Size = new System.Drawing.Size(184, 13);
@@ -249,7 +264,7 @@
             // 
             // _btnRegistrar
             // 
-            this._btnRegistrar.Location = new System.Drawing.Point(15, 440);
+            this._btnRegistrar.Location = new System.Drawing.Point(131, 122);
             this._btnRegistrar.Name = "_btnRegistrar";
             this._btnRegistrar.Size = new System.Drawing.Size(87, 23);
             this._btnRegistrar.TabIndex = 10;
@@ -259,7 +274,7 @@
             // 
             // _btnEliminar
             // 
-            this._btnEliminar.Location = new System.Drawing.Point(224, 440);
+            this._btnEliminar.Location = new System.Drawing.Point(224, 122);
             this._btnEliminar.Name = "_btnEliminar";
             this._btnEliminar.Size = new System.Drawing.Size(87, 23);
             this._btnEliminar.TabIndex = 12;
@@ -267,41 +282,25 @@
             this._btnEliminar.UseVisualStyleBackColor = true;
             this._btnEliminar.Click += new System.EventHandler(this._btnEliminar_Click);
             // 
-            // _btnEditar
+            // _lstbContacto
             // 
-            this._btnEditar.Location = new System.Drawing.Point(119, 440);
-            this._btnEditar.Name = "_btnEditar";
-            this._btnEditar.Size = new System.Drawing.Size(87, 23);
-            this._btnEditar.TabIndex = 11;
-            this._btnEditar.Text = "Editar";
-            this._btnEditar.UseVisualStyleBackColor = true;
-            this._btnEditar.Click += new System.EventHandler(this._btnEditar_Click);
-            // 
-            // _lstbClienteCliente
-            // 
-            this._lstbClienteCliente.FormattingEnabled = true;
-            this._lstbClienteCliente.Location = new System.Drawing.Point(15, 287);
-            this._lstbClienteCliente.Name = "_lstbClienteCliente";
-            this._lstbClienteCliente.Size = new System.Drawing.Size(296, 147);
-            this._lstbClienteCliente.Sorted = true;
-            this._lstbClienteCliente.TabIndex = 13;
-            this._lstbClienteCliente.SelectedIndexChanged += new System.EventHandler(this._lstbClienteCliente_SelectedIndexChanged);
-            // 
-            // navigator1
-            // 
-            this.navigator1.Location = new System.Drawing.Point(317, 161);
-            this.navigator1.Name = "navigator1";
-            this.navigator1.Size = new System.Drawing.Size(291, 302);
-            this.navigator1.TabIndex = 14;
+            this._lstbContacto.FormattingEnabled = true;
+            this._lstbContacto.Location = new System.Drawing.Point(20, 32);
+            this._lstbContacto.Name = "_lstbContacto";
+            this._lstbContacto.Size = new System.Drawing.Size(291, 82);
+            this._lstbContacto.Sorted = true;
+            this._lstbContacto.TabIndex = 13;
+            this._lstbContacto.SelectedIndexChanged += new System.EventHandler(this._lstbContacto_SelectedIndexChanged);
             // 
             // _txtComentarios
             // 
-            this._txtComentarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._txtComentarios.Location = new System.Drawing.Point(317, 62);
+            this._txtComentarios.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this._txtComentarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this._txtComentarios.Location = new System.Drawing.Point(17, 357);
             this._txtComentarios.Multiline = true;
             this._txtComentarios.Name = "_txtComentarios";
             this._txtComentarios.ReadOnly = true;
-            this._txtComentarios.Size = new System.Drawing.Size(296, 88);
+            this._txtComentarios.Size = new System.Drawing.Size(296, 73);
             this._txtComentarios.TabIndex = 16;
             this._txtComentarios.TabStop = false;
             this._txtComentarios.Text = ".";
@@ -310,19 +309,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(314, 41);
+            this.label1.Location = new System.Drawing.Point(14, 341);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(80, 13);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Comentarios";
+            this.label1.Text = "Comentarios:";
             // 
             // _txtRegPatronal
             // 
+            this._txtRegPatronal.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this._txtRegPatronal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this._txtRegPatronal.Location = new System.Drawing.Point(422, 17);
+            this._txtRegPatronal.Location = new System.Drawing.Point(129, 223);
             this._txtRegPatronal.Name = "_txtRegPatronal";
             this._txtRegPatronal.ReadOnly = true;
-            this._txtRegPatronal.Size = new System.Drawing.Size(191, 13);
+            this._txtRegPatronal.Size = new System.Drawing.Size(184, 13);
             this._txtRegPatronal.TabIndex = 17;
             this._txtRegPatronal.TabStop = false;
             this._txtRegPatronal.Text = ".";
@@ -331,49 +331,108 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(314, 17);
+            this.label2.Location = new System.Drawing.Point(14, 223);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "Reg. Patronal";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(16, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(198, 20);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Catálogo de Contactos:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 20);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Datos del Cliente:";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this._btnEditarCliente);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this._lblCorreo);
+            this.panel1.Controls.Add(this._lblTelefono);
+            this.panel1.Controls.Add(this._lblDomicilio);
+            this.panel1.Controls.Add(this._lblRFC);
+            this.panel1.Controls.Add(this._txtRegPatronal);
+            this.panel1.Controls.Add(this._lblCURP);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this._lblContrasenaRFC);
+            this.panel1.Controls.Add(this._txtComentarios);
+            this.panel1.Controls.Add(this._lblContrasenaFirma);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this._lblPeriodo);
+            this.panel1.Controls.Add(this._lblNombre);
+            this.panel1.Controls.Add(this._txtNombre);
+            this.panel1.Controls.Add(this._txtCorreo);
+            this.panel1.Controls.Add(this._txtTelefono);
+            this.panel1.Controls.Add(this._txtTipoCliente);
+            this.panel1.Controls.Add(this._txtDomicilio);
+            this.panel1.Controls.Add(this._txtContrasenaFIEL);
+            this.panel1.Controls.Add(this._txtRFC);
+            this.panel1.Controls.Add(this._txtContrasenaRFC);
+            this.panel1.Controls.Add(this._txtCURP);
+            this.panel1.Location = new System.Drawing.Point(15, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(329, 464);
+            this.panel1.TabIndex = 21;
+            // 
+            // _btnEditarCliente
+            // 
+            this._btnEditarCliente.Location = new System.Drawing.Point(226, 436);
+            this._btnEditarCliente.Name = "_btnEditarCliente";
+            this._btnEditarCliente.Size = new System.Drawing.Size(87, 23);
+            this._btnEditarCliente.TabIndex = 21;
+            this._btnEditarCliente.Text = "Editar";
+            this._btnEditarCliente.UseVisualStyleBackColor = true;
+            this._btnEditarCliente.Click += new System.EventHandler(this._btnEditarCliente_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this._btnEliminar);
+            this.panel2.Controls.Add(this._btnRegistrar);
+            this.panel2.Controls.Add(this._lstbContacto);
+            this.panel2.Controls.Add(this.navigator1);
+            this.panel2.Location = new System.Drawing.Point(368, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(329, 464);
+            this.panel2.TabIndex = 22;
+            // 
+            // navigator1
+            // 
+            this.navigator1.Location = new System.Drawing.Point(20, 149);
+            this.navigator1.Name = "navigator1";
+            this.navigator1.Size = new System.Drawing.Size(291, 314);
+            this.navigator1.TabIndex = 14;
+            // 
             // CardClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this._txtRegPatronal);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this._txtComentarios);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.navigator1);
-            this.Controls.Add(this._lstbClienteCliente);
-            this.Controls.Add(this._btnRegistrar);
-            this.Controls.Add(this._btnEliminar);
-            this.Controls.Add(this._btnEditar);
-            this.Controls.Add(this._txtTipoCliente);
-            this.Controls.Add(this._txtContrasenaFIEL);
-            this.Controls.Add(this._txtContrasenaRFC);
-            this.Controls.Add(this._txtCURP);
-            this.Controls.Add(this._txtRFC);
-            this.Controls.Add(this._txtDomicilio);
-            this.Controls.Add(this._txtTelefono);
-            this.Controls.Add(this._txtCorreo);
-            this.Controls.Add(this._txtNombre);
-            this.Controls.Add(this._lblNombre);
-            this.Controls.Add(this._lblPeriodo);
-            this.Controls.Add(this._lblContrasenaFirma);
-            this.Controls.Add(this._lblContrasenaRFC);
-            this.Controls.Add(this._lblCURP);
-            this.Controls.Add(this._lblRFC);
-            this.Controls.Add(this._lblDomicilio);
-            this.Controls.Add(this._lblTelefono);
-            this.Controls.Add(this._lblCorreo);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Name = "CardClientes";
-            this.Size = new System.Drawing.Size(620, 475);
+            this.Size = new System.Drawing.Size(727, 491);
             this.Load += new System.EventHandler(this.CardClientes_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -399,12 +458,16 @@
         private System.Windows.Forms.TextBox _txtTipoCliente;
         private System.Windows.Forms.Button _btnRegistrar;
         private System.Windows.Forms.Button _btnEliminar;
-        private System.Windows.Forms.Button _btnEditar;
-        private System.Windows.Forms.ListBox _lstbClienteCliente;
+        private System.Windows.Forms.ListBox _lstbContacto;
         private Navigator navigator1;
         private System.Windows.Forms.TextBox _txtComentarios;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox _txtRegPatronal;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button _btnEditarCliente;
     }
 }

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -89,6 +89,10 @@
     <Compile Include="frmCalendar.Designer.cs">
       <DependentUpon>frmCalendar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Checador.cs" />
+    <Compile Include="Clases\Listener.cs" />
+    <Compile Include="Clases\NotificationCenter.cs" />
+
     <Compile Include="Pantallas\CardEmpleado.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,14 +111,14 @@
     <Compile Include="Pantallas\CardClientes.Designer.cs">
       <DependentUpon>CardClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantallas\CardClienteCliente.cs">
+    <Compile Include="Pantallas\CardContacto.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Pantallas\CardClienteCliente.Designer.cs">
-      <DependentUpon>CardClienteCliente.cs</DependentUpon>
+    <Compile Include="Pantallas\CardContacto.Designer.cs">
+      <DependentUpon>CardContacto.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Cliente.cs" />
-    <Compile Include="Clases\ClienteDeCliente.cs" />
+    <Compile Include="Clases\Contacto.cs" />
     <Compile Include="Clases\Connection.cs" />
     <Compile Include="Clases\DirectoryManager.cs" />
     <Compile Include="Clases\Empleado.cs" />
@@ -137,11 +141,11 @@
     <Compile Include="Pantallas\EditarCliente.Designer.cs">
       <DependentUpon>EditarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantallas\EditarClienteCliente.cs">
+    <Compile Include="Pantallas\EditarContacto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pantallas\EditarClienteCliente.Designer.cs">
-      <DependentUpon>EditarClienteCliente.cs</DependentUpon>
+    <Compile Include="Pantallas\EditarContacto.Designer.cs">
+      <DependentUpon>EditarContacto.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>UserControl</SubType>
@@ -172,12 +176,23 @@
     </Compile>
     <Compile Include="Pantallas\RegistrarCita.Designer.cs">
       <DependentUpon>RegistrarCita.cs</DependentUpon>
+    <Compile Include="Pantallas\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\RegistrarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pantallas\RegistrarEmpleado.Designer.cs">
       <DependentUpon>RegistrarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\RegistrosES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\RegistrosES.Designer.cs">
+      <DependentUpon>RegistrosES.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -187,11 +202,11 @@
     <Compile Include="Pantallas\RegistrarCliente.Designer.cs">
       <DependentUpon>RegistrarCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantallas\RegistrarClienteCliente.cs">
+    <Compile Include="Pantallas\RegistrarContacto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pantallas\RegistrarClienteCliente.Designer.cs">
-      <DependentUpon>RegistrarClienteCliente.cs</DependentUpon>
+    <Compile Include="Pantallas\RegistrarContacto.Designer.cs">
+      <DependentUpon>RegistrarContacto.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmCalendar.resx">
       <DependentUpon>frmCalendar.cs</DependentUpon>
@@ -208,11 +223,11 @@
     <EmbeddedResource Include="Pantallas\CatalogoEmpleados.resx">
       <DependentUpon>CatalogoEmpleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas\EditarClienteCliente.resx">
-      <DependentUpon>EditarClienteCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Pantallas\EditarContacto.resx">
+      <DependentUpon>EditarContacto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas\CardClienteCliente.resx">
-      <DependentUpon>CardClienteCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Pantallas\CardContacto.resx">
+      <DependentUpon>CardContacto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documentos.resx">
       <DependentUpon>Documentos.cs</DependentUpon>
@@ -231,9 +246,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\RegistrarCita.resx">
       <DependentUpon>RegistrarCita.cs</DependentUpon>
+    <EmbeddedResource Include="Pantallas\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\RegistrarEmpleado.resx">
       <DependentUpon>RegistrarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\RegistrosES.resx">
+      <DependentUpon>RegistrosES.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -243,12 +263,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Pantallas\RegistrarCliente.resx">
       <DependentUpon>RegistrarCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pantallas\RegistrarClienteCliente.resx">
-      <DependentUpon>RegistrarClienteCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Pantallas\RegistrarContacto.resx">
+      <DependentUpon>RegistrarContacto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -277,6 +298,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
+    <None Include="Resources\logogaribayaguirre.jpg" />
+    <None Include="Resources\profileicon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
