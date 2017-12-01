@@ -142,14 +142,5 @@ namespace Contabilidad
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void _btnCatalogoEmpleados_Click(object sender, EventArgs e)
-        {
-            navigator1.NavigateTo(new CatalogoEmpleados());
-        }
-
-        private void _btnCatalogoClientes_Click(object sender, EventArgs e)
-        {
-            navigator1.NavigateTo(new CatalogoClientes());
-        }
     }
 }

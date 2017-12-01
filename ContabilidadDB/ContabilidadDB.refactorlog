@@ -70,4 +70,32 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="FechaNacimiento" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="1de24e16-9612-4db2-9ebe-95adca9a992b" ChangeDateTime="11/28/2017 16:05:18">
+    <Property Name="ElementName" Value="[dbo].[Citas].[StarTimeDay]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Citas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StartTimeDay" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e64e63c7-7294-4983-bf54-80f852957bf4" ChangeDateTime="11/28/2017 16:05:27">
+    <Property Name="ElementName" Value="[dbo].[Citas].[Star]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Citas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StartTimeHour" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3e0272d2-6a2b-4ddd-b516-bad98149a900" ChangeDateTime="12/01/2017 06:24:14">
+    <Property Name="ElementName" Value="[dbo].[Citas].[StartTimeDay]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Citas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Dia" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2a275cb8-981e-4d9d-97f8-7eb33712759d" ChangeDateTime="12/01/2017 06:24:29">
+    <Property Name="ElementName" Value="[dbo].[Citas].[StartTimeHour]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Citas]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Hora" />
+  </Operation>
 </Operations>
